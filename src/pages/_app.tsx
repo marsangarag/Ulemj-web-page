@@ -3,8 +3,15 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { AnimatePresence } from "framer-motion";
 import Page from "components/layout/page";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function App({ Component, pageProps }: AppProps) {
+    useEffect(() => {
+        Aos.init();
+    }, []);
+
     return (
         <>
             <Head>
@@ -14,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=0"
                 />
             </Head>
-            <AnimatePresence initial={false} mode="wait">
+            <AnimatePresence mode="wait">
                 <Page>
                     <Component {...pageProps} />
                 </Page>

@@ -1,40 +1,31 @@
 export default function Footer() {
     return (
         <>
-            <div className="p-5 gap-5 grid grid-cols-2 md:grid-cols-4">
-                <div>
-                    <ul className="flex flex-col gap-1">
-                        <li className="font-bold mb-4">Navigation</li>
-                        <li>Shop</li>
-                        <li>Lookbook</li>
-                        <li>About</li>
-                    </ul>
+            <div className="p-5 grid gap-y-8 text-center sm:grid-cols-2 md:grid-cols-4">
+                <div className="flex flex-col">
+                    <span className="font-bold mb-2">Navigation</span>
+                    <span>Shop</span>
+                    <span>Lookbook</span>
+                    <span>About</span>
                 </div>
-                <div>
-                    <ul className="flex flex-col gap-1">
-                        <li className="font-bold mb-4">Customer Care</li>
-                        <li>Shop</li>
-                        <li>Lookbook</li>
-                        <li>About</li>
-                    </ul>
+                <div className="flex flex-col">
+                    <span className="font-bold mb-2">Customer Care</span>
+                    <span>Shipping info & returns</span>
+                    <span>Terms & conditions</span>
+                    <span>Privacy Policy</span>
                 </div>
-                <div>
-                    <ul className="flex flex-col gap-1">
-                        <li className="font-bold mb-4">Contact</li>
-                        <li>Vercencia@info.com</li>
-                        <li>+1667 991082</li>
-                    </ul>
+                <div className="flex flex-col">
+                    <span className="font-bold mb-2">Contact</span>
+                    <span>Vercencia@info.com</span>
+                    <span>+976 88110011</span>
                 </div>
-                <div>
-                    <ul className="flex flex-col gap-1">
-                        <li className="font-bold mb-4">Social Media</li>
-                        <li>Instagram</li>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                    </ul>
+                <div className="flex flex-col">
+                    <span className="font-bold mb-2">Social media</span>
+                    <span>Instagram</span>
+                    <span>Facebook</span>
+                    <span>Twitter</span>
                 </div>
             </div>
-            {/* <div className="font-bold text-9xl">©VERCENCIA</div> */}
         </>
     );
 }
