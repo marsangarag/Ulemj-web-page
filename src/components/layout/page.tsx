@@ -1,3 +1,11 @@
+import Header from "./header";
+import Opacity from "./opacity";
+
 export default function Page({ children }: { children: any }) {
-    return <h1>hashdahdhsadhshdh</h1>;
+    return (
+        <Opacity className="w-full h-full my-col-20">
+            <Header />
+            {children}
+        </Opacity>
+    );
 }
