@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function Home() {
-    return <h1 className="h-full font-medium">hasdhasdh</h1>;
+    return <div className="my-col-20"></div>;
 }

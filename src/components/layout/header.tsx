@@ -9,7 +9,7 @@ export default function Header() {
     };
 
     return (
-        <div className="flex justify-between items-center py-4 px-5">
+        <div className=" flex flex-col md:flex-row justify-between items-center py-4 px-5">
             <Opacity
                 onClick={() => onNavigate("")}
                 delay={0.1}

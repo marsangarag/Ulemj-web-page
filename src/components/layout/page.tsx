@@ -6,7 +6,7 @@ export default function Page({ children }: { children: any }) {
     return (
         <Opacity className="w-full h-full my-col-20">
             <Header />
-            {children}
+            <div className="w-full h-full">{children}</div>
             <Footer />
         </Opacity>
     );
