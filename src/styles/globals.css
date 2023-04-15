@@ -131,3 +131,7 @@ video {
 .shadow-text {
     text-shadow: 1px 1px black;
 }
+
+.marquee {
+    @apply flex items-center pl-10 gap-x-10 !important;
+}
