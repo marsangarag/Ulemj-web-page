@@ -6,12 +6,8 @@ import Opacity from "./opacity";
 export default function Page({ children }: { children: any }) {
     const { lang } = useAppState();
     return (
-        <Opacity
-            className={`w-screen overflow-hidden h-screen my-col-20 ${
-                lang === "en" ? "font-poppins" : "font-rubik"
-            }`}
-        >
-            <div className="w-full h-full overflow-y-scroll">
+        <Opacity className={`w-screen overflow-hidden h-screen font-rubik`}>
+            <div className="w-full h-full overflow-y-scroll my-col-16">
                 <Header />
                 {children}
                 <Footer />

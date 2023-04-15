@@ -96,7 +96,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-padding: 0;
-    @apply font-normal text-black text-lg;
+    @apply font-normal text-black text-base;
     outline: none;
 }
 
@@ -117,6 +117,17 @@ body {
     display: none;
 }
 
+.my-col-16 {
+    @apply flex flex-col gap-y-4;
+}
 .my-col-20 {
     @apply flex flex-col gap-y-5;
+}
+
+video {
+    clip-path: inset(1px 0px);
+}
+
+.shadow-text {
+    text-shadow: 1px 1px black;
 }

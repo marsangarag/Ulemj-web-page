@@ -14,8 +14,8 @@ export default function Header() {
     };
 
     const centerItems = [
-        { en: "Shop", mon: "Дэлгүүр", route: "/shop" },
-        { en: "Lookbook", mon: "Каталог", route: "/book" },
+        { en: "Booking", mon: "Цаг захиалах", route: "/booking" },
+        { en: "Shop", mon: "Каталог", route: "/shop" },
         { en: "About", mon: "Тухай", route: "/about" },
     ];
 
@@ -34,13 +34,13 @@ export default function Header() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row justify-between items-center py-4 px-5">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-4 px-5">
             <Opacity
                 onClick={() => onNavigate("/")}
                 delay={0.2}
                 className="font-medium tracking-widest cursor-pointer"
             >
-                VERSENCIA
+                ULEMJ
             </Opacity>
             <div className="flex items-center gap-x-5 text-sm text-gray">
                 {centerItems?.map((item, index: number) => {
