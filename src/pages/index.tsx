@@ -1,4 +1,5 @@
 import Banner from "components/home/banner";
+import Carousel from "components/home/carousel";
 import Products from "components/home/product";
 import RunningText from "components/home/running-text";
 import Salon from "components/home/salon";
@@ -32,6 +33,7 @@ export default function Home() {
             </div>
             <Products />
             <Service />
+            <Carousel />
         </div>
     );
 }
