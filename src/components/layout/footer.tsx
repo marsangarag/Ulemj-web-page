@@ -8,23 +8,15 @@ export default function Footer() {
             title: { en: "Navigation", mon: "Хэсэх" },
             items: [
                 { en: "Shop", mon: "Дэлгүүр" },
-                { en: "Lookbook", mon: "Каталог" },
+                { en: "Booking", mon: "Каталог" },
                 { en: "About", mon: "Дэлгэрэнгүй" },
-            ],
-        },
-        {
-            title: { en: "Customer Care", mon: "Харилцагч" },
-            items: [
-                { en: "Shopping info & returns", mon: "Буцаалт" },
-                { en: "Terms & conditions", mon: "Үйлчилгээний нөхцөл" },
-                { en: "Privacy Policy", mon: "Нууцлалын бодлого" },
             ],
         },
         {
             title: { en: "Contact", mon: "Холбоо барих" },
             items: [
-                { en: "Vercencia@info.com", mon: "Vercencia@info.com" },
-                { en: "+976 88110011", mon: "+976 88110011" },
+                { en: "grease@ulemj.mn", mon: "grease@ulemj.mn" },
+                { en: "+976 77779595", mon: "+976 77779595" },
             ],
         },
         {
@@ -32,13 +24,13 @@ export default function Footer() {
             items: [
                 { en: "Instagram", mon: "Instagram" },
                 { en: "Facebook", mon: "Facebook" },
-                { en: "Twitter", mon: "Twitter" },
+                { en: "Youtube", mon: "Youtube" },
             ],
         },
     ];
     return (
         <>
-            <div className="p-5 grid gap-y-8 text-center sm:grid-cols-2 md:grid-cols-4">
+            <div className="flex flex-col text-center gap-y-8 sm:flex-row sm:justify-between sm: px-5">
                 {footerItems?.map((footer) => {
                     return (
                         <div
