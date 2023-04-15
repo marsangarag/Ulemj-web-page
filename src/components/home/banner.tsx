@@ -11,6 +11,7 @@ export default function Banner() {
         <motion.div className="relative w-full text-white">
             <div className="relative">
                 <video
+                    onContextMenu={(e) => e.preventDefault()}
                     className="w-full aspect-video overflow-hidden rounded-xl relative"
                     autoPlay={true}
                     loop
@@ -32,7 +33,7 @@ export default function Banner() {
                     className="absolute w-full h-1/2 bottom-0 left-0 z-20 bg-white"
                 ></motion.div>
             </div>
-            <div className="absolute top-1/3 -translate-y-1/3 md:top-1/2 left-5 md:left-10 md:-translate-y-1/2 text-xs font-light text-justify w-1/3 md:w-2/5  sm:text-sm md:text-base shadow-text">
+            <div className="absolute top-1/3 -translate-y-1/3 md:top-1/2 left-5 md:left-10 md:-translate-y-1/2 text-xs font-light text-justify w-[42%] sm:w-1/4 md:w-2/5  sm:text-sm md:text-base shadow-text">
                 <span className="font-medium">Ulemj grease LLC </span>
                 is a leading company with great experience in the sector of
                 nail, beauty spa and hair salons in Mongolia at its{" "}
@@ -45,7 +46,7 @@ export default function Banner() {
                 initial={{ x: -width }}
                 animate={{ x: 0 }}
                 transition={{
-                    delay: 0.5,
+                    delay: 0.7,
                     type: "spring",
                     stiffness: 500,
                     damping: 50,

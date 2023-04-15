@@ -3,6 +3,7 @@ import Opacity from "./opacity";
 import { useAppState } from "lib/context/app";
 import { Lang } from "lib/types/language.type";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
     const router = useRouter();
@@ -34,13 +35,14 @@ export default function Header() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row justify-between items-center pt-4 px-5">
-            <Opacity
-                onClick={() => onNavigate("/")}
-                delay={0.2}
-                className="font-medium tracking-widest cursor-pointer"
-            >
-                ULEMJ
+        <div className="flex flex-col pb-4 md:flex-row md:pb-0 justify-between items-center px-5">
+            <Opacity onClick={() => onNavigate("/")} delay={0.2}>
+                <Image
+                    src={"/images/brand-logo.png"}
+                    alt="ulemj"
+                    height={0}
+                    width={120}
+                />
             </Opacity>
             <div className="flex items-center gap-x-5 text-sm text-gray">
                 {centerItems?.map((item, index: number) => {
