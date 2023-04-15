@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import AppProvider from "lib/context/app";
-import Auth from "lib/auth";
 
 export default function App({ Component, pageProps }: AppProps) {
     useEffect(() => {
@@ -24,13 +23,11 @@ export default function App({ Component, pageProps }: AppProps) {
                 />
             </Head>
             <AppProvider>
-                <Auth>
-                    <AnimatePresence mode="wait">
-                        <Page>
-                            <Component {...pageProps} />
-                        </Page>
-                    </AnimatePresence>
-                </Auth>
+                <AnimatePresence mode="wait">
+                    <Page>
+                        <Component {...pageProps} />
+                    </Page>
+                </AnimatePresence>
             </AppProvider>
         </>
     );

@@ -1,11 +1,11 @@
 import Banner from "components/home/banner";
 import RunningText from "components/home/running-text";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import Salon from "components/home/salon";
+import Service from "components/home/service";
 
 export default function Home() {
     return (
-        <div className="flex flex-col overflow-x-hidden">
+        <div className="my-col-20">
             <Banner />
             <RunningText
                 images={[
@@ -26,6 +26,8 @@ export default function Home() {
                     "woody",
                 ]}
             />
+            <Salon />
+            <Service />
         </div>
     );
 }

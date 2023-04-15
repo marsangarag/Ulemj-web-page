@@ -96,7 +96,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-padding: 0;
-    @apply font-normal text-black text-base;
+    @apply font-normal text-black text-base w-full h-full;
     outline: none;
 }
 

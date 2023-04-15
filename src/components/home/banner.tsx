@@ -4,8 +4,7 @@ import { useEffect } from "react";
 import { useAppState } from "lib/context/app";
 
 export default function Banner() {
-    const { window, lang } = useAppState();
-    const { width, height } = window || {};
+    const { lang } = useAppState();
 
     return (
         <motion.div className="relative w-full text-white">
@@ -43,7 +42,7 @@ export default function Banner() {
             </div>
 
             <motion.div
-                initial={{ x: -width }}
+                initial={{ x: -500 }}
                 animate={{ x: 0 }}
                 transition={{
                     delay: 0.7,

@@ -7,7 +7,6 @@ const { Provider }: any = appContext;
 
 const initialState = {
     lang: "en",
-    window: { height: 0, width: 0 },
 };
 
 export default function AppProvider({ children }: any) {
@@ -18,10 +17,6 @@ export default function AppProvider({ children }: any) {
             ...state,
             setLang: (payload: string) => {
                 dispatch({ type: Constant.SET_LANG, payload });
-            },
-
-            setWindow: (payload: { width: number; height: number }) => {
-                dispatch({ type: Constant.SET_WINDOW, payload });
             },
         }),
         [state]

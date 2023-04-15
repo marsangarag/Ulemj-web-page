@@ -9,12 +9,6 @@ const reducer = (state: any, action: any) => {
                 lang: action.payload,
             };
 
-        case Constant.SET_WINDOW: {
-            return {
-                ...state,
-                window: action.payload,
-            };
-        }
         default:
             return state;
     }

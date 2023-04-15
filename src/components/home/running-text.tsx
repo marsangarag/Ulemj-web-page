@@ -1,15 +1,15 @@
-import { motion } from "framer-motion";
-import { useAppState } from "lib/context/app";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 export default function RunningText({ images }: { images: string[] }) {
     return (
-        <Marquee gradient={false} speed={200} className="py-5">
+        <Marquee gradient={false} speed={200} className="h-[160px]">
             {images?.map((image) => {
                 return (
                     <Image
+                        onContextMenu={(e) => e.preventDefault()}
                         key={image}
+                        priority
                         src={`/images/logos/${image}.png`}
                         alt={image}
                         width={120}

@@ -30,7 +30,7 @@ export default function Footer() {
     ];
     return (
         <>
-            <div className="flex flex-col text-center gap-y-2 sm:flex-row sm:justify-evenly">
+            <div className="py-5 flex flex-col text-center gap-y-2 sm:flex-row sm:justify-evenly">
                 {footerItems?.map((footer) => {
                     return (
                         <div
