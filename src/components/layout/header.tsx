@@ -48,7 +48,11 @@ export default function Header() {
                 {centerItems?.map((item, index: number) => {
                     return (
                         <Opacity
-                            className="cursor-pointer"
+                            className={`cursor-pointer ${
+                                router.pathname.includes(item.route)
+                                    ? "font-bold"
+                                    : "font-normal"
+                            }`}
                             onClick={() => onNavigate(item.route)}
                             key={item.route}
                             delay={0.2 * (index + 2)}
@@ -70,7 +74,7 @@ export default function Header() {
                             onClick={onChangeLang}
                             className={`absolute top-5 py-1 px-5 -right-5 bg-white rounded-b-xl z-10 ${
                                 lang === "en" && "font-rubik"
-                            }`}
+                            } `}
                         >
                             {lang === "en" ? "Монгол" : "English"}
                         </Opacity>

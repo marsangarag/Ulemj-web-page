@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Service() {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
+            onContextMenu={(e) => e.preventDefault()}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{
-                delay: 0.5,
                 type: "spring",
                 stiffness: 100,
                 damping: 50,
             }}
+            viewport={{ once: true }}
             className="flex flex-col gap-y-1 md:grid md:grid-cols-5 gap-x-1 md:place-items-stretch"
         >
-            <div className="col-span-3 relative text-white ">
+            <div className="col-span-3 w-full h-full relative text-white ">
                 {/* <Image
                     src={"/images/spa.jpg"}
                     alt="spa"
@@ -23,10 +25,10 @@ export default function Service() {
                 <img
                     src="/images/service/spa.jpg"
                     alt="spa"
-                    className="rounded-xl h-full"
+                    className="rounded-xl h-full w-full"
                 />
                 <div className="absolute bottom-8 left-6">
-                    <p className="text-lg sm:text-3xl font-light">
+                    <p className="text-xl sm:text-3xl tracking-wide font-light">
                         Grease Wellness
                     </p>
                     <p className="text-smaller font-normal pb-5">
@@ -50,7 +52,7 @@ export default function Service() {
                 <img
                     src="/images/service/baga_tenger.jpg"
                     alt="baga tenger"
-                    className="rounded-xl"
+                    className="rounded-xl h-full w-full"
                 />
             </div>
         </motion.div>

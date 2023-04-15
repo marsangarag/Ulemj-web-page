@@ -27,6 +27,10 @@ export default function Home() {
                 ]}
             />
             <Salon />
+            <div className="self-center py-5 text-center font-bold">
+                Sustainability – Customer Service – Quality - Personalization -
+                Innovation - Professionalism and Teamwork.
+            </div>
             <Service />
         </div>
     );
