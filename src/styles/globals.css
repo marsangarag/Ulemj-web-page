@@ -135,3 +135,7 @@ video {
 .marquee {
     @apply flex items-center pl-10 gap-x-10 !important;
 }
+
+.swiper-pagination-bullet-active {
+    background-color: white !important; 
+}

@@ -1,4 +1,5 @@
 import Banner from "components/home/banner";
+import Carousel from "components/home/carousel";
 import RunningText from "components/home/running-text";
 import Salon from "components/home/salon";
 import Service from "components/home/service";
@@ -32,6 +33,7 @@ export default function Home() {
                 Innovation - Professionalism and Teamwork.
             </div>
             <Service />
+            <Carousel />
         </div>
     );
 }

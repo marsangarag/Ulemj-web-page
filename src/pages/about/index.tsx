@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div className="border-2 m-5 border-black/5">
+        <div className="border-2 border-black/5">
             <div className="px-2 md:px-24 py-8 text-justify leading-5">
                 <h1 className="font-bold mb-8">
                     SERVICE IS OUR BUSINESS PERFECTION IS OUR GOAL SATISFACTION
