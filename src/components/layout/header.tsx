@@ -35,16 +35,16 @@ export default function Header() {
     };
 
     return (
-        <div className="flex flex-col pb-4 md:flex-row md:pb-0 justify-between items-center px-5">
+        <div className="relative h-full w-full sm:block flex flex-col items-center">
             <Opacity onClick={() => onNavigate("/")} delay={0.2}>
                 <Image
                     src={"/images/brand-logo.png"}
                     alt="ulemj"
                     height={0}
-                    width={120}
+                    width={150}
                 />
             </Opacity>
-            <div className="flex items-center gap-x-5 text-sm text-gray">
+            <div className="flex items-center gap-x-5 text-sm sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:top-1/2 sm:-translate-y-1/2 pb-4 sm:pb-0 -mt-4 sm:mt-0">
                 {centerItems?.map((item, index: number) => {
                     return (
                         <Opacity
@@ -62,8 +62,8 @@ export default function Header() {
                     );
                 })}
             </div>
-            <div className="flex gap-x-5 text-gray text-sm items-center">
-                <Opacity
+            <div className="flex gap-x-5 text-sm items-center">
+                {/* <Opacity
                     onClick={() => setShowLang(!showLang)}
                     delay={1}
                     className="cursor-pointer relative"
@@ -79,7 +79,7 @@ export default function Header() {
                             {lang === "en" ? "Монгол" : "English"}
                         </Opacity>
                     ) : null}
-                </Opacity>
+                </Opacity> */}
                 {/* <Opacity
                     onClick={onChangeLang}
                     delay={1}

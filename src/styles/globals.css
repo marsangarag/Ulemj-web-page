@@ -133,5 +133,5 @@ video {
 }
 
 .marquee {
-    @apply flex items-center pl-10 gap-x-10 !important;
+    @apply flex items-center pl-[30px] gap-x-[30px] !important;
 }

@@ -1,18 +1,18 @@
 import Banner from "components/home/banner";
+import Products from "components/home/product";
 import RunningText from "components/home/running-text";
 import Salon from "components/home/salon";
 import Service from "components/home/service";
 
 export default function Home() {
     return (
-        <div className="my-col-20">
+        <div className="flex flex-col gap-y-2.5">
             <Banner />
             <RunningText
                 images={[
                     "bodyography",
                     "byebyeblemish",
                     "christina",
-                    "hairburst",
                     "gigi",
                     "goli",
                     "hantesis",
@@ -22,7 +22,6 @@ export default function Home() {
                     "lumenis",
                     "orly",
                     "phytomer",
-                    "sisology",
                     "woody",
                 ]}
             />
@@ -31,6 +30,7 @@ export default function Home() {
                 Sustainability – Customer Service – Quality - Personalization -
                 Innovation - Professionalism and Teamwork.
             </div>
+            <Products />
             <Service />
         </div>
     );

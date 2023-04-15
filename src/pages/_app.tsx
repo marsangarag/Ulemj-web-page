@@ -4,15 +4,10 @@ import type { AppProps } from "next/app";
 import { AnimatePresence } from "framer-motion";
 import Page from "components/layout/page";
 import { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
+
 import AppProvider from "lib/context/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-    useEffect(() => {
-        Aos.init();
-    }, []);
-
     return (
         <>
             <Head>

@@ -7,7 +7,7 @@ export default function Page({ children }: { children: any }) {
     const { lang } = useAppState();
     return (
         <Opacity className={`w-screen h-screen overflow-x-hidden font-rubik`}>
-            <div className="bg-main w-full h-5"></div>
+            <div className="bg-main w-full h-5 md:h-8"></div>
             <div className="px-5">
                 <Header />
                 {children}

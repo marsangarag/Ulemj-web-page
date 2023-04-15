@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Salon() {
     const onButtonClick = (link: string) => {
@@ -6,9 +7,16 @@ export default function Salon() {
     };
 
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 50,
+            }}
+            viewport={{ once: true }}
             onContextMenu={(e) => e.preventDefault()}
-            data-aos="fade-up"
             className="flex flex-col gap-y-1 md:grid md:grid-cols-12 gap-x-1 md:place-items-stretch"
         >
             <div className="md:col-span-5 relative w-full ">
@@ -22,7 +30,7 @@ export default function Salon() {
                         <div className="text-xl sm:text-3xl font-light tracking-wide">
                             Beauty Spa
                         </div>
-                        <div className="text-smaller">
+                        <div className="text-smaller sm:text-xs md:text-sm">
                             Introduction to outstanding beauty services
                         </div>
                     </div>
@@ -32,7 +40,7 @@ export default function Salon() {
                                 "http://appointment.ulemjgrease.com/appointments?business_type=2"
                             )
                         }
-                        className="bg-main cursor-pointer shadow-lg rounded-3xl p-2 text-xs font-medium"
+                        className="bg-main cursor-pointer shadow-lg rounded-3xl p-2 text-xs md:text-sm font-medium"
                     >
                         Beauty Services
                     </div>
@@ -45,27 +53,27 @@ export default function Salon() {
                             "http://appointment.ulemjgrease.com/appointments?business_type=1"
                         )
                     }
-                    className="cursor-pointer h-1/2 w-1/2 md:w-full relative"
+                    className="cursor-pointer w-1/2 md:w-full relative"
                 >
                     <img
                         src="/images/salon/nail.jpg"
                         alt="nail"
-                        className="rounded-xl "
+                        className="rounded-xl"
                     />
-                    <div className="bottom-4 left-4 absolute flex flex-col">
-                        <div className="text-xl sm:text-3xl font-light tracking-wide">
+                    <div className="bottom-2.5 sm:bottom-4 left-2 sm:left-4 absolute flex flex-col">
+                        <div className="text-xl sm:text-2xl lg:text-3xl font-light tracking-wide">
                             Nails
                         </div>
-                        <div className="text-smaller">
+                        <div className="text-smaller sm:text-xs md:text-sm">
                             Manicure, Pedicure and Treatment
                         </div>
                     </div>
                 </div>
-                <div className="bg-black text-white rounded-xl p-5 w-1/2 md:w-full md:h-full flex flex-col justify-between items-start gap-y-1.5">
-                    <div className="rounded-3xl cursor-pointer border border-white text-xs md:text-sm py-2.5 px-3">
+                <div className="bg-black text-white rounded-xl p-2.5 sm:p-4 w-1/2 md:w-full md:h-full flex flex-col justify-between items-start gap-y-1.5">
+                    <div className="rounded-3xl cursor-pointer border border-white text-xs sm:text-sm md:text-base py-2.5 px-3">
                         Appointment
                     </div>
-                    <div className="text-smaller md:text-xs">
+                    <div className="text-smaller sm:text-xs md:text-sm lg:text-base xl:text-lg">
                         We served 6000 clients a month and more than 70% of them
                         are lon-Term for more than 3 years. Total clients are
                         potential and 15% of our clients are foreigners, living
@@ -84,7 +92,9 @@ export default function Salon() {
                         <div className="text-xl sm:text-3xl font-light tracking-wide">
                             Hair Treatment
                         </div>
-                        <div className="text-smaller">Styling & treatment</div>
+                        <div className="text-smaller sm:text-xs md:text-sm">
+                            Styling & treatment
+                        </div>
                     </div>
                     <div
                         onClick={() =>
@@ -92,12 +102,12 @@ export default function Salon() {
                                 "http://appointment.ulemjgrease.com/appointments?business_type=3"
                             )
                         }
-                        className="bg-white text-black cursor-pointer rounded-3xl p-2 text-xs font-medium"
+                        className="bg-white text-black cursor-pointer rounded-3xl p-2 text-xs md:text-sm font-medium"
                     >
                         Hair Services
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
