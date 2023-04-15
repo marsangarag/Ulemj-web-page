@@ -6,6 +6,7 @@ import Page from "components/layout/page";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import AppProvider from "lib/context/app";
 
 export default function App({ Component, pageProps }: AppProps) {
     useEffect(() => {
@@ -15,17 +16,19 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
-                <title>Toki Call Service</title>
+                <title>Ulemj</title>
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=0"
                 />
             </Head>
-            <AnimatePresence mode="wait">
-                <Page>
-                    <Component {...pageProps} />
-                </Page>
-            </AnimatePresence>
+            <AppProvider>
+                <AnimatePresence mode="wait">
+                    <Page>
+                        <Component {...pageProps} />
+                    </Page>
+                </AnimatePresence>
+            </AppProvider>
         </>
     );
 }

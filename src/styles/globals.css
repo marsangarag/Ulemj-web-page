@@ -90,7 +90,7 @@ body {
     overscroll-behavior-y: none !important;
     -webkit-user-select: none;
     margin: 0;
-    font-family: "Poppins" !important;
+    /* font-family: "Poppins" !important; */
     font-style: normal;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -98,6 +98,18 @@ body {
     scroll-padding: 0;
     @apply font-normal text-black text-lg;
     outline: none;
+}
+
+.font-poppins {
+    font-family: "Poppins";
+}
+
+.font-rubik {
+    font-family: "Rubik";
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
 }
 
 ::-webkit-scrollbar {
