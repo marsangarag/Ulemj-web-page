@@ -7,7 +7,6 @@ const { Provider }: any = appContext;
 
 const initialState = {
     lang: "en",
-    brand: "ulemj",
 };
 
 export default function AppProvider({ children }: any) {
@@ -18,10 +17,6 @@ export default function AppProvider({ children }: any) {
             ...state,
             setLang: (payload: string) => {
                 dispatch({ type: Constant.SET_LANG, payload });
-            },
-
-            setBrand: (payload: string) => {
-                dispatch({ type: Constant.SET_BRAND, payload });
             },
         }),
         [state]

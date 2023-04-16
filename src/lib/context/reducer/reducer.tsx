@@ -8,11 +8,7 @@ const reducer = (state: any, action: any) => {
                 ...state,
                 lang: action.payload,
             };
-        case Constant.SET_BRAND:
-            return {
-                ...state,
-                brand: action.payload,
-            };
+
         default:
             return state;
     }

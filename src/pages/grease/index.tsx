@@ -5,11 +5,12 @@ import Products from "components/home/product";
 import RunningText from "components/home/running-text";
 import Salon from "components/home/salon";
 import Service from "components/home/service";
+import { useAppState } from "lib/context/app";
 
-export default function BrandPage() {
+export default function Grease() {
     return (
         <div className="flex flex-col gap-y-2.5 ">
-            <Banner />
+            <Banner brand="grease" />
             <RunningText
                 images={[
                     "phytomer",
@@ -27,7 +28,7 @@ export default function BrandPage() {
                     "byebyeblemish",
                 ]}
             />
-            <Salon />
+            <Salon brand="grease" />
             <div className="self-center py-5 text-center font-bold">
                 Sustainability – Customer Service – Quality - Personalization -
                 Innovation - Professionalism and Teamwork.

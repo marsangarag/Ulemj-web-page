@@ -1,15 +1,25 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useAppState } from "lib/context/app";
-import { colorCodes } from "lib/helper";
-import { Color } from "lib/types/color.type";
 
-export default function Salon() {
+export default function Salon({ brand }: { brand: string }) {
     const onButtonClick = (link: string) => {
         window.open(link, "_blank", "noreferrer");
     };
 
-    const { brand } = useAppState();
+    const content = {
+        grease: {
+            left: {
+                image: "beauty",
+                title: "Beauty Spa",
+                text: "Introduction to outstanding beauty services",
+                button: {
+                    title: "Beauty Services",
+                    route: "http://appointment.ulemjgrease.com/appointments?business_type=2",
+                },
+            },
+        },
+    };
 
     return (
         <motion.div
@@ -45,9 +55,7 @@ export default function Salon() {
                                 "http://appointment.ulemjgrease.com/appointments?business_type=2"
                             )
                         }
-                        className={`${
-                            colorCodes[brand as keyof Color].border
-                        } cursor-pointer shadow-lg rounded-3xl p-2 text-xs md:text-sm font-medium`}
+                        className={`color cursor-pointer shadow-lg rounded-3xl p-2 text-xs md:text-sm font-medium`}
                     >
                         Beauty Services
                     </div>

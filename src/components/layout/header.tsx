@@ -7,9 +7,9 @@ import Image from "next/image";
 import { colorCodes } from "lib/helper";
 import { Color } from "lib/types/color.type";
 
-export default function Header() {
+export default function Header({ brand }: { brand: string }) {
     const router = useRouter();
-    const { lang, setLang, brand } = useAppState();
+    const { lang, setLang } = useAppState();
     const [showLang, setShowLang] = useState<boolean>(false);
 
     const onNavigate = (route: string) => {
@@ -61,7 +61,7 @@ export default function Header() {
     return (
         <div
             className={`relative h-[63px] flex flex-col items-center border-b ${
-                colorCodes[brand as keyof Color].border
+                colorCodes[brand as keyof Color]?.border
             }`}
         >
             <Opacity

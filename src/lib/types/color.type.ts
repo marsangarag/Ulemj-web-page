@@ -1,4 +1,4 @@
 export interface Color {
-    ulemj: string;
+    grease: string;
     pharm: string;
 }

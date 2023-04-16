@@ -1,9 +1,4 @@
-import { useAppState } from "lib/context/app";
-import { colorCodes } from "lib/helper";
-import { Color } from "lib/types/color.type";
-
 export default function About() {
-    const { brand } = useAppState();
     return (
         <div className="container mx-auto">
             <div className="px-2 md:px-24 pb-8 text-justify leading-5 ">
@@ -22,8 +17,7 @@ export default function About() {
                 </p>
                 <div className="mb-8 grid sm:grid-cols-3 gap-1 sm:gap-10">
                     <div
-                        className={`border border-main rounded-2xl py-8 px-5 hover:bg-${
-                            colorCodes[brand as keyof Color]
+                        className={`border border-main rounded-2xl py-8 px-5 hover:bg-grease
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">MISSION</h2>
@@ -33,8 +27,7 @@ export default function About() {
                         </p>
                     </div>
                     <div
-                        className={`border border-main rounded-2xl py-8 px-5 hover:bg-${
-                            colorCodes[brand as keyof Color]
+                        className={`border border-main rounded-2xl py-8 px-5 hover:bg-grease
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">VISION</h2>
@@ -44,8 +37,7 @@ export default function About() {
                         </p>
                     </div>
                     <div
-                        className={`border border-main rounded-2xl py-8 px-5 hover:bg-${
-                            colorCodes[brand as keyof Color]
+                        className={`border border-main rounded-2xl py-8 px-5 hover:bg-grease
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">VALUES</h2>
@@ -67,19 +59,19 @@ export default function About() {
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10">
                 <div>
                     <img
-                        src={`/images/about/${brand}/LPG.jpg`}
+                        src={`/images/about/grease/LPG.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/${brand}/M22.jpg`}
+                        src={`/images/about/grease/M22.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/${brand}/Glowsolution.jpg`}
+                        src={`/images/about/grease/Glowsolution.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl"
                     />
                 </div>
@@ -91,22 +83,22 @@ export default function About() {
                 </h2>
                 <div className="grid grid-cols-4 sm:px-24 items-center place-items-center">
                     <img
-                        src={`/images/about/${brand}/120staff.png`}
+                        src={`/images/about/grease/120staff.png`}
                         alt=""
                         className="hover:scale-105 ease-in duration-100"
                     />
                     <img
-                        src={`/images/about/${brand}/4location.png`}
+                        src={`/images/about/grease/4location.png`}
                         alt=""
                         className="hover:scale-105 ease-in duration-100"
                     />
                     <img
-                        src={`/images/about/${brand}/25years.png`}
+                        src={`/images/about/grease/25years.png`}
                         alt=""
                         className="hover:scale-105 ease-in duration-100"
                     />
                     <img
-                        src={`/images/about/${brand}/24hour.png`}
+                        src={`/images/about/grease/24hour.png`}
                         alt=""
                         className="hover:scale-105 ease-in duration-100"
                     />

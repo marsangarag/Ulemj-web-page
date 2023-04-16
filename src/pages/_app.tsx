@@ -4,7 +4,6 @@ import type { AppProps } from "next/app";
 import { AnimatePresence } from "framer-motion";
 import Page from "components/layout/page";
 import AppProvider from "lib/context/app";
-import WithPath from "lib/path";
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
@@ -18,11 +17,9 @@ export default function App({ Component, pageProps }: AppProps) {
             </Head>
             <AppProvider>
                 <AnimatePresence mode="wait">
-                    <WithPath>
-                        <Page>
-                            <Component {...pageProps} />
-                        </Page>
-                    </WithPath>
+                    <Page>
+                        <Component {...pageProps} />
+                    </Page>
                 </AnimatePresence>
             </AppProvider>
         </>
