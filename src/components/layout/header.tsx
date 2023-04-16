@@ -25,7 +25,7 @@ export default function Header() {
             route: "http://appointment.ulemjgrease.com/",
         },
         { en: "Shop", mon: "Каталог", route: "https://shop.ulemjgrease.com/" },
-        { en: "About", mon: "Тухай", route: "/about" },
+        { en: "About", mon: "Тухай", route: `about` },
     ];
 
     const rightItems = [
@@ -43,10 +43,10 @@ export default function Header() {
     };
 
     return (
-        <div className="relative h-full w-full sm:block flex flex-col items-center">
+        <div className="relative h-full w-full sm:block flex flex-col items-center border-b border-main/50">
             <Opacity
                 className="cursor-pointer"
-                onClick={() => onNavigate("/")}
+                onClick={() => onNavigate(`${router.pathname}`)}
                 delay={0.2}
             >
                 <Image
