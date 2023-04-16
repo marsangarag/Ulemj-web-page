@@ -50,19 +50,19 @@ export default function About() {
             <div className="grid sm:grid-cols-3 px-24 py-8 bg-black/5 gap-1">
                 <div>
                     <img
-                        src="/images/LPG.jpg"
+                        src="/images/about/LPG.jpg"
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl"
                     />
                 </div>
                 <div>
                     <img
-                        src="/images/M22.jpg"
+                        src="/images/about/M22.jpg"
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl"
                     />
                 </div>
                 <div>
                     <img
-                        src="/images/Glowsolution.jpg"
+                        src="/images/about/Glowsolution.jpg"
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl"
                     />
                 </div>
@@ -74,22 +74,22 @@ export default function About() {
                 </h2>
                 <div className="grid sm:grid-cols-4 px-24 items-center place-items-center">
                     <img
-                        src="/images/120staff.png"
+                        src="/images/about/120staff.png"
                         alt=""
                         className="hover:scale-105 ease-in duration-100"
                     />
                     <img
-                        src="/images/4location.png"
+                        src="/images/about/4location.png"
                         alt=""
                         className="hover:scale-105 ease-in duration-100"
                     />
                     <img
-                        src="/images/25years.png"
+                        src="/images/about/25years.png"
                         alt=""
                         className="hover:scale-105 ease-in duration-100"
                     />
                     <img
-                        src="/images/24hour.png"
+                        src="/images/about/24hour.png"
                         alt=""
                         className="hover:scale-105 ease-in duration-100"
                     />

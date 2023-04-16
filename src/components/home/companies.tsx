@@ -30,7 +30,7 @@ export default function Companies() {
         },
         {
             name: "grease",
-            route: "/",
+            route: "/grease",
         },
     ];
     return (

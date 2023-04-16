@@ -6,7 +6,7 @@ import RunningText from "components/home/running-text";
 import Salon from "components/home/salon";
 import Service from "components/home/service";
 
-export default function Home() {
+export default function Grease() {
     return (
         <div className="flex flex-col gap-y-2.5 ">
             <Banner />

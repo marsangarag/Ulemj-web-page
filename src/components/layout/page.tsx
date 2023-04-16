@@ -8,7 +8,7 @@ export default function Page({ children }: { children: any }) {
     return (
         <Opacity className={`w-screen h-screen overflow-x-hidden font-rubik`}>
             <div className="bg-main w-full h-5 md:h-8"></div>
-            <div className="px-5">
+            <div className="mx-5 border-r border-l border-main/50">
                 <Header />
                 {children}
                 <Footer />
