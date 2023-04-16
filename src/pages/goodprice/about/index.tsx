@@ -2,105 +2,100 @@ export default function About() {
     return (
         <div className="container mx-auto">
             <div className="px-2 md:px-24 pb-8 text-justify leading-5 ">
+                <h1 className="font-bold mb-8 text-center text-2xl">
+                    SERVICE IS OUR BUSINESS PERFECTION IS OUR GOAL SATISFACTION
+                    IS OUR GUARANTEE
+                </h1>
                 <p className="mb-8">
-                    We are the official distributor of internationally
-                    recognized <b>MCCM Medical Cosmetics LLC</b> of Portugal
-                    wich manufactures aesthetic professional ampoules, sheffield
-                    Pharmaceutical of USA wich manufactures creams for
-                    dermatology, allergy, pain relief, <b>Neogenesis Co.,Ltd</b>{" "}
-                    Global Leader Enterprise of Autologous Cell Therapies of
-                    South Korea which manufactures HA filler, PDO Thread Lift
-                    and cosmetic products, <b>Wooshin Labot-tach LLC</b> of
-                    South Korea which manufactures Hydrogel Patch Lines and Oral
-                    Disintegrating Fims, <b>Neocell Co.,Ltd</b> of USA which
-                    manufactures natural collagen supplements for beauty and
-                    sport.
+                    The Good Price Market is a well-established retail chain
+                    that began its operations in 1998. The store is equipped
+                    with high-quality German shop furnitures and US made
+                    refrigerators. Over time, the store expanded its reach by
+                    opening new branches in 2010, 2012, and 2013. Currently, the
+                    store has four branches, serving a wide customer base.
                 </p>
-                <div className="flex justify-center mb-8">
-                    <div className="hover:bg-pharm border border-pharm min-w-[330px] min-h-[200px] text-white rounded-xl flex justify-center items-center group">
-                        <div className="px-8 group-hover:hidden text-5xl font-bold text-pharm">
-                            MISSION
-                        </div>
-                        <div className="text-sm font-light hidden group-hover:block">
-                            To become the official distributor of <br />
-                            <br /> - Santen pharmaceutical of Japan <br />
-                            - Sanof pharmaceutical of France
-                            <br />
-                            - Allergan pharmaceutical of USA <br />- MC Neil
-                            consumer healthcare company of USA.
-                        </div>
+                <div className="mb-8 grid sm:grid-cols-3 gap-1 sm:gap-10">
+                    <div
+                        className={`border border-goodprice rounded-2xl py-8 px-5 hover:bg-goodprice
+                        } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
+                    >
+                        <h2 className="font-bold">MISSION</h2>
+                        <p>
+                            The store's mission is to create quality service
+                            with high standards
+                        </p>
+                    </div>
+                    <div
+                        className={`border border-goodprice rounded-2xl py-8 px-5 hover:bg-goodprice
+                        } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
+                    >
+                        <h2 className="font-bold">VISION</h2>
+                        <p>
+                            The values that guide the market are to establish an
+                            international trade channel and create a unified
+                            central distribution system.
+                        </p>
+                    </div>
+                    <div
+                        className={`border border-goodprice rounded-2xl py-8 px-5 hover:bg-goodprice
+                        } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
+                    >
+                        <h2 className="font-bold">VALUES</h2>
+                        <p>
+                            The store's motto is to respect the customer and
+                            value quality
+                        </p>
                     </div>
                 </div>
                 <p>
-                    The company’s business is the trade and import of the
-                    medicines, biological active products, medical technics,
-                    equipment and devices and cosmetic treatment instruments. It
-                    is the health product importer of Mongolia and the
-                    developing national company of wholesale.
+                    Good Price Store initially imported products solely from the
+                    United States, but now, it imports and sells products from
+                    various countries, including Germany, Korea, and Russia. The
+                    store's mission is to create perfect service standards,
+                    establish an international trade channel, and create a
+                    unified central distribution system. The values that guide
+                    the store include profit, speed and energy, the perfect
+                    solution, health, and family.
                 </p>
             </div>
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10">
                 <div>
                     <img
-                        src={`/images/about/pharm/Picture01.jpg`}
+                        src={`/images/about/goodprice/banner01.png`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/pharm/Picture02.jpg`}
+                        src={`/images/about/goodprice/banner02.png`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/pharm/Picture03.jpg`}
+                        src={`/images/about/goodprice/banner03.png`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
             </div>
             <div className="my-8 px-4">
                 <h2 className="text-center font-bold mb-8">
-                    We provide our drugs and medical and equipments to eleven
-                    Aesthetic clinics and twenty nine pharmacies in here
+                    Good Price Store has set its sights on creating its own
+                    brand in the international market.
                 </h2>
-                <div className="grid grid-cols-5 sm:px-20 items-center place-items-center">
-                    <div className="hover:scale-105 ease-in duration-100">
-                        <img
-                            src={`/images/about/pharm/Cosmetic.png`}
-                            alt="Cosmetic"
-                        />
-                        <b>Cosmetic</b>
-                    </div>
-                    <div className="hover:scale-105 ease-in duration-100">
-                        <img
-                            src={`/images/about/pharm/Antibiotic.png`}
-                            alt="Antibiotic"
-                        />
-                        <b>Antibiotic</b>
-                    </div>
-                    <div className="hover:scale-105 ease-in duration-100">
-                        <img
-                            src={`/images/about/pharm/Supplement.png`}
-                            alt="Supplement"
-                        />
-                        <b>Supplement</b>
-                    </div>
-                    <div className="hover:scale-105 ease-in duration-100">
-                        <img
-                            src={`/images/about/pharm/Vitamin.png`}
-                            alt="Vitamin"
-                        />
-                        <b>Vitamin</b>
-                    </div>
-                    <div className="hover:scale-105 ease-in duration-100">
-                        <img
-                            src={`/images/about/pharm/Protein.png`}
-                            alt="Protein"
-                        />
-                        <b>Protein</b>
-                    </div>
+                <div className="sm:px-20 mb-8">
+                    <img
+                        src={`/images/about/goodprice/banner.jpg`}
+                        alt=""
+                        className="hover:scale-105 ease-in duration-100 rounded-xl"
+                    />
                 </div>
+                <p>
+                    The Good Price Market’s motto is to respect the customer and
+                    value quality. With its commitment to providing excellent
+                    service, high-quality products, and a focus on international
+                    trading.
+                </p>
             </div>
         </div>
     );
