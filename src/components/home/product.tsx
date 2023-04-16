@@ -62,6 +62,52 @@ export default function Products({ brand }: { brand: string }) {
                 link: "https://shop.ulemjgrease.com/products/null/179442",
             },
         ],
+        clinic: [
+            {
+                name: "Shave Relief Balm",
+                price: "31.900",
+                link: "https://shop.ulemjgrease.com/products/9583/34469",
+            },
+
+            {
+                name: "3 Action with hemp seed oil",
+                price: "178.900",
+                link: "https://shop.ulemjgrease.com/products/9583/35568",
+            },
+            {
+                name: "Instant lift eye mask",
+                price: "28.900",
+                link: "https://shop.ulemjgrease.com/products/9256/87064",
+            },
+            {
+                name: "Goli - Supergreens gummies",
+                price: "89.000",
+                link: "https://shop.ulemjgrease.com/products/null/179442",
+            },
+        ],
+        stardom: [
+            {
+                name: "Shave Relief Balm",
+                price: "31.900",
+                link: "https://shop.ulemjgrease.com/products/9583/34469",
+            },
+
+            {
+                name: "3 Action with hemp seed oil",
+                price: "178.900",
+                link: "https://shop.ulemjgrease.com/products/9583/35568",
+            },
+            {
+                name: "Instant lift eye mask",
+                price: "28.900",
+                link: "https://shop.ulemjgrease.com/products/9256/87064",
+            },
+            {
+                name: "Goli - Supergreens gummies",
+                price: "89.000",
+                link: "https://shop.ulemjgrease.com/products/null/179442",
+            },
+        ],
     };
 
     const onShopClick = (link: string) => {

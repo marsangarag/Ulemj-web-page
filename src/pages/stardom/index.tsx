@@ -33,10 +33,10 @@ export default function Stardom() {
                 Sustainability – Customer Service – Quality - Personalization -
                 Innovation - Professionalism and Teamwork.
             </div>
-            <Products />
-            <Service />
+            <Products brand="stardom" />
+            <Service brand="stardom" />
             <Companies />
-            <Carousel />
+            <Carousel brand="stardom" />
         </div>
     );
 }

@@ -11,6 +11,7 @@ export default function Carousel({ brand }: { brand: string }) {
         grease: ["banner00", "banner01", "banner02", "banner03", "banner04"],
         pharm: ["banner1"],
         clinic: ["banner1"],
+        stardom: ["banner1"],
     };
     return (
         <Fade className="" transition={{ y: -250, delay: 0 }}>

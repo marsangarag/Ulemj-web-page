@@ -108,6 +108,38 @@ export default function Salon({ brand }: { brand: string }) {
                 },
             },
         },
+        stardom: {
+            left: {
+                image: "beauty",
+                title: "Beauty Spa",
+                text: "Introduction to outstanding beauty services",
+                button: {
+                    title: "Beauty Services",
+                    route: "http://appointment.ulemjgrease.com/appointments?business_type=2",
+                },
+            },
+            center: {
+                top: {
+                    image: "nail",
+                    title: "Nails",
+                    text: "Manicure, Pedicure and Treatment",
+                    route: "http://appointment.ulemjgrease.com/appointments?business_type=1",
+                },
+                bottom: {
+                    text: "We served <b>6000</b> clients a month and more than <b>70%</b>  of them are lon-Term for more than <b>3 years</b>. Total clients are potential and <b>15%</b>  of our clients are foreigners, living in Ulaanbaatar.",
+                    route: "http://appointment.ulemjgrease.com/",
+                },
+            },
+            right: {
+                image: "hair",
+                title: "Hair treatment",
+                text: "Stylish & treatment",
+                button: {
+                    title: "Hair Services",
+                    route: "http://appointment.ulemjgrease.com/appointments?business_type=3",
+                },
+            },
+        },
     };
 
     return (
