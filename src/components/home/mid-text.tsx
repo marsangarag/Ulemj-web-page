@@ -6,7 +6,7 @@ export default function MidText({ brand }: { brand: string }) {
         pharm: "We provide our drugs and medical and equipments to eleven Aesthetic clinics and twenty nine pharmacies in here.",
     };
     return (
-        <div className="self-center py-5 text-center font-bold">
+        <div className="self-center py-5 px-5 text-center font-bold">
             {text[brand as keyof Brand]}
         </div>
     );

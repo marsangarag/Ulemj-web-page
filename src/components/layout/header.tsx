@@ -94,22 +94,27 @@ export default function Header({ brand }: { brand: string }) {
 
     return (
         <div
-            className={`relative h-[63px] flex flex-col items-center border-b ${
+            className={`relative h-full sm:h-16 flex flex-col gap-y-1 items-center border-b ${
                 colorCodes[brand as keyof Brand]?.border
             }`}
         >
             <Opacity
-                className="sm:absolute top-0 sm:left-4"
+                className="sm:absolute sm:left-0"
                 onClick={() => onNavigate(`/${brand}`)}
                 delay={0.2}
             >
-                <Image
+                <img
+                    src={`/images/brand/${brand}.png`}
+                    alt={brand}
+                    className="h-16 aspect-auto"
+                />
+                {/* <Image
                     className="cursor-pointer"
                     src={`/images/brand/${brand}.png`}
                     alt={brand}
-                    height={0}
+                    height={63}
                     width={120}
-                />
+                /> */}
             </Opacity>
             <div className="flex items-center gap-x-5 text-sm sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:top-1/2 sm:-translate-y-1/2 pb-4 sm:pb-0 -mt-4 sm:mt-0">
                 {centerItems[brand as keyof typeof centerItems]?.map(

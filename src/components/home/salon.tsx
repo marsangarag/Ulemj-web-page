@@ -6,7 +6,9 @@ import Fade from "components/layout/fade";
 
 export default function Salon({ brand }: { brand: string }) {
     const onButtonClick = (link: string) => {
-        window.open(link, "_blank", "noreferrer");
+        if (link) {
+            window.open(link, "_blank", "noreferrer");
+        }
     };
 
     const content = {
@@ -44,33 +46,33 @@ export default function Salon({ brand }: { brand: string }) {
         },
         pharm: {
             left: {
-                image: "beauty",
-                title: "Beauty Spa",
-                text: "Introduction to outstanding beauty services",
+                image: "goli",
+                title: "Apple Cide Vinegar Gummies",
+                text: "Infused with a delicious flavor profile. Taste the Apple. Not the Vinegar.®",
                 button: {
-                    title: "Beauty Services",
-                    route: "http://appointment.ulemjgrease.com/appointments?business_type=2",
+                    title: "Read more",
+                    route: "https://shop.ulemjgrease.com/posts/3617",
                 },
             },
             center: {
                 top: {
-                    image: "nail",
-                    title: "Nails",
-                    text: "Manicure, Pedicure and Treatment",
-                    route: "http://appointment.ulemjgrease.com/appointments?business_type=1",
+                    image: "hairburst",
+                    title: "Hairburst",
+                    text: "Coming soon...",
+                    route: "",
                 },
                 bottom: {
-                    text: "We served <b>6000</b> clients a month and more than <b>70%</b>  of them are lon-Term for more than <b>3 years</b>. Total clients are potential and <b>15%</b>  of our clients are foreigners, living in Ulaanbaatar.",
+                    text: "<b>Ulemj Pharmacy</b> distributes natural collagen supplements for beauty and sport from <b>Neocell Co..ltd</b>  of the USA, which have been proven to be highly effective.",
                     route: "http://appointment.ulemjgrease.com/",
                 },
             },
             right: {
-                image: "hair",
-                title: "Hair treatment",
+                image: "byebye",
+                title: "Bye Bye Blemish Skin Treatments",
                 text: "Stylish & treatment",
                 button: {
-                    title: "Hair Services",
-                    route: "http://appointment.ulemjgrease.com/appointments?business_type=3",
+                    title: "Read more",
+                    route: "https://shop.ulemjgrease.com/posts/817",
                 },
             },
         },
@@ -89,6 +91,7 @@ export default function Salon({ brand }: { brand: string }) {
                     alt="beauty"
                     className="rounded-xl h-full w-full aspect-auto"
                 />
+                <div className="absolute h-full inset-0 w-full rounded-xl bg-gradient-to-b from-transparent to-black/40"></div>
                 <div className="absolute bottom-5 left-5 right-5 flex flex-col gap-y-2.5 text-white items-start">
                     <div className="flex flex-col gap-y-1">
                         <div className="text-xl sm:text-3xl font-light tracking-wide">
@@ -121,8 +124,12 @@ export default function Salon({ brand }: { brand: string }) {
                             content[brand as keyof Brand]?.center?.top?.route
                         )
                     }
-                    className="cursor-pointer w-1/2 md:w-full relative"
+                    className={`${
+                        content[brand as keyof Brand]?.center?.top?.route &&
+                        "cursor-pointer "
+                    } w-1/2 md:w-full relative`}
                 >
+                    <div className="absolute h-full inset-0 w-full rounded-xl bg-gradient-to-b from-transparent to-black/40"></div>
                     <img
                         src={`/images/salon/${brand}/${
                             content[brand as keyof Brand]?.center?.top?.image
@@ -130,8 +137,14 @@ export default function Salon({ brand }: { brand: string }) {
                         alt="nail"
                         className="rounded-xl aspect-auto"
                     />
-                    <div className="bottom-2.5 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 absolute flex flex-col">
-                        <div className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-light tracking-wide">
+                    <div
+                        className={`bottom-2.5 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 absolute flex flex-col ${
+                            brand === "pharm" && "text-white"
+                        }`}
+                    >
+                        <div
+                            className={`text-xl sm:text-xl md:text-2xl lg:text-3xl font-light tracking-wide `}
+                        >
                             {content[brand as keyof Brand]?.center?.top?.title}
                         </div>
                         <div className="text-smaller lg:text-xs">
@@ -143,7 +156,7 @@ export default function Salon({ brand }: { brand: string }) {
                     transition={{ y: -200, delay: 0.2 }}
                     className={`${
                         colorCodes[brand as keyof Brand].bgColor
-                    } aspect-auto text-white rounded-xl p-2.5 sm:p-4 w-1/2 md:w-full md:h-full flex flex-col justify-between items-start gap-y-1.5`}
+                    } aspect-auto text-white rounded-xl p-2.5 sm:p-4 w-1/2 md:w-full md:h-full flex flex-col justify-between items-start gap-y-2.5`}
                 >
                     <div
                         onClick={() =>
@@ -156,7 +169,7 @@ export default function Salon({ brand }: { brand: string }) {
                     >
                         Appointment
                     </div>
-                    <div className="text-smaller sm:text-xs lg:text-sm xl:text-lg">
+                    <div className="text-smaller text-justify sm:text-sm lg:text-base xl:text-lg">
                         {parse(
                             content[brand as keyof Brand]?.center?.bottom?.text
                         )}
@@ -167,6 +180,7 @@ export default function Salon({ brand }: { brand: string }) {
                 transition={{ y: 200, delay: 0.3 }}
                 className="md:col-span-4 relative w-full "
             >
+                <div className="absolute h-full inset-0 w-full rounded-xl bg-gradient-to-b from-transparent to-black/40"></div>
                 <img
                     src={`/images/salon/${brand}/${
                         content[brand as keyof Brand]?.right?.image
