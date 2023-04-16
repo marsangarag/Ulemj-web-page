@@ -39,6 +39,14 @@ const colorCodes = {
         "button-border": "border-white",
         color: "text-white",
     },
+    california: {
+        bgColor: "bg-california",
+        border: "border-california/50",
+        hover: "hover:bg-california",
+        button: "bg-transparent",
+        "button-border": "border-white",
+        color: "text-white",
+    },
 };
 
 export { colorCodes };

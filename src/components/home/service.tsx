@@ -74,6 +74,19 @@ export default function Service({ brand }: { brand: string }) {
                 img: "right",
             },
         },
+        california: {
+            left: {
+                image: "left",
+                title: "",
+                text: "",
+                route: "",
+            },
+            right: {
+                route: "https://www.instagram.com/stardom_boutique/",
+                button: "<span className='font-bold'>#</span>Oversized denim shirt",
+                img: "right",
+            },
+        },
     };
 
     return (
@@ -96,16 +109,18 @@ export default function Service({ brand }: { brand: string }) {
                     <div className="text-smaller sm:text-xs md:text-sm lg:text-base xl:text-xl font-normal pb-1 sm:pb-5 text-justify">
                         {parse(content[brand as keyof Brand]?.left?.text)}
                     </div>
-                    <button
-                        onClick={() =>
-                            onLinkClick(
-                                content[brand as keyof Brand]?.left?.route
-                            )
-                        }
-                        className="border-2 shadow py-1.5 px-3  rounded-3xl text-xs md:text-sm lg:text-base font-semibold"
-                    >
-                        Learn more
-                    </button>
+                    {brand !== "california" && (
+                        <button
+                            onClick={() =>
+                                onLinkClick(
+                                    content[brand as keyof Brand]?.left?.route
+                                )
+                            }
+                            className="border-2 shadow py-1.5 px-3  rounded-3xl text-xs md:text-sm lg:text-base font-semibold"
+                        >
+                            Learn more
+                        </button>
+                    )}
                 </div>
             </Fade>
             <Fade
@@ -113,21 +128,38 @@ export default function Service({ brand }: { brand: string }) {
                 onClick={() =>
                     onLinkClick(content[brand as keyof Brand]?.right?.route)
                 }
-                className="md:col-span-2 cursor-pointer relative"
+                className="md:col-span-2 cursor-pointer relative aspect-square"
             >
-                <div className="gradient-bg"></div>
-                <div className="absolute z-20 right-0 font-light text-end whitespace-nowrap text-smaller md:text-xs lg:text-base xl:text-xl">
-                    <div className="bg-white rounded-bl-xl px-2 py-1 sm:py-2">
-                        {parse(content[brand as keyof Brand]?.right?.button)}
+                {brand === "california" ? (
+                    <div className="absolute flex flex-col items-center gap-y-5 top-1/2 w-full px-10 -translate-y-1/2">
+                        <div className="text-smaller md:text-xs lg:text-base xl:text-xl text-center">
+                            To ensure the highest quality of cuisine, a
+                            Michelin-starred chef from the United States works
+                            as the head chef.
+                        </div>
+                        <div className="border-black text-xs md:text-sm lg:text-base xl:text-xl border rounded-3xl p-2 font-medium">
+                            VIEW OUR MENU
+                        </div>
                     </div>
-                </div>
-                <img
-                    src={`/images/service/${brand}/${
-                        content[brand as keyof Brand]?.right?.img
-                    }.jpg`}
-                    alt="baga tenger"
-                    className="rounded-xl h-full w-full"
-                />
+                ) : (
+                    <>
+                        <div className="gradient-bg"></div>
+                        <div className="absolute z-20 right-0 font-light text-end whitespace-nowrap text-smaller md:text-xs lg:text-base xl:text-xl">
+                            <div className="bg-white rounded-bl-xl px-2 py-1 sm:py-2">
+                                {parse(
+                                    content[brand as keyof Brand]?.right?.button
+                                )}
+                            </div>
+                        </div>
+                        <img
+                            src={`/images/service/${brand}/${
+                                content[brand as keyof Brand]?.right?.img
+                            }.jpg`}
+                            alt="baga tenger"
+                            className="rounded-xl h-full w-full"
+                        />
+                    </>
+                )}
             </Fade>
         </div>
     );

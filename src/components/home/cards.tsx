@@ -193,6 +193,44 @@ export default function Salon({ brand }: { brand: string }) {
                 },
             },
         },
+        california: {
+            left: {
+                image: "left",
+                title: "Catering & Events",
+                text: "We cater to corporate or social events including weddings, receptions,  birthdays, anniversaries, and more.",
+                button: {
+                    title: "See more",
+                    route: "https://www.facebook.com/California.Restaurant.MN",
+                },
+                button2: {
+                    title: "",
+                    route: "",
+                },
+            },
+            center: {
+                top: {
+                    image: "top",
+                    title: "Menu",
+                    text: "Our chefs use fresh, seasonal ingredients to make affordable, tasty, nourishing meals.",
+                    route: "https://qrmenu.mn/menu/ODQy",
+                },
+                bottom: {
+                    button: "Reservation",
+                    image: "",
+                    text: "The California Restaurant has received numerous accolades, including being named the leading restaurant in Ulaanbaatar in 2008, 2012, and 2013 by the Public Dining Association of OU.",
+                    route: "tel:+97611319031",
+                },
+            },
+            right: {
+                image: "right",
+                title: "Our Services",
+                text: "",
+                button: {
+                    title: "See more",
+                    route: "https://www.facebook.com/California.Restaurant.MN",
+                },
+            },
+        },
     };
 
     return (
@@ -228,9 +266,11 @@ export default function Salon({ brand }: { brand: string }) {
                             }
                             className={`${
                                 colorCodes[brand as keyof Brand]?.button
-                            } ${
-                                colorCodes[brand as keyof Brand]?.color
-                            } cursor-pointer shadow rounded-3xl py-2.5 px-4 text-xs md:text-sm lg:text-base xl:text-xl font-medium`}
+                            } ${colorCodes[brand as keyof Brand]?.color}  ${
+                                colorCodes[brand as keyof Brand]?.[
+                                    "button-border"
+                                ]
+                            } border cursor-pointer shadow rounded-3xl py-2.5 px-4 text-xs md:text-sm lg:text-base xl:text-xl font-medium`}
                         >
                             {content[brand as keyof Brand]?.left?.button?.title}
                         </div>
@@ -244,9 +284,11 @@ export default function Salon({ brand }: { brand: string }) {
                                 }
                                 className={`${
                                     colorCodes[brand as keyof Brand]?.button
-                                } ${
-                                    colorCodes[brand as keyof Brand]?.color
-                                } cursor-pointer shadow rounded-3xl py-2.5 px-4 text-xs md:text-sm lg:text-base xl:text-xl font-medium`}
+                                } ${colorCodes[brand as keyof Brand]?.color} ${
+                                    colorCodes[brand as keyof Brand]?.[
+                                        "button-border"
+                                    ]
+                                } border cursor-pointer shadow rounded-3xl py-2.5 px-4 text-xs md:text-sm lg:text-base xl:text-xl font-medium`}
                             >
                                 {
                                     content[brand as keyof Brand]?.left?.button2
@@ -268,7 +310,7 @@ export default function Salon({ brand }: { brand: string }) {
                     className={`${
                         content[brand as keyof Brand]?.center?.top?.route &&
                         "cursor-pointer "
-                    } w-1/2 md:w-full md:h-full relative`}
+                    }  w-1/2 md:w-full md:h-full relative`}
                 >
                     <div className="gradient-bg"></div>
                     <img
@@ -282,7 +324,8 @@ export default function Salon({ brand }: { brand: string }) {
                         className={`bottom-2.5 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 absolute flex flex-col ${
                             (brand === "pharm" ||
                                 brand === "stardom" ||
-                                brand === "clinic") &&
+                                brand === "clinic" ||
+                                brand === "california") &&
                             "text-white"
                         }`}
                     >
@@ -413,9 +456,13 @@ export default function Salon({ brand }: { brand: string }) {
                             }
                             className={`${
                                 colorCodes[brand as keyof Brand]?.button
-                            }  ${
+                            } ${
+                                colorCodes[brand as keyof Brand]?.[
+                                    "button-border"
+                                ]
+                            } ${
                                 colorCodes[brand as keyof Brand]?.color
-                            } shadow cursor-pointer rounded-3xl py-2.5 px-4 text-xs md:text-sm font-medium`}
+                            } border shadow cursor-pointer rounded-3xl py-2.5 px-4 text-xs md:text-sm font-medium`}
                         >
                             {
                                 content[brand as keyof Brand]?.right?.button

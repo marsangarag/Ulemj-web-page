@@ -39,6 +39,10 @@ export default function Carousel({ brand }: { brand: string }) {
             photos: ["dood"],
             route: "https://www.facebook.com/goodpricemarket ",
         },
+        california: {
+            photos: ["dood"],
+            route: "https://www.facebook.com/goodpricemarket ",
+        },
     };
     return (
         <Fade className="" transition={{ y: 250, delay: 0 }}>

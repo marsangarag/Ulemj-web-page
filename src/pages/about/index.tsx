@@ -98,7 +98,7 @@ export default function About() {
             </div>
             <div className="my-8 px-4">
                 <h2 className="text-center font-bold mb-8">
-                    We continuously introduce the world's best brands and
+                    We continuously introduce the world&#39;s best brands and
                     technology in our trade, industry, and services to improve
                     the quality of our products.
                 </h2>

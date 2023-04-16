@@ -8,6 +8,7 @@ module.exports = {
                 grease: "#C2B59B",
                 pharm: "#769193",
                 goodprice: "#26723e",
+                california: "#c0333d",
             },
             fontSize: {
                 smaller: ["10px", "12px"],

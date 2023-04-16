@@ -8,6 +8,8 @@ export default function MidText({ brand }: { brand: string }) {
         stardom:
             "Stardom Boutique has become one of the most sought-after and trend-setting shops in the city, making it a popular destination for fashion-forward individuals.",
         goodprice: "",
+        california:
+            "A PERFECT BLEND OF SENSATIONAL FOOD, INSPIRING IDEAS AND PROFESSIONAL STAFF.",
     };
     return (
         <div className="self-center py-5 px-5 text-center font-bold">

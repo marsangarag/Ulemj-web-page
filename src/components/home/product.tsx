@@ -134,6 +134,28 @@ export default function Products({ brand }: { brand: string }) {
                 link: "https://www.instagram.com/stardom_boutique/",
             },
         ],
+        california: [
+            {
+                name: "Imported products",
+                price: "Beverages",
+                link: "https://www.instagram.com/stardom_boutique/",
+            },
+            {
+                name: "Natural Fruits & Vegetables",
+                price: "Sustainable",
+                link: "https://www.instagram.com/stardom_boutique/",
+            },
+            {
+                name: "Organic Food",
+                price: "Healthy eating",
+                link: "https://www.instagram.com/stardom_boutique/",
+            },
+            {
+                name: "Fresh Bakery",
+                price: "Healthy lifestyle",
+                link: "https://www.instagram.com/stardom_boutique/",
+            },
+        ],
     };
 
     const onShopClick = (link: string) => {

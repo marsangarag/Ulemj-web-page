@@ -93,6 +93,23 @@ export default function Header({ brand }: { brand: string }) {
                 route: `/${brand}/about`,
             },
         ],
+        california: [
+            {
+                en: "Reservations",
+                mon: "",
+                route: `tel:+97611319031 `,
+            },
+            {
+                en: "Services",
+                mon: "",
+                route: `https://www.facebook.com/California.Restaurant.MN`,
+            },
+            {
+                en: "About",
+                mon: "Тухай",
+                route: `/${brand}/about`,
+            },
+        ],
     };
 
     const rightItems = [

@@ -4,4 +4,5 @@ export interface Brand {
     clinic: string;
     stardom: string;
     goodprice?: string;
+    california: string;
 }

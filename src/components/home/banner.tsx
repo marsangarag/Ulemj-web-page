@@ -61,6 +61,17 @@ export default function Banner({
             },
             button2: null,
         },
+        california: {
+            text: "<span className='font-bold'>The California Restaurant</span>  was established in 2002 with a unique American-style environment that evokes the atmosphere of California.",
+            button1: {
+                title: "Table reservation",
+                route: "tel:+97611319031",
+            },
+            button2: {
+                title: "View our menu",
+                route: "https://qrmenu.mn/menu/ODQy",
+            },
+        },
     };
 
     const onButtonClick = (link?: string) => {
@@ -83,7 +94,7 @@ export default function Banner({
                             scrollbar={{ draggable: true }}
                             loop={true}
                             autoplay={{
-                                delay: 5000,
+                                delay: 4000,
                                 disableOnInteraction: false,
                             }}
                         >

@@ -244,6 +244,54 @@ export default function Footer({ brand }: { brand: string }) {
                 ],
             },
         ],
+        california: [
+            {
+                title: { en: "Navigation", mon: "Хэсэх" },
+                items: [
+                    {
+                        en: "Reservation",
+                        mon: "Дэлгүүр",
+                        route: "+97611319031",
+                    },
+                    {
+                        en: "Services",
+                        mon: "Цаг захиалах",
+                        route: "https://www.facebook.com/California.Restaurant.MN",
+                    },
+                    { en: "About", mon: "Дэлгэрэнгүй", route: "/about" },
+                ],
+            },
+            {
+                title: { en: "Contact", mon: "Холбоо барих" },
+                items: [
+                    {
+                        en: "california@ulemj.mn",
+                        mon: "california@ulemj.mn",
+                        route: "california@ulemj.mn",
+                    },
+                    {
+                        en: "+976 11319031",
+                        mon: "+976 11319031",
+                        route: "+976 11319031",
+                    },
+                ],
+            },
+            {
+                title: { en: "Social media", mon: "Сошиал медиа" },
+                items: [
+                    // {
+                    //     en: "Instagram",
+                    //     mon: "Instagram",
+                    //     route: "https://www.instagram.com/stardom_boutique/",
+                    // },
+                    {
+                        en: "Facebook",
+                        mon: "Facebook",
+                        route: "https://www.facebook.com/California.Restaurant.MN",
+                    },
+                ],
+            },
+        ],
     };
 
     const onLinkClick = (route: string) => {

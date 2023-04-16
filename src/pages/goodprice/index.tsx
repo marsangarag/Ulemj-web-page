@@ -9,10 +9,10 @@ export default function Goodprice() {
     const upperCase = (text: string) => {
         return text.toUpperCase();
     };
+
     return (
         <div className="flex flex-col gap-y-2.5 ">
             <Banner images={["deed1", "deed2", "deed3"]} brand="goodprice" />
-
             <Image
                 src={"/icons/goodprice.png"}
                 alt="goodprice"
