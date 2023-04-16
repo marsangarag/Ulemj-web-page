@@ -14,6 +14,7 @@ export default function Service() {
                 type: "spring",
                 stiffness: 100,
                 damping: 50,
+                duration: 0.5,
             }}
             viewport={{ once: true }}
             className="flex flex-col gap-y-1 md:grid md:grid-cols-5 gap-x-1 md:place-items-stretch"

@@ -23,12 +23,13 @@ export default function Salon({ brand }: { brand: string }) {
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 300 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
                 type: "spring",
                 stiffness: 100,
                 damping: 50,
+                duration: 1,
             }}
             viewport={{ once: true }}
             onContextMenu={(e) => e.preventDefault()}

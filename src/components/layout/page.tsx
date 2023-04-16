@@ -19,6 +19,16 @@ export default function Page({ children }: { children: any }) {
                 setBrand("grease");
             } else if (pathname.includes("pharm")) {
                 setBrand("pharm");
+            } else if (pathname.includes("clinic")) {
+                setBrand("clinic");
+            } else if (pathname.includes("california")) {
+                setBrand("california");
+            } else if (pathname.includes("goodprice")) {
+                setBrand("goodprice");
+            } else if (pathname.includes("stardom")) {
+                setBrand("stardom");
+            } else if (pathname.includes("buildings")) {
+                setBrand("buildings");
             }
         }
     }, [router]);
