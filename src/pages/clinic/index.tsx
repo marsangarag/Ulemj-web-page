@@ -33,10 +33,10 @@ export default function Clinic() {
                 Sustainability – Customer Service – Quality - Personalization -
                 Innovation - Professionalism and Teamwork.
             </div>
-            <Products />
-            <Service />
+            <Products brand="clinic" />
+            <Service brand="clinic" />
             <Companies />
-            <Carousel />
+            <Carousel brand="clinic" />
         </div>
     );
 }
