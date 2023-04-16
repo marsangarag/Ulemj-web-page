@@ -129,7 +129,7 @@ video {
 }
 
 .shadow-text {
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .marquee {
