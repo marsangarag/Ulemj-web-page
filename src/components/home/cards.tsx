@@ -84,36 +84,36 @@ export default function Salon({ brand }: { brand: string }) {
         },
         clinic: {
             left: {
-                image: "beauty",
-                title: "Beauty Spa",
-                text: "Introduction to outstanding beauty services",
+                image: "left",
+                title: "Laser Treatments",
+                text: "Introduction to outstanding laser services",
                 button: {
-                    title: "Beauty Services",
-                    route: "http://appointment.ulemjgrease.com/appointments?business_type=2",
+                    title: "Treatments Services",
+                    route: "http://appointment.ulemjgrease.com/salon-profile/clinic/blogs/13 ",
                 },
                 button2: { title: "", route: "" },
             },
             center: {
                 top: {
-                    image: "nail",
-                    title: "Nails",
-                    text: "Manicure, Pedicure and Treatment",
-                    route: "http://appointment.ulemjgrease.com/appointments?business_type=1",
+                    image: "top",
+                    title: "Threads",
+                    text: "Mesotherapy and Aesthetical Treatments",
+                    route: "http://appointment.ulemjgrease.com/salon-profile/clinic/blogs/17",
                 },
                 bottom: {
-                    button: "Appointment",
-                    image: "",
-                    text: "We served <b>6000</b> clients a month and more than <b>70%</b>  of them are lon-Term for more than <b>3 years</b>. Total clients are potential and <b>15%</b>  of our clients are foreigners, living in Ulaanbaatar.",
-                    route: "http://appointment.ulemjgrease.com/",
+                    button: "",
+                    image: "bottom",
+                    text: "We offer a wide range of treatments, including Botox PRP for face, hair, and hand rejuvenation, hyaluronic acid injection, IPL treatment for skin rejuvenation, hair removal, acne treatment, pigmentation, and laser treatment for scar removal and freckles for you",
+                    route: "http://appointment.ulemjgrease.com/salon-profile/clinic/ ",
                 },
             },
             right: {
-                image: "hair",
-                title: "Hair treatment",
-                text: "Stylish & treatment",
+                image: "right",
+                title: "Foreign doctors",
+                text: "Our foreign specialized doctors",
                 button: {
-                    title: "Hair Services",
-                    route: "http://appointment.ulemjgrease.com/appointments?business_type=3",
+                    title: "See more",
+                    route: "http://appointment.ulemjgrease.com/salon-profile/clinic/blogs ",
                 },
             },
         },
@@ -242,7 +242,9 @@ export default function Salon({ brand }: { brand: string }) {
                     />
                     <div
                         className={`bottom-2.5 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 absolute flex flex-col ${
-                            (brand === "pharm" || brand === "stardom") &&
+                            (brand === "pharm" ||
+                                brand === "stardom" ||
+                                brand === "clinic") &&
                             "text-white"
                         }`}
                     >
@@ -259,8 +261,18 @@ export default function Salon({ brand }: { brand: string }) {
                 {content[brand as keyof Brand]?.center?.bottom?.image ? (
                     <Fade
                         transition={{ y: -200, delay: 0.2 }}
-                        className={`aspect-auto rounded-xl relative w-1/2 md:w-full md:h-full flex flex-col justify-between items-start gap-y-2.5`}
+                        className={`aspect-auto ${
+                            content[brand as keyof Brand]?.center?.bottom
+                                ?.route && "cursor-pointer"
+                        } rounded-xl relative w-1/2 md:w-full md:h-full flex flex-col justify-between items-start gap-y-2.5`}
+                        onClick={() =>
+                            onButtonClick(
+                                content[brand as keyof Brand]?.center?.bottom
+                                    ?.route
+                            )
+                        }
                     >
+                        <div className="gradient-bg"></div>
                         <img
                             src={`/images/salon/${brand}/${
                                 content[brand as keyof Brand]?.center?.bottom
@@ -269,22 +281,38 @@ export default function Salon({ brand }: { brand: string }) {
                             alt="nail"
                             className="rounded-xl h-full w-full"
                         />
-                        <div
-                            onClick={() =>
-                                onButtonClick(
+
+                        {content[brand as keyof Brand]?.center?.bottom
+                            ?.button ? (
+                            <div
+                                onClick={() =>
+                                    onButtonClick(
+                                        content[brand as keyof Brand]?.center
+                                            ?.bottom?.route
+                                    )
+                                }
+                                className={`rounded-3xl absolute top-4 left-4 cursor-pointer border ${
+                                    colorCodes[brand as keyof Brand]?.border
+                                } text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-1.5 px-5 font-medium`}
+                            >
+                                {
                                     content[brand as keyof Brand]?.center
-                                        ?.bottom?.route
-                                )
-                            }
-                            className={`rounded-3xl absolute top-4 left-4 cursor-pointer border ${
-                                colorCodes[brand as keyof Brand]?.border
-                            } text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-1.5 px-5 font-medium`}
-                        >
-                            {
-                                content[brand as keyof Brand]?.center?.bottom
-                                    ?.button
-                            }
-                        </div>
+                                        ?.bottom?.button
+                                }
+                            </div>
+                        ) : null}
+                        {content[brand as keyof Brand]?.center?.bottom?.text ? (
+                            <div
+                                className={`absolute bottom-2 w-full px-2 leading-tight text-smaller md:bottom-5 md:px-5 lg:text-sm text-justify ${
+                                    colorCodes[brand as keyof Brand].color
+                                }`}
+                            >
+                                {
+                                    content[brand as keyof Brand]?.center
+                                        ?.bottom?.text
+                                }
+                            </div>
+                        ) : null}
                     </Fade>
                 ) : (
                     <Fade

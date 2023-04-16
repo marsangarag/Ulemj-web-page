@@ -34,12 +34,10 @@ export default function Banner({ brand }: { brand: string }) {
             button2: null,
         },
         clinic: {
-            bold1: "Ulemj pharm LLC",
-            bold2: "since 2016.",
-            text: "is a renowned establishment that has been operating ",
+            text: "We provide top-quality beauty treatments, adhering to international standarts and ensuring a safe and comfortable experience for clients",
             button1: {
-                title: "Shop ow",
-                route: "https://shop.ulemjgrease.com/",
+                title: "Appointment",
+                route: "http://appointment.ulemjgrease.com/salon-profile/clinic/",
             },
             button2: null,
         },

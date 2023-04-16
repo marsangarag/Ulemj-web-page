@@ -38,12 +38,12 @@ export default function Service({ brand }: { brand: string }) {
             left: {
                 image: "left",
                 title: "",
-                text: "<div className='text-xs sm:text-base font-light'>One of the brands that Ulemj Pharmacy is proud to distribute is <b>MCCM</b>  Medical Cosmetics LLC of Portugal. This company manufactures aesthetic professional ampoules that are designed to provide clients with exceptional skin care results. Additionally, Ulemj Pharmacy distributes creams for dermatology, allergy, and pain relief from Sheffield Pharmaceutical of the USA.</div>",
-                route: "http://appointment.ulemjgrease.com/salon-profile/wellness/",
+                text: "<div className='flex flex-col text-smaller md:text-sm lg:text-base xl:text-3xl'><div>External beauty is a gift from God,</div><div>But inner beauty is your own creation</div><div className='font-bold'>Lee Ji Young /PhD/</div> </div>",
+                route: "http://appointment.ulemjgrease.com/salon-profile/clinic/blogs/15",
             },
             right: {
-                route: "http://appointment.ulemjgrease.com/salon-profile/egulen/",
-                button: "We have the most effective <span className='font-bold'>skin lightening treatments</span>",
+                route: "http://appointment.ulemjgrease.com/salon-profile/clinic/blogs/18 ",
+                button: "Get to know more about <span className='font-bold'>Service</span>",
                 img: "right",
             },
         },
@@ -103,7 +103,7 @@ export default function Service({ brand }: { brand: string }) {
                 className="md:col-span-2 cursor-pointer relative"
             >
                 <div className="gradient-bg"></div>
-                <div className="absolute z-20 right-0 font-light text-end whitespace-nowrap text-xs md:text-sm lg:text-lg xl:text-xl">
+                <div className="absolute z-20 right-0 font-light text-end whitespace-nowrap text-smaller md:text-xs lg:text-base xl:text-xl">
                     <div className="bg-white rounded-bl-xl px-2 py-1 sm:py-2">
                         {parse(content[brand as keyof Brand]?.right?.button)}
                     </div>

@@ -105,14 +105,14 @@ export default function Footer({ brand }: { brand: string }) {
                 title: { en: "Navigation", mon: "Хэсэх" },
                 items: [
                     {
-                        en: "Shop",
+                        en: "Appointment",
                         mon: "Дэлгүүр",
-                        route: "https://shop.ulemjgrease.com/",
+                        route: "http://appointment.ulemjgrease.com/salon-profile/clinic/",
                     },
                     {
-                        en: "Booking",
+                        en: "Treatments",
                         mon: "Цаг захиалах",
-                        route: "http://appointment.ulemjgrease.com/",
+                        route: "http://appointment.ulemjgrease.com/salon-profile/clinic/services",
                     },
                     { en: "About", mon: "Дэлгэрэнгүй", route: "/about" },
                 ],
@@ -121,14 +121,14 @@ export default function Footer({ brand }: { brand: string }) {
                 title: { en: "Contact", mon: "Холбоо барих" },
                 items: [
                     {
-                        en: "grease@ulemj.mn",
-                        mon: "grease@ulemj.mn",
-                        route: "grease@ulemj.mn",
+                        en: "medical@ulemj.mn",
+                        mon: "medical@ulemj.mn",
+                        route: "medical@ulemj.mn",
                     },
                     {
-                        en: "+976 77779595",
-                        mon: "+976 77779595",
-                        route: "+976 77779595",
+                        en: "+976 70004466",
+                        mon: "+976 70004466",
+                        route: "+976 70004466",
                     },
                 ],
             },
@@ -138,17 +138,12 @@ export default function Footer({ brand }: { brand: string }) {
                     {
                         en: "Instagram",
                         mon: "Instagram",
-                        route: "https://www.instagram.com/ulemj.grease/",
+                        route: "https://www.instagram.com/ulemj.clinic/",
                     },
                     {
                         en: "Facebook",
                         mon: "Facebook",
-                        route: "https://www.facebook.com/greasesalon",
-                    },
-                    {
-                        en: "Youtube",
-                        mon: "Youtube",
-                        route: "https://www.youtube.com/@ulemjgreasesalon1277",
+                        route: "https://www.facebook.com/AntiAgingClinc/",
                     },
                 ],
             },

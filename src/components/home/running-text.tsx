@@ -13,7 +13,7 @@ export default function RunningText({ images }: { images: string[] }) {
     return width ? (
         <Marquee
             gradient={false}
-            speed={width > 444 ? (width > 500 ? 50 : 100) : 30}
+            speed={width > 444 ? (width > 500 ? 100 : 50) : 30}
             className="h-[60px] md:h-[100px]"
         >
             {images?.map((image) => {
