@@ -82,14 +82,15 @@ export default function Products({ brand }: { brand: string }) {
                         <div
                             onContextMenu={(e) => e.preventDefault()}
                             key={product.name}
-                            className="flex flex-col gap-y-1 sm:block"
+                            className="flex flex-col gap-y-1 sm:block relative"
                         >
                             <img
-                                src={`/images/products/${product.name}.jpg`}
+                                src={`/images/products/${brand}/${product.name}.jpg`}
                                 alt={product.name}
                                 // className="min-w-[250px] min-h-[360px] sm:min-w-[333px] sm:min-h-[458px] rounded-xl"
                                 className="rounded-xl  w-full h-full aspect-auto "
                             />
+                            <div className="absolute inset-0 w-full rounded-xl h-full bg-gradient-to-b from-transparent to-black/40"></div>
                             <div className="relative h-full w-full">
                                 <div className="absolute text-smaller sm:text-xs md:text-sm lg:text-base xl:text-lg sm:bottom-4 bottom-2.5 sm:top-auto text-white w-full md:px-4 px-2 flex items-center justify-between">
                                     <div className="hidden sm:flex sm:flex-col shadow-text">

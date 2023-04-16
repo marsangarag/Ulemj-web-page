@@ -23,15 +23,15 @@ export default function Service({ brand }: { brand: string }) {
         },
         pharm: {
             left: {
-                image: "spa",
-                title: "Grease Wellness",
-                text: "at Shangri-La Ulaanbaatar, Mongolia",
+                image: "left",
+                title: "",
+                text: "<div className='text-base font-light'>One of the brands that Ulemj Pharmacy is proud to distribute is <b>MCCM</b>  Medical Cosmetics LLC of Portugal. This company manufactures aesthetic professional ampoules that are designed to provide clients with exceptional skin care results. Additionally, Ulemj Pharmacy distributes creams for dermatology, allergy, and pain relief from Sheffield Pharmaceutical of the USA.</div>",
                 route: "http://appointment.ulemjgrease.com/salon-profile/wellness/",
             },
             right: {
                 route: "http://appointment.ulemjgrease.com/salon-profile/egulen/",
-                button: "<span className='font-bold'>Grease VIP</span> at Baga tenger",
-                img: "baga_tenger",
+                button: "We have the most effective <span className='font-bold'>skin lightening treatments</span>",
+                img: "right",
             },
         },
     };
@@ -43,16 +43,18 @@ export default function Service({ brand }: { brand: string }) {
                 className="col-span-3 w-full h-full relative text-white "
             >
                 <img
-                    src={`/images/service/${brand}/spa.jpg`}
+                    src={`/images/service/${brand}/${
+                        content[brand as keyof Brand]?.left?.image
+                    }.jpg`}
                     alt="spa"
                     className="rounded-xl h-full w-full"
                 />
-                <div className="absolute bottom-8 left-5">
+                <div className="absolute bottom-8 left-5 right-5">
                     <p className="text-xl sm:text-3xl tracking-wide font-light">
                         {content[brand as keyof Brand]?.left?.title}
                     </p>
-                    <p className="text-smaller font-normal pb-5">
-                        {content[brand as keyof Brand]?.left?.text}
+                    <p className="text-smaller font-normal pb-5 text-justify">
+                        {parse(content[brand as keyof Brand]?.left?.text)}
                     </p>
                     <button
                         onClick={() =>
@@ -69,9 +71,7 @@ export default function Service({ brand }: { brand: string }) {
             <Fade
                 transition={{ y: 200, delay: 0.1 }}
                 onClick={() =>
-                    onLinkClick(
-                        "http://appointment.ulemjgrease.com/salon-profile/egulen/"
-                    )
+                    onLinkClick(content[brand as keyof Brand]?.right?.route)
                 }
                 className="md:col-span-2 cursor-pointer relative"
             >
