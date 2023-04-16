@@ -3,8 +3,20 @@ import { motion } from "framer-motion";
 import { Brand } from "lib/types/brand.type";
 import { colorCodes } from "lib/helper";
 import parse from "html-react-parser";
+import Fade from "components/layout/fade";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
 
-export default function Banner({ brand }: { brand: string }) {
+import "swiper/css";
+import "swiper/css/pagination";
+
+export default function Banner({
+    brand,
+    images,
+}: {
+    brand: string;
+    images?: string[];
+}) {
     const slogans = {
         grease: {
             text: "<span className='font-medium'>Ulemj grease LLC</span> is a leading company with great experience in the sector of nail, beauty spa and hair salons in Mongolia at its <span className='font-medium'>25th anniversary.</span>",
@@ -41,6 +53,14 @@ export default function Banner({ brand }: { brand: string }) {
             },
             button2: null,
         },
+        goodprice: {
+            text: "Choose the <span className='font-bold'>best healthier</span> way of life",
+            button1: {
+                title: "Discover Now »",
+                route: "https://www.facebook.com/goodpricemarket/",
+            },
+            button2: null,
+        },
     };
 
     const onButtonClick = (link?: string) => {
@@ -50,32 +70,76 @@ export default function Banner({ brand }: { brand: string }) {
     };
 
     return (
-        <motion.div className="relative w-full text-white">
+        <div className="relative w-full text-white">
             <div className="relative">
-                <video
-                    onContextMenu={(e) => e.preventDefault()}
-                    className="w-full aspect-video overflow-hidden rounded-xl relative"
-                    autoPlay={true}
-                    loop
-                    muted
-                    src={`/video/${brand}.mp4`}
-                />
+                {images && images?.length > 0 ? (
+                    <>
+                        <div className="gradient-bg z-30"></div>
+                        <Swiper
+                            modules={[Pagination, Autoplay]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            pagination={{ clickable: true }}
+                            scrollbar={{ draggable: true }}
+                            loop={true}
+                            autoplay={{
+                                delay: 5000,
+                                disableOnInteraction: false,
+                            }}
+                        >
+                            {images?.map((banner) => {
+                                return (
+                                    <SwiperSlide
+                                        onContextMenu={(e) =>
+                                            e.preventDefault()
+                                        }
+                                        className={`${
+                                            images && "cursor-pointer"
+                                        } `}
+                                        // onClick={() =>
+                                        //     onBannerClick(
+                                        //         banners[brand as keyof Brand]
+                                        //             ?.route
+                                        //     )
+                                        // }
+                                        key={banner}
+                                    >
+                                        <img
+                                            src={`/images/carousel/${brand}/${banner}.jpg`}
+                                            alt={banner}
+                                            className="rounded-2xl mx-auto"
+                                        />
+                                    </SwiperSlide>
+                                );
+                            })}
+                        </Swiper>
+                    </>
+                ) : (
+                    <video
+                        onContextMenu={(e) => e.preventDefault()}
+                        className="w-full aspect-video overflow-hidden rounded-xl relative"
+                        autoPlay={true}
+                        loop
+                        muted
+                        src={`/video/${brand}.mp4`}
+                    />
+                )}
                 <motion.div
                     initial={{ scaleY: 1 }}
                     animate={{ scaleY: 0 }}
                     style={{ transformOrigin: "top" }}
                     transition={{ duration: 0.7, ease: "linear" }}
-                    className="absolute w-full h-1/2 top-0 left-0 z-20 bg-white"
+                    className="absolute  w-full h-1/2 top-0 left-0 z-20 bg-white"
                 ></motion.div>
                 <motion.div
                     initial={{ scaleY: 1 }}
                     animate={{ scaleY: 0 }}
                     style={{ transformOrigin: "bottom" }}
                     transition={{ duration: 0.7, ease: "linear" }}
-                    className="absolute w-full h-1/2 bottom-0 left-0 z-20 bg-white"
+                    className="absolute  w-full h-1/2 bottom-0 left-0 z-20 bg-white"
                 ></motion.div>
             </div>
-            <div className="absolute text-shadow bottom-1/3 left-5 md:left-10 text-smaller font-light text-justify w-[40%] md:w-2/5 sm:text-lg md:text-xl xl:text-3xl shadow-text">
+            <div className="absolute z-30 text-shadow bottom-1/3 left-5 md:left-10 text-smaller font-light text-justify w-[40%] md:w-2/5 sm:text-lg md:text-xl xl:text-3xl shadow-text">
                 {parse(slogans[brand as keyof Brand]?.text)}
             </div>
 
@@ -88,7 +152,7 @@ export default function Banner({ brand }: { brand: string }) {
                     stiffness: 500,
                     damping: 50,
                 }}
-                className="w-full text-smaller sm:text-xs md:text-sm font-medium px-4 md:px-8 absolute bottom-4 md:bottom-10 flex justify-start gap-x-2.5 items-center"
+                className="w-full text-smaller sm:text-xs md:text-sm font-medium px-4 md:px-8 absolute bottom-4 md:bottom-10 z-30 flex justify-start gap-x-2.5 items-center"
             >
                 {slogans[brand as keyof Brand]?.button2 ? (
                     <div
@@ -119,6 +183,6 @@ export default function Banner({ brand }: { brand: string }) {
                     {slogans[brand as keyof Brand]?.button1?.title}
                 </div>
             </motion.div>
-        </motion.div>
+        </div>
     );
 }

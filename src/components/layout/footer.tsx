@@ -196,6 +196,54 @@ export default function Footer({ brand }: { brand: string }) {
                 ],
             },
         ],
+        goodprice: [
+            {
+                title: { en: "Navigation", mon: "Хэсэх" },
+                items: [
+                    {
+                        en: "Delivery",
+                        mon: "Дэлгүүр",
+                        route: "+97677775555",
+                    },
+                    {
+                        en: "Shop",
+                        mon: "Цаг захиалах",
+                        route: "http://goodprice.mindplay.mn/shopTab/",
+                    },
+                    { en: "About", mon: "Дэлгэрэнгүй", route: "/about" },
+                ],
+            },
+            {
+                title: { en: "Contact", mon: "Холбоо барих" },
+                items: [
+                    {
+                        en: "goodprice@ulemj.mn ",
+                        mon: "goodprice@ulemj.mn ",
+                        route: "goodprice@ulemj.mn ",
+                    },
+                    {
+                        en: "+976 77775555",
+                        mon: "+976 77775555",
+                        route: "+976 77775555",
+                    },
+                ],
+            },
+            {
+                title: { en: "Social media", mon: "Сошиал медиа" },
+                items: [
+                    // {
+                    //     en: "Instagram",
+                    //     mon: "Instagram",
+                    //     route: "https://www.instagram.com/stardom_boutique/",
+                    // },
+                    {
+                        en: "Facebook",
+                        mon: "Facebook",
+                        route: "https://www.facebook.com/goodpricemarket",
+                    },
+                ],
+            },
+        ],
     };
 
     const onLinkClick = (route: string) => {

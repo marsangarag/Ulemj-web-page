@@ -31,6 +31,14 @@ const colorCodes = {
         "button-border": "border-white",
         color: "text-black",
     },
+    goodprice: {
+        bgColor: "bg-goodprice",
+        border: "border-goodprice/50",
+        hover: "hover:bg-goodprice",
+        button: "bg-transparent",
+        "button-border": "border-white",
+        color: "text-white",
+    },
 };
 
 export { colorCodes };

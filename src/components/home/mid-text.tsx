@@ -7,6 +7,7 @@ export default function MidText({ brand }: { brand: string }) {
         clinic: "Sustainability – Customer Service – Quality - Personalization - Innovation - Professionalism and Teamwork.",
         stardom:
             "Stardom Boutique has become one of the most sought-after and trend-setting shops in the city, making it a popular destination for fashion-forward individuals.",
+        goodprice: "",
     };
     return (
         <div className="self-center py-5 px-5 text-center font-bold">

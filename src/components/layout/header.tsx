@@ -76,6 +76,23 @@ export default function Header({ brand }: { brand: string }) {
                 route: `/${brand}/about`,
             },
         ],
+        goodprice: [
+            {
+                en: "Delivery",
+                mon: "",
+                route: `https://www.facebook.com/goodpricemarket/ `,
+            },
+            {
+                en: "Shop",
+                mon: "",
+                route: `http://goodprice.mindplay.mn/shopTab/`,
+            },
+            {
+                en: "About",
+                mon: "Тухай",
+                route: `/${brand}/about`,
+            },
+        ],
     };
 
     const rightItems = [
@@ -106,7 +123,7 @@ export default function Header({ brand }: { brand: string }) {
                 <img
                     src={`/images/brand/${brand}.png`}
                     alt={brand}
-                    className="h-16 aspect-auto cursor-pointer"
+                    className="h-16 aspect-auto cursor-pointer w-full"
                 />
                 {/* <Image
                     className="cursor-pointer"

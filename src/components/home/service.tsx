@@ -61,6 +61,19 @@ export default function Service({ brand }: { brand: string }) {
                 img: "right",
             },
         },
+        goodprice: {
+            left: {
+                image: "left",
+                title: "2023 SPRING",
+                text: "#Flower Embroidered denim shirt",
+                route: "https://www.instagram.com/stardom_boutique/",
+            },
+            right: {
+                route: "https://www.instagram.com/stardom_boutique/",
+                button: "<span className='font-bold'>#</span>Oversized denim shirt",
+                img: "right",
+            },
+        },
     };
 
     return (

@@ -112,6 +112,28 @@ export default function Products({ brand }: { brand: string }) {
                 link: "https://www.instagram.com/stardom_boutique/",
             },
         ],
+        goodprice: [
+            {
+                name: "Imported products",
+                price: "Beverages",
+                link: "https://www.instagram.com/stardom_boutique/",
+            },
+            {
+                name: "Natural Fruits & Vegetables",
+                price: "Sustainable",
+                link: "https://www.instagram.com/stardom_boutique/",
+            },
+            {
+                name: "Organic Food",
+                price: "Healthy eating",
+                link: "https://www.instagram.com/stardom_boutique/",
+            },
+            {
+                name: "Fresh Bakery",
+                price: "Healthy lifestyle",
+                link: "https://www.instagram.com/stardom_boutique/",
+            },
+        ],
     };
 
     const onShopClick = (link: string) => {
@@ -153,16 +175,20 @@ export default function Products({ brand }: { brand: string }) {
                                                     {product?.price}
                                                 </div>
                                             </div>
-                                            <div
-                                                onClick={() =>
-                                                    onShopClick(product?.link)
-                                                }
-                                                className="rounded-3xl cursor-pointer border border-white py-1 px-1 md:px-2.5 lg:px-5"
-                                            >
-                                                {brand === "clinic"
-                                                    ? "More"
-                                                    : "Shop"}
-                                            </div>
+                                            {brand !== "goodprice" && (
+                                                <div
+                                                    onClick={() =>
+                                                        onShopClick(
+                                                            product?.link
+                                                        )
+                                                    }
+                                                    className="rounded-3xl cursor-pointer border border-white py-1 px-1 md:px-2.5 lg:px-5"
+                                                >
+                                                    {brand === "clinic"
+                                                        ? "More"
+                                                        : "Shop"}
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                     <div className="sm:hidden text-black bottom-10 sm:bottom-0 text-smaller sm:text-xs md:text-sm lg:text-base xl:text-lg w-full  flex flex-col md:flex-row gap-y-1">

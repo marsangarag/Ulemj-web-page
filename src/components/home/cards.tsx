@@ -155,6 +155,44 @@ export default function Salon({ brand }: { brand: string }) {
                 },
             },
         },
+        goodprice: {
+            left: {
+                image: "left",
+                title: "New Release",
+                text: "Women Spring collection",
+                button: {
+                    title: "Shop ↗",
+                    route: "https://www.instagram.com/stardom_boutique/",
+                },
+                button2: {
+                    title: "Lookbook ↗",
+                    route: "https://www.instagram.com/stardom_boutique/",
+                },
+            },
+            center: {
+                top: {
+                    image: "top",
+                    title: "",
+                    text: "Stardom Boutique has become one of the most sought-after and trend-setting shops in the city, making it a popular destination for fashion-forward individuals.",
+                    route: "",
+                },
+                bottom: {
+                    button: "Social",
+                    image: "bottom",
+                    text: "We served <b>6000</b> clients a month and more than <b>70%</b>  of them are lon-Term for more than <b>3 years</b>. Total clients are potential and <b>15%</b>  of our clients are foreigners, living in Ulaanbaatar.",
+                    route: "https://www.instagram.com/stardom_boutique/",
+                },
+            },
+            right: {
+                image: "right",
+                title: "",
+                text: "Our partnered brands from the USA include Endless Rose, English Factory, Beulah Style, and Encreme. Additionally, Seoul-based brands includes Spell Edit, Rookie Bud, Liberzen, Papermoon/TheFrankieShop, Esther de God, JS NewYork.z",
+                button: {
+                    title: "",
+                    route: "",
+                },
+            },
+        },
     };
 
     return (
