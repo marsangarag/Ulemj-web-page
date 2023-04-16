@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useAppState } from "lib/context/app";
 
 export default function Banner() {
-    const { lang } = useAppState();
+    const { lang, brand } = useAppState();
 
     return (
         <motion.div className="relative w-full text-white">
@@ -15,7 +15,7 @@ export default function Banner() {
                     autoPlay={true}
                     loop
                     muted
-                    src="/video/banner.mp4"
+                    src={`/video/${brand}.mp4`}
                 />
                 <motion.div
                     initial={{ scaleY: 1 }}

@@ -7,7 +7,7 @@ const { Provider }: any = appContext;
 
 const initialState = {
     lang: "en",
-    brand: "",
+    brand: "ulemj",
 };
 
 export default function AppProvider({ children }: any) {

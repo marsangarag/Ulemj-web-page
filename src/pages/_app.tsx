@@ -3,15 +3,10 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { AnimatePresence } from "framer-motion";
 import Page from "components/layout/page";
-import { useEffect } from "react";
-
 import AppProvider from "lib/context/app";
-import { useRouter } from "next/router";
+import WithPath from "lib/path";
 
 export default function App({ Component, pageProps }: AppProps) {
-    const router = useRouter();
-    const { brand } = router.query;
-    console.log(brand);
     return (
         <>
             <Head>
@@ -23,9 +18,11 @@ export default function App({ Component, pageProps }: AppProps) {
             </Head>
             <AppProvider>
                 <AnimatePresence mode="wait">
-                    <Page>
-                        <Component {...pageProps} />
-                    </Page>
+                    <WithPath>
+                        <Page>
+                            <Component {...pageProps} />
+                        </Page>
+                    </WithPath>
                 </AnimatePresence>
             </AppProvider>
         </>

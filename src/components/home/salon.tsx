@@ -1,10 +1,15 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useAppState } from "lib/context/app";
+import { colorCodes } from "lib/helper";
+import { Color } from "lib/types/color.type";
 
 export default function Salon() {
     const onButtonClick = (link: string) => {
         window.open(link, "_blank", "noreferrer");
     };
+
+    const { brand } = useAppState();
 
     return (
         <motion.div
@@ -40,7 +45,9 @@ export default function Salon() {
                                 "http://appointment.ulemjgrease.com/appointments?business_type=2"
                             )
                         }
-                        className="bg-main cursor-pointer shadow-lg rounded-3xl p-2 text-xs md:text-sm font-medium"
+                        className={`${
+                            colorCodes[brand as keyof Color].border
+                        } cursor-pointer shadow-lg rounded-3xl p-2 text-xs md:text-sm font-medium`}
                     >
                         Beauty Services
                     </div>
