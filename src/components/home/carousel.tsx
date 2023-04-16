@@ -5,6 +5,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default function Carousel() {
+    const banners = [
+        "banner00",
+        "banner01",
+        "banner02",
+        "banner03",
+        "banner04",
+    ];
     return (
         <div>
             <Swiper
@@ -19,36 +26,28 @@ export default function Carousel() {
                     disableOnInteraction: false,
                 }}
             >
-                <SwiperSlide>
-                    <img
-                        src="/images/carousel/banner00.jpg"
-                        className="rounded-2xl"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img
-                        src="/images/carousel/banner01.jpg"
-                        className="rounded-2xl"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img
-                        src="/images/carousel/banner02.jpg"
-                        className="rounded-2xl"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img
-                        src="/images/carousel/banner03.jpg"
-                        className="rounded-2xl"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img
-                        src="/images/carousel/banner04.jpg"
-                        className="rounded-2xl"
-                    />
-                </SwiperSlide>
+                {banners?.map((banner) => {
+                    return (
+                        <SwiperSlide
+                            onContextMenu={(e) => e.preventDefault()}
+                            className="cursor-pointer"
+                            onClick={() =>
+                                window.open(
+                                    "https://www.instagram.com/ulemj.grease/",
+                                    "_blank",
+                                    "noreferrer"
+                                )
+                            }
+                            key={banner}
+                        >
+                            <img
+                                src={`/images/carousel/${banner}.jpg`}
+                                alt={banner}
+                                className="rounded-2xl"
+                            />
+                        </SwiperSlide>
+                    );
+                })}
             </Swiper>
         </div>
     );

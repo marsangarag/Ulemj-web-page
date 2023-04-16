@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Products() {
     const products = [
         {
@@ -22,6 +20,11 @@ export default function Products() {
             price: "173.900",
             link: "https://shop.ulemjgrease.com/products/9256/92988",
         },
+        {
+            name: "Line repair Teraskin+HA",
+            price: "50.900",
+            link: "https://shop.ulemjgrease.com/products/9256/35743",
+        },
     ];
 
     const onShopClick = (link: string) => {
@@ -29,7 +32,7 @@ export default function Products() {
     };
 
     return (
-        <div className="overflow-x-scroll flex gap-x-1 sm:pb-4">
+        <div className="overflow-x-scroll w-full flex gap-x-1 sm:pb-4">
             {products?.map((product) => {
                 return (
                     <div
@@ -56,11 +59,6 @@ export default function Products() {
                                 Shop
                             </div>
                         </div>
-                        {/* <Image
-                            src={`/images/products/${product.name}.jpg`}
-                            alt={product?.name}
-                            fill
-                        /> */}
                     </div>
                 );
             })}

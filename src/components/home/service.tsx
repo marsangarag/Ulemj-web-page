@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 
 export default function Service() {
+    const onLinkClick = (link: string) => {
+        window.open(link, "_blank", "noreferrer");
+    };
     return (
         <motion.div
             onContextMenu={(e) => e.preventDefault()}
@@ -34,13 +37,27 @@ export default function Service() {
                     <p className="text-smaller font-normal pb-5">
                         at Shangri-La Ulaanbaatar, Mongolia
                     </p>
-                    <button className="border-2 py-1.5 px-3 rounded-3xl text-xs font-semibold">
+                    <button
+                        onClick={() =>
+                            onLinkClick(
+                                "http://appointment.ulemjgrease.com/salon-profile/wellness/"
+                            )
+                        }
+                        className="border-2 py-1.5 px-3 rounded-3xl text-xs font-semibold"
+                    >
                         Learn more
                     </button>
                 </div>
             </div>
-            <div className="md:col-span-2 relative">
-                <div className="bg-white absolute z-20 right-0 -top-1 font-light px-3 py-1 text-sm rounded-bl-xl">
+            <div className="md:col-span-2  relative">
+                <div
+                    onClick={() =>
+                        onLinkClick(
+                            "http://appointment.ulemjgrease.com/salon-profile/egulen/"
+                        )
+                    }
+                    className="bg-white cursor-pointer absolute z-20 right-0 -top-1 font-light px-3 py-1 text-sm rounded-bl-xl"
+                >
                     <span className="font-bold">Grease VIP</span> at Baga tenger
                 </div>
                 {/* <Image

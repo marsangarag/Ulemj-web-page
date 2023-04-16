@@ -11,12 +11,20 @@ export default function Header() {
     const [showLang, setShowLang] = useState<boolean>(false);
 
     const onNavigate = (route: string) => {
-        router.push(route);
+        if (route.includes("http")) {
+            window.open(route, "_blank", "noreferrer");
+        } else {
+            router.push(route);
+        }
     };
 
     const centerItems = [
-        { en: "Booking", mon: "Цаг захиалах", route: "/booking" },
-        { en: "Shop", mon: "Каталог", route: "/shop" },
+        {
+            en: "Booking",
+            mon: "Цаг захиалах",
+            route: "http://appointment.ulemjgrease.com/",
+        },
+        { en: "Shop", mon: "Каталог", route: "https://shop.ulemjgrease.com/" },
         { en: "About", mon: "Тухай", route: "/about" },
     ];
 

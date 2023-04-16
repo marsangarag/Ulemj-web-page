@@ -1,8 +1,21 @@
+import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 export default function RunningText({ images }: { images: string[] }) {
-    return (
-        <Marquee gradient={false} speed={100} className="h-[60px] md:h-[100px]">
+    const [width, setWidth] = useState<number>(0);
+
+    useEffect(() => {
+        if (window && typeof window !== undefined) {
+            setWidth(window.innerWidth);
+        }
+    }, []);
+
+    return width ? (
+        <Marquee
+            gradient={false}
+            speed={width > 444 ? (width > 500 ? 50 : 100) : 30}
+            className="h-[60px] md:h-[100px]"
+        >
             {images?.map((image) => {
                 return (
                     // <Image
@@ -24,5 +37,5 @@ export default function RunningText({ images }: { images: string[] }) {
                 );
             })}
         </Marquee>
-    );
+    ) : null;
 }
