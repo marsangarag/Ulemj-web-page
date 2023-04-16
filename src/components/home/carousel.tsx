@@ -10,9 +10,10 @@ export default function Carousel({ brand }: { brand: string }) {
     const banners = {
         grease: ["banner00", "banner01", "banner02", "banner03", "banner04"],
         pharm: ["banner1"],
+        clinic: [""],
     };
     return (
-        <Fade className="" transition={{ y: -250, delay: 0 }}>
+        <Fade className="" transition={{ y: 250, delay: 0 }}>
             <Swiper
                 modules={[Pagination, Autoplay]}
                 spaceBetween={50}
@@ -42,7 +43,7 @@ export default function Carousel({ brand }: { brand: string }) {
                             <img
                                 src={`/images/carousel/${brand}/${banner}.jpg`}
                                 alt={banner}
-                                className="rounded-2xl"
+                                className="rounded-2xl mx-auto"
                             />
                         </SwiperSlide>
                     );

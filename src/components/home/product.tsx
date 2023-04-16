@@ -62,6 +62,29 @@ export default function Products({ brand }: { brand: string }) {
                 link: "https://shop.ulemjgrease.com/products/null/179442",
             },
         ],
+        clinic: [
+            {
+                name: "Shave Relief Balm",
+                price: "31.900",
+                link: "https://shop.ulemjgrease.com/products/9583/34469",
+            },
+
+            {
+                name: "3 Action with hemp seed oil",
+                price: "178.900",
+                link: "https://shop.ulemjgrease.com/products/9583/35568",
+            },
+            {
+                name: "Instant lift eye mask",
+                price: "28.900",
+                link: "https://shop.ulemjgrease.com/products/9256/87064",
+            },
+            {
+                name: "Goli - Supergreens gummies",
+                price: "89.000",
+                link: "https://shop.ulemjgrease.com/products/null/179442",
+            },
+        ],
     };
 
     const onShopClick = (link: string) => {
@@ -90,9 +113,9 @@ export default function Products({ brand }: { brand: string }) {
                                 // className="min-w-[250px] min-h-[360px] sm:min-w-[333px] sm:min-h-[458px] rounded-xl"
                                 className="rounded-xl  w-full h-full aspect-auto "
                             />
-                            <div className="absolute inset-0 w-full rounded-xl h-full bg-gradient-to-b from-transparent to-black/40"></div>
+                            <div className="h-full w-full absolute inset-0 sm:bg-gradient-to-b from-transparent to-black/40 rounded-xl"></div>
                             <div className="relative h-full w-full">
-                                <div className="absolute text-smaller sm:text-xs md:text-sm lg:text-base xl:text-lg sm:bottom-4 bottom-2.5 sm:top-auto text-white w-full md:px-4 px-2 flex items-center justify-between">
+                                <div className="absolute text-smaller sm:text-xs md:text-sm lg:text-base xl:text-lg bottom-4 sm:top-auto text-white w-full md:px-4 px-2 flex items-center justify-between">
                                     <div className="hidden sm:flex sm:flex-col shadow-text">
                                         <div>{product?.name}</div>
                                         <div className="font-medium">

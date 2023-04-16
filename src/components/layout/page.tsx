@@ -8,7 +8,6 @@ import { colorCodes } from "lib/helper";
 import { Brand } from "lib/types/brand.type";
 
 export default function Page({ children }: { children: any }) {
-    const { lang } = useAppState();
     const [brand, setBrand] = useState<string>("grease");
     const router = useRouter();
     const { pathname } = router;
@@ -47,7 +46,7 @@ export default function Page({ children }: { children: any }) {
             >
                 <Header brand={brand} />
                 <div className="pt-4">{children}</div>
-                <Footer />
+                <Footer brand={brand} />
             </div>
         </Opacity>
     );

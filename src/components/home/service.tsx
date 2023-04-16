@@ -25,7 +25,20 @@ export default function Service({ brand }: { brand: string }) {
             left: {
                 image: "left",
                 title: "",
-                text: "<div className='text-base font-light'>One of the brands that Ulemj Pharmacy is proud to distribute is <b>MCCM</b>  Medical Cosmetics LLC of Portugal. This company manufactures aesthetic professional ampoules that are designed to provide clients with exceptional skin care results. Additionally, Ulemj Pharmacy distributes creams for dermatology, allergy, and pain relief from Sheffield Pharmaceutical of the USA.</div>",
+                text: "<div className='text-smaller md:text-sm lg:text-base xl:text-3xl font-light'>One of the brands that Ulemj Pharmacy is proud to distribute is <b>MCCM</b>  Medical Cosmetics LLC of Portugal. This company manufactures aesthetic professional ampoules that are designed to provide clients with exceptional skin care results. Additionally, Ulemj Pharmacy distributes creams for dermatology, allergy, and pain relief from Sheffield Pharmaceutical of the USA.</div>",
+                route: "http://appointment.ulemjgrease.com/salon-profile/wellness/",
+            },
+            right: {
+                route: "http://appointment.ulemjgrease.com/salon-profile/egulen/",
+                button: "We have the most effective <span className='font-bold'>skin lightening treatments</span>",
+                img: "right",
+            },
+        },
+        clinic: {
+            left: {
+                image: "left",
+                title: "",
+                text: "<div className='text-xs sm:text-base font-light'>One of the brands that Ulemj Pharmacy is proud to distribute is <b>MCCM</b>  Medical Cosmetics LLC of Portugal. This company manufactures aesthetic professional ampoules that are designed to provide clients with exceptional skin care results. Additionally, Ulemj Pharmacy distributes creams for dermatology, allergy, and pain relief from Sheffield Pharmaceutical of the USA.</div>",
                 route: "http://appointment.ulemjgrease.com/salon-profile/wellness/",
             },
             right: {
@@ -53,7 +66,7 @@ export default function Service({ brand }: { brand: string }) {
                     <div className="text-xl sm:text-3xl tracking-wide font-light">
                         {content[brand as keyof Brand]?.left?.title}
                     </div>
-                    <div className="text-smaller font-normal pb-5 text-justify">
+                    <div className="text-smaller font-normal pb-1 sm:pb-5 text-justify">
                         {parse(content[brand as keyof Brand]?.left?.text)}
                     </div>
                     <button
@@ -75,8 +88,9 @@ export default function Service({ brand }: { brand: string }) {
                 }
                 className="md:col-span-2 cursor-pointer relative"
             >
-                <div className=" absolute z-20 right-4 left-4 -top-1 font-light px-3 text-end py-1 text-sm ">
-                    <div className="bg-white rounded-bl-xl">
+                <div className="gradient-bg"></div>
+                <div className="absolute z-20 right-0 font-light text-end whitespace-nowrap py-1 text-xs lg:text-sm">
+                    <div className="bg-white rounded-bl-xl px-2">
                         {parse(content[brand as keyof Brand]?.right?.button)}
                     </div>
                 </div>

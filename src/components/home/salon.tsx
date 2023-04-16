@@ -123,7 +123,7 @@ export default function Salon({ brand }: { brand: string }) {
                     alt="beauty"
                     className="rounded-xl h-full w-full aspect-auto"
                 />
-                <div className="absolute h-full inset-0 w-full rounded-xl bg-gradient-to-b from-transparent to-black/40"></div>
+                <div className="gradient-bg"></div>
                 <div className="absolute bottom-5 left-5 right-5 flex flex-col gap-y-2.5 text-white items-start">
                     <div className="flex flex-col gap-y-1">
                         <div className="text-xl sm:text-3xl font-light tracking-wide">
@@ -161,7 +161,7 @@ export default function Salon({ brand }: { brand: string }) {
                         "cursor-pointer "
                     } w-1/2 md:w-full relative`}
                 >
-                    <div className="absolute h-full inset-0 w-full rounded-xl bg-gradient-to-b from-transparent to-black/40"></div>
+                    <div className="gradient-bg"></div>
                     <img
                         src={`/images/salon/${brand}/${
                             content[brand as keyof Brand]?.center?.top?.image
@@ -212,7 +212,7 @@ export default function Salon({ brand }: { brand: string }) {
                 transition={{ y: 200, delay: 0.3 }}
                 className="md:col-span-4 relative w-full "
             >
-                <div className="absolute h-full inset-0 w-full rounded-xl bg-gradient-to-b from-transparent to-black/40"></div>
+                <div className="gradient-bg"></div>
                 <img
                     src={`/images/salon/${brand}/${
                         content[brand as keyof Brand]?.right?.image

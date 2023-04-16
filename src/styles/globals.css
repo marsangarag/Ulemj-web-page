@@ -139,3 +139,7 @@ video {
 .swiper-pagination-bullet-active {
     background-color: white !important;
 }
+
+.gradient-bg {
+    @apply h-full w-full absolute inset-0 bg-gradient-to-b from-transparent to-black/40 rounded-xl;
+}
