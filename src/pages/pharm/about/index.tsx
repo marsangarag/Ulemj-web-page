@@ -46,42 +46,65 @@ export default function About() {
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10">
                 <div>
                     <img
-                        src={`/images/about/clinic/About-Photo01.png`}
+                        src={`/images/about/pharm/Picture01.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/clinic/About-Photo02.png`}
+                        src={`/images/about/pharm/Picture02.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/clinic/About-Photo03.png`}
+                        src={`/images/about/pharm/Picture03.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
             </div>
             <div className="my-8 px-4">
                 <h2 className="text-center font-bold mb-8">
-                    Sustainability – Customer Service – Quality -
-                    Personalization - Innovation - Professionalism and Teamwork.
+                    We provide our drugs and medical and equipments to eleven
+                    Aesthetic clinics and twenty nine pharmacies in here
                 </h2>
-                <div className="sm:px-20 mb-8">
-                    <img
-                        src={`/images/about/clinic/banner.png`}
-                        alt=""
-                        className="hover:scale-105 ease-in duration-100 rounded-xl"
-                    />
+                <div className="grid grid-cols-5 sm:px-20 items-center place-items-center">
+                    <div className="hover:scale-105 ease-in duration-100">
+                        <img
+                            src={`/images/about/pharm/Cosmetic.png`}
+                            alt="Cosmetic"
+                        />
+                        <b>Cosmetic</b>
+                    </div>
+                    <div className="hover:scale-105 ease-in duration-100">
+                        <img
+                            src={`/images/about/pharm/Antibiotic.png`}
+                            alt="Antibiotic"
+                        />
+                        <b>Antibiotic</b>
+                    </div>
+                    <div className="hover:scale-105 ease-in duration-100">
+                        <img
+                            src={`/images/about/pharm/Supplement.png`}
+                            alt="Supplement"
+                        />
+                        <b>Supplement</b>
+                    </div>
+                    <div className="hover:scale-105 ease-in duration-100">
+                        <img
+                            src={`/images/about/pharm/Vitamin.png`}
+                            alt="Vitamin"
+                        />
+                        <b>Vitamin</b>
+                    </div>
+                    <div className="hover:scale-105 ease-in duration-100">
+                        <img
+                            src={`/images/about/pharm/Protein.png`}
+                            alt="Protein"
+                        />
+                        <b>Protein</b>
+                    </div>
                 </div>
-                <p>
-                    We are through our branch medicine supply company “Ulemj
-                    Grease” LLC From developed countries such as South Korea,
-                    France, Spain, and the The United States, suitable for
-                    Mongolian skin bringing in the best products and using them
-                    in our services.
-                </p>
             </div>
         </div>
     );
