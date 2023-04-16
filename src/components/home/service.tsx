@@ -50,12 +50,12 @@ export default function Service({ brand }: { brand: string }) {
                     className="rounded-xl h-full w-full"
                 />
                 <div className="absolute bottom-8 left-5 right-5">
-                    <p className="text-xl sm:text-3xl tracking-wide font-light">
+                    <div className="text-xl sm:text-3xl tracking-wide font-light">
                         {content[brand as keyof Brand]?.left?.title}
-                    </p>
-                    <p className="text-smaller font-normal pb-5 text-justify">
+                    </div>
+                    <div className="text-smaller font-normal pb-5 text-justify">
                         {parse(content[brand as keyof Brand]?.left?.text)}
-                    </p>
+                    </div>
                     <button
                         onClick={() =>
                             onLinkClick(
@@ -75,8 +75,10 @@ export default function Service({ brand }: { brand: string }) {
                 }
                 className="md:col-span-2 cursor-pointer relative"
             >
-                <div className="bg-white  absolute z-20 right-0 -top-1 font-light px-3 py-1 text-sm rounded-bl-xl">
-                    {parse(content[brand as keyof Brand]?.right?.button)}
+                <div className=" absolute z-20 right-4 left-4 -top-1 font-light px-3 text-end py-1 text-sm ">
+                    <div className="bg-white rounded-bl-xl">
+                        {parse(content[brand as keyof Brand]?.right?.button)}
+                    </div>
                 </div>
                 <img
                     src={`/images/service/${brand}/${
