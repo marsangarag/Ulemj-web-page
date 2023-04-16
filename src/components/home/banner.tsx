@@ -31,6 +31,26 @@ export default function Banner({ brand }: { brand: string }) {
             },
             button2: null,
         },
+        stardom: {
+            bold1: "Ulemj pharm LLC",
+            bold2: "since 2016.",
+            text: "is a renowned establishment that has been operating ",
+            button1: {
+                title: "Shop now",
+                route: "https://shop.ulemjgrease.com/",
+            },
+            button2: null,
+        },
+        clinic: {
+            bold1: "Ulemj pharm LLC",
+            bold2: "since 2016.",
+            text: "is a renowned establishment that has been operating ",
+            button1: {
+                title: "Shop now",
+                route: "https://shop.ulemjgrease.com/",
+            },
+            button2: null,
+        },
     };
 
     const onButtonClick = (link?: string) => {

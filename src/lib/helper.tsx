@@ -24,6 +24,8 @@ const colorCodes = {
         bgColor: "bg-black",
         border: "border-black/50",
         hover: "hover:bg-black",
+        button: "bg-pharm/90",
+        "button-border": "border-pharm/90",
     },
 };
 
