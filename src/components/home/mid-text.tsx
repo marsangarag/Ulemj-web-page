@@ -6,7 +6,7 @@ export default function MidText({ brand }: { brand: string }) {
         pharm: "We provide our drugs and medical and equipments to eleven Aesthetic clinics and twenty nine pharmacies in here.",
         clinic: "We provide our drugs and medical and equipments to eleven Aesthetic clinics and twenty nine pharmacies in here.",
         stardom:
-            "We provide our drugs and medical and equipments to eleven Aesthetic clinics and twenty nine pharmacies in here.",
+            "Stardom Boutique has become one of the most sought-after and trend-setting shops in the city, making it a popular destination for fashion-forward individuals.",
     };
     return (
         <div className="self-center py-5 px-5 text-center font-bold">

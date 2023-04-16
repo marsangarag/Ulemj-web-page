@@ -3,7 +3,7 @@ import Carousel from "components/home/carousel";
 import Companies from "components/home/companies";
 import Products from "components/home/product";
 import RunningText from "components/home/running-text";
-import Salon from "components/home/salon";
+import Salon from "components/home/cards";
 import Service from "components/home/service";
 import { useAppState } from "lib/context/app";
 

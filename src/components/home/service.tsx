@@ -51,13 +51,13 @@ export default function Service({ brand }: { brand: string }) {
         stardom: {
             left: {
                 image: "left",
-                title: "",
-                text: "<div className='text-base font-light'>One of the brands that Ulemj Pharmacy is proud to distribute is <b>MCCM</b>  Medical Cosmetics LLC of Portugal. This company manufactures aesthetic professional ampoules that are designed to provide clients with exceptional skin care results. Additionally, Ulemj Pharmacy distributes creams for dermatology, allergy, and pain relief from Sheffield Pharmaceutical of the USA.</div>",
-                route: "http://appointment.ulemjgrease.com/salon-profile/wellness/",
+                title: "2023 SPRING",
+                text: "#Flower Embroidered denim shirt",
+                route: "https://www.instagram.com/stardom_boutique/",
             },
             right: {
-                route: "http://appointment.ulemjgrease.com/salon-profile/egulen/",
-                button: "We have the most effective <span className='font-bold'>skin lightening treatments</span>",
+                route: "https://www.instagram.com/stardom_boutique/",
+                button: "<span className='font-bold'>#</span>Oversized denim shirt",
                 img: "right",
             },
         },
@@ -76,11 +76,11 @@ export default function Service({ brand }: { brand: string }) {
                     alt="spa"
                     className="rounded-xl h-full w-full"
                 />
-                <div className="absolute bottom-8 left-5 right-5">
-                    <div className="text-xl sm:text-3xl tracking-wide font-light">
+                <div className="absolute shadow-text bottom-8 left-5 right-5">
+                    <div className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-wide font-light">
                         {content[brand as keyof Brand]?.left?.title}
                     </div>
-                    <div className="text-smaller font-normal pb-1 sm:pb-5 text-justify">
+                    <div className="text-smaller sm:text-xs md:text-sm lg:text-base xl:text-xl font-normal pb-1 sm:pb-5 text-justify">
                         {parse(content[brand as keyof Brand]?.left?.text)}
                     </div>
                     <button
@@ -89,7 +89,7 @@ export default function Service({ brand }: { brand: string }) {
                                 content[brand as keyof Brand]?.left?.route
                             )
                         }
-                        className="border-2 py-1.5 px-3 rounded-3xl text-xs font-semibold"
+                        className="border-2 shadow py-1.5 px-3  rounded-3xl text-xs md:text-sm lg:text-base font-semibold"
                     >
                         Learn more
                     </button>
@@ -103,8 +103,8 @@ export default function Service({ brand }: { brand: string }) {
                 className="md:col-span-2 cursor-pointer relative"
             >
                 <div className="gradient-bg"></div>
-                <div className="absolute z-20 right-0 font-light text-end whitespace-nowrap py-1 text-xs lg:text-sm">
-                    <div className="bg-white rounded-bl-xl px-2">
+                <div className="absolute z-20 right-0 font-light text-end whitespace-nowrap text-xs md:text-sm lg:text-lg xl:text-xl">
+                    <div className="bg-white rounded-bl-xl px-2 py-1 sm:py-2">
                         {parse(content[brand as keyof Brand]?.right?.button)}
                     </div>
                 </div>

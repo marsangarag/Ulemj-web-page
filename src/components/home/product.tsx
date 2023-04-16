@@ -87,25 +87,29 @@ export default function Products({ brand }: { brand: string }) {
         ],
         stardom: [
             {
-                name: "Shave Relief Balm",
-                price: "31.900",
-                link: "https://shop.ulemjgrease.com/products/9583/34469",
-            },
-
-            {
-                name: "3 Action with hemp seed oil",
-                price: "178.900",
-                link: "https://shop.ulemjgrease.com/products/9583/35568",
+                name: "product1",
+                price: "",
+                link: "https://www.instagram.com/stardom_boutique/",
             },
             {
-                name: "Instant lift eye mask",
-                price: "28.900",
-                link: "https://shop.ulemjgrease.com/products/9256/87064",
+                name: "product2",
+                price: "",
+                link: "https://www.instagram.com/stardom_boutique/",
             },
             {
-                name: "Goli - Supergreens gummies",
-                price: "89.000",
-                link: "https://shop.ulemjgrease.com/products/null/179442",
+                name: "product3",
+                price: "",
+                link: "https://www.instagram.com/stardom_boutique/",
+            },
+            {
+                name: "product4",
+                price: "",
+                link: "https://www.instagram.com/stardom_boutique/",
+            },
+            {
+                name: "product5",
+                price: "",
+                link: "https://www.instagram.com/stardom_boutique/",
             },
         ],
     };
@@ -137,32 +141,36 @@ export default function Products({ brand }: { brand: string }) {
                                 className="rounded-xl  w-full h-full aspect-auto "
                             />
                             <div className="h-full w-full absolute inset-0 sm:bg-gradient-to-b from-transparent to-black/40 rounded-xl"></div>
-                            <div className="relative h-full w-full">
-                                <div className="absolute text-smaller sm:text-xs md:text-sm lg:text-base xl:text-lg bottom-4 sm:top-auto text-white w-full md:px-4 px-2 flex items-center justify-between">
-                                    <div className="hidden sm:flex sm:flex-col shadow-text">
-                                        <div>{product?.name}</div>
-                                        <div className="font-medium">
-                                            {product?.price}₮
+                            {product?.price ? (
+                                <>
+                                    <div className="relative h-full w-full">
+                                        <div className="absolute text-smaller sm:text-xs md:text-sm lg:text-base xl:text-lg bottom-4 sm:top-auto text-white w-full md:px-4 px-2 flex items-center justify-between">
+                                            <div className="hidden sm:flex sm:flex-col shadow-text">
+                                                <div>{product?.name}</div>
+                                                <div className="font-medium">
+                                                    {product?.price}₮
+                                                </div>
+                                            </div>
+                                            <div
+                                                onClick={() =>
+                                                    onShopClick(product?.link)
+                                                }
+                                                className="rounded-3xl cursor-pointer border border-white py-1 px-1 md:px-2.5"
+                                            >
+                                                Shop
+                                            </div>
                                         </div>
                                     </div>
-                                    <div
-                                        onClick={() =>
-                                            onShopClick(product?.link)
-                                        }
-                                        className="rounded-3xl cursor-pointer border border-white py-1 px-1 md:px-2.5"
-                                    >
-                                        Shop
+                                    <div className="sm:hidden text-black bottom-10 sm:bottom-0 text-smaller sm:text-xs md:text-sm lg:text-base xl:text-lg w-full  flex flex-col md:flex-row gap-y-1">
+                                        <div className="flex flex-col shadow-text">
+                                            <div className="font-medium">
+                                                {product?.price}₮
+                                            </div>
+                                            <div>{product?.name}</div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="sm:hidden text-black bottom-10 sm:bottom-0 text-smaller sm:text-xs md:text-sm lg:text-base xl:text-lg w-full  flex flex-col md:flex-row gap-y-1">
-                                <div className="flex flex-col shadow-text">
-                                    <div className="font-medium">
-                                        {product?.price}₮
-                                    </div>
-                                    <div>{product?.name}</div>
-                                </div>
-                            </div>
+                                </>
+                            ) : null}
                         </div>
                     </SwiperSlide>
                 ))}

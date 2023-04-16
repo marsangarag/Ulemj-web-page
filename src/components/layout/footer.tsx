@@ -100,7 +100,6 @@ export default function Footer({ brand }: { brand: string }) {
                 ],
             },
         ],
-
         clinic: [
             {
                 title: { en: "Navigation", mon: "Хэсэх" },
@@ -161,12 +160,12 @@ export default function Footer({ brand }: { brand: string }) {
                     {
                         en: "Shop",
                         mon: "Дэлгүүр",
-                        route: "https://shop.ulemjgrease.com/",
+                        route: "https://www.instagram.com/stardom_boutique/",
                     },
                     {
-                        en: "Booking",
+                        en: "Lookbook",
                         mon: "Цаг захиалах",
-                        route: "http://appointment.ulemjgrease.com/",
+                        route: "https://www.facebook.com/stardombyplatinum",
                     },
                     { en: "About", mon: "Дэлгэрэнгүй", route: "/about" },
                 ],
@@ -175,15 +174,15 @@ export default function Footer({ brand }: { brand: string }) {
                 title: { en: "Contact", mon: "Холбоо барих" },
                 items: [
                     {
-                        en: "grease@ulemj.mn",
-                        mon: "grease@ulemj.mn",
-                        route: "grease@ulemj.mn",
+                        en: "agii@ulemj.mn",
+                        mon: "agii@ulemj.mn",
+                        route: "agii@ulemj.mn",
                     },
-                    {
-                        en: "+976 77779595",
-                        mon: "+976 77779595",
-                        route: "+976 77779595",
-                    },
+                    // {
+                    //     en: "+976 77779595",
+                    //     mon: "+976 77779595",
+                    //     route: "+976 77779595",
+                    // },
                 ],
             },
             {
@@ -192,17 +191,12 @@ export default function Footer({ brand }: { brand: string }) {
                     {
                         en: "Instagram",
                         mon: "Instagram",
-                        route: "https://www.instagram.com/ulemj.grease/",
+                        route: "https://www.instagram.com/stardom_boutique/",
                     },
                     {
                         en: "Facebook",
                         mon: "Facebook",
-                        route: "https://www.facebook.com/greasesalon",
-                    },
-                    {
-                        en: "Youtube",
-                        mon: "Youtube",
-                        route: "https://www.youtube.com/@ulemjgreasesalon1277",
+                        route: "https://www.facebook.com/stardombyplatinum",
                     },
                 ],
             },
