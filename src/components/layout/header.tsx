@@ -42,6 +42,40 @@ export default function Header({ brand }: { brand: string }) {
             },
             { en: "About", mon: "Тухай", route: `/${brand}/about` },
         ],
+        clinic: [
+            {
+                en: "Appointment",
+                mon: "",
+                route: "http://appointment.ulemjgrease.com/salon-profile/clinic/",
+            },
+            {
+                en: "Treatments",
+                mon: "",
+                route: "",
+            },
+            {
+                en: "About",
+                mon: "Тухай",
+                route: `/${brand}/about`,
+            },
+        ],
+        stardom: [
+            {
+                en: "Women",
+                mon: "",
+                route: `#`,
+            },
+            {
+                en: "Lookbook",
+                mon: "",
+                route: `#`,
+            },
+            {
+                en: "About",
+                mon: "Тухай",
+                route: `/${brand}/about`,
+            },
+        ],
     };
 
     const rightItems = [
