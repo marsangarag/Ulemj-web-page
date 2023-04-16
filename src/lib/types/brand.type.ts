@@ -3,4 +3,5 @@ export interface Brand {
     pharm: string;
     clinic: string;
     stardom: string;
+    goodprice: string;
 }

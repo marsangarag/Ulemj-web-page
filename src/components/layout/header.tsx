@@ -51,7 +51,7 @@ export default function Header({ brand }: { brand: string }) {
             {
                 en: "Treatments",
                 mon: "",
-                route: "",
+                route: "http://appointment.ulemjgrease.com/salon-profile/clinic/services ",
             },
             {
                 en: "About",

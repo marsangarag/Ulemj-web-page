@@ -8,7 +8,7 @@ import Service from "components/home/service";
 import { useAppState } from "lib/context/app";
 import MidText from "components/home/mid-text";
 
-export default function Clinic() {
+export default function Goodprice() {
     return (
         <div className="flex flex-col gap-y-2.5 ">
             <Banner brand="clinic" />

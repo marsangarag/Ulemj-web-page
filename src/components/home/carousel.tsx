@@ -7,11 +7,34 @@ import Fade from "components/layout/fade";
 import { Brand } from "lib/types/brand.type";
 
 export default function Carousel({ brand }: { brand: string }) {
+    const onBannerClick = (link: string) => {
+        if (link) {
+            window.open(link, "_blank", "noreferrer");
+        }
+    };
     const banners = {
-        grease: ["banner00", "banner01", "banner02", "banner03", "banner04"],
-        pharm: ["banner1"],
-        clinic: ["banner1"],
-        stardom: ["banner1"],
+        grease: {
+            route: "https://www.instagram.com/ulemj.grease/",
+            photos: [
+                "banner00",
+                "banner01",
+                "banner02",
+                "banner03",
+                "banner04",
+            ],
+        },
+        pharm: {
+            route: "",
+            photos: ["banner1"],
+        },
+        clinic: {
+            photos: ["banner1", "banner2", "banner3", "banner4"],
+            route: "https://www.instagram.com/ulemj.clinic/",
+        },
+        stardom: {
+            photos: ["banner1"],
+            route: "https://www.instagram.com/stardom_boutique/",
+        },
     };
     return (
         <Fade className="" transition={{ y: 250, delay: 0 }}>
@@ -27,16 +50,17 @@ export default function Carousel({ brand }: { brand: string }) {
                     disableOnInteraction: false,
                 }}
             >
-                {banners[brand as keyof Brand]?.map((banner) => {
+                {banners[brand as keyof Brand]?.photos?.map((banner) => {
                     return (
                         <SwiperSlide
                             onContextMenu={(e) => e.preventDefault()}
-                            className="cursor-pointer"
+                            className={`${
+                                banners[brand as keyof Brand]?.route &&
+                                "cursor-pointer"
+                            } `}
                             onClick={() =>
-                                window.open(
-                                    "https://www.instagram.com/ulemj.grease/",
-                                    "_blank",
-                                    "noreferrer"
+                                onBannerClick(
+                                    banners[brand as keyof Brand]?.route
                                 )
                             }
                             key={banner}

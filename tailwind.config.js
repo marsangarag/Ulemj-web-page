@@ -7,6 +7,7 @@ module.exports = {
                 gray: "rgba(86, 99, 111, 1)",
                 grease: "#C2B59B",
                 pharm: "#769193",
+                goodprice: "#26723e",
             },
             fontSize: {
                 smaller: ["10px", "12px"],
