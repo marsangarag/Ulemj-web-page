@@ -1,50 +1,36 @@
-import Image from "next/image";
+import { useAppState } from "lib/context/app";
 import { useRouter } from "next/router";
 
 export default function Companies() {
     const router = useRouter();
+    const { setBrand } = useAppState();
     const companies = [
-        {
-            name: "stardom",
-            route: "/stardom",
-        },
-        {
-            name: "clinic",
-            route: "/clinic",
-        },
-        {
-            name: "goodprice",
-            route: "/goodprice",
-        },
-        {
-            name: "buildings",
-            route: "/buildings",
-        },
-        {
-            name: "california",
-            route: "/california",
-        },
-        {
-            name: "pharm",
-            route: "/pharm",
-        },
-        {
-            name: "grease",
-            route: "/grease",
-        },
+        "stardom",
+        "clinic",
+        "goodprice",
+        "buildings",
+        "california",
+        "pharm",
+        "grease",
     ];
+
+    const onCompanyClick = async (name: string) => {
+        await setBrand(name);
+        router.push(`/${name}`);
+    };
+
     return (
         <div className="flex items-center h-9 sm:h-12 md:h-[100px] md:gap-x-5 lg:gap-x-20">
             {companies.map((company) => {
                 return (
                     <div
-                        onClick={() => router.push(company.route)}
-                        key={company.name}
+                        onClick={() => onCompanyClick(company)}
+                        key={company}
                         className="cursor-pointer"
                     >
                         <img
-                            src={`/images/companies/${company.name}.png`}
-                            alt={company.name}
+                            src={`/images/companies/${company}.png`}
+                            alt={company}
                             className="w-full h-full"
                         />
                     </div>

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Header() {
     const router = useRouter();
-    const { lang, setLang } = useAppState();
+    const { lang, setLang, brand } = useAppState();
     const [showLang, setShowLang] = useState<boolean>(false);
 
     const onNavigate = (route: string) => {
@@ -43,18 +43,19 @@ export default function Header() {
     };
 
     return (
-        <div className="relative h-full w-full sm:block flex flex-col items-center border-b border-main/50">
+        <div className="relative h-full w-full sm:block flex flex-col items-center border-b border-main/50 mb-5">
             <Opacity
                 className="cursor-pointer"
                 onClick={() => onNavigate(`${router.pathname}`)}
                 delay={0.2}
             >
-                <Image
+                <img src={`/images/brand/${brand}.png`} alt="" />
+                {/* <Image
                     src={"/images/brand-logo.png"}
                     alt="ulemj"
                     height={0}
-                    width={150}
-                />
+                    width={100}
+                /> */}
             </Opacity>
             <div className="flex items-center gap-x-5 text-sm sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:top-1/2 sm:-translate-y-1/2 pb-4 sm:pb-0 -mt-4 sm:mt-0">
                 {centerItems?.map((item, index: number) => {
