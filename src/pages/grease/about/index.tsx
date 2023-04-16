@@ -17,8 +17,7 @@ export default function About() {
                 </p>
                 <div className="mb-8 grid sm:grid-cols-3 gap-1 sm:gap-10">
                     <div
-                        className={`border border-main rounded-2xl py-8 px-5 hover:bg-grease
-                        } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
+                        className={`border border-main rounded-2xl py-8 px-5 hover:bg-grease ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">MISSION</h2>
                         <p>
