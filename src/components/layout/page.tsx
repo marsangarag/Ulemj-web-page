@@ -33,21 +33,25 @@ export default function Page({ children }: { children: any }) {
     }, [router]);
 
     return (
-        <Opacity className={`w-screen h-screen overflow-x-hidden font-rubik`}>
-            <div
-                className={`${
-                    colorCodes[brand as keyof Brand]?.bgColor
-                } w-full h-5 md:h-8`}
-            ></div>
-            <div
-                className={`mx-5 border-r border-l ${
-                    colorCodes[brand as keyof Brand]?.border
-                }`}
+        <>
+            <Opacity
+                className={`w-screen h-screen overflow-x-hidden font-rubik`}
             >
-                <Header brand={brand} />
-                <div className="pt-4">{children}</div>
-                <Footer brand={brand} />
-            </div>
-        </Opacity>
+                <div
+                    className={`${
+                        colorCodes[brand as keyof Brand]?.bgColor
+                    } w-full h-5 md:h-8`}
+                ></div>
+                <div
+                    className={`mx-5 border-r border-l ${
+                        colorCodes[brand as keyof Brand]?.border
+                    }`}
+                >
+                    <Header brand={brand} />
+                    <div className="pt-4">{children}</div>
+                    <Footer brand={brand} />
+                </div>
+            </Opacity>
+        </>
     );
 }

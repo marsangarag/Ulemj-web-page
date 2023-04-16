@@ -5,6 +5,7 @@ const colorCodes = {
         hover: "hover:bg-grease",
         button: "bg-grease/90",
         "button-border": "border-grease/90",
+        color: "text-white",
     },
     pharm: {
         bgColor: "bg-pharm",
@@ -12,6 +13,7 @@ const colorCodes = {
         hover: "hover:bg-pharm",
         button: "bg-pharm/90",
         "button-border": "border-pharm/90",
+        color: "text-white",
     },
     clinic: {
         bgColor: "bg-grease",
@@ -19,13 +21,15 @@ const colorCodes = {
         hover: "hover:bg-grease",
         button: "bg-grease/90",
         "button-border": "border-grease/90",
+        color: "text-white",
     },
     stardom: {
         bgColor: "bg-black",
         border: "border-black/50",
         hover: "hover:bg-black",
-        button: "bg-pharm/90",
-        "button-border": "border-pharm/90",
+        button: "bg-white",
+        "button-border": "border-white",
+        color: "text-black",
     },
 };
 

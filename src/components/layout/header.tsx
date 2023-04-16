@@ -63,12 +63,12 @@ export default function Header({ brand }: { brand: string }) {
             {
                 en: "Women",
                 mon: "",
-                route: `#`,
+                route: `https://www.instagram.com/stardom_boutique/`,
             },
             {
                 en: "Lookbook",
                 mon: "",
-                route: `#`,
+                route: `https://www.facebook.com/stardombyplatinum`,
             },
             {
                 en: "About",
@@ -106,7 +106,7 @@ export default function Header({ brand }: { brand: string }) {
                 <img
                     src={`/images/brand/${brand}.png`}
                     alt={brand}
-                    className="h-16 aspect-auto"
+                    className="h-16 aspect-auto cursor-pointer"
                 />
                 {/* <Image
                     className="cursor-pointer"
@@ -122,7 +122,10 @@ export default function Header({ brand }: { brand: string }) {
                         return (
                             <Opacity
                                 className={`cursor-pointer ${
-                                    index === 2 &&
+                                    index ===
+                                        centerItems[brand as keyof Brand]
+                                            .length -
+                                            1 &&
                                     router.pathname.includes("about")
                                         ? "font-bold"
                                         : "font-normal"

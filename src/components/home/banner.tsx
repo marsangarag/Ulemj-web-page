@@ -1,17 +1,13 @@
 import Image from "next/image";
-import { color, motion } from "framer-motion";
-import { useEffect } from "react";
-import { useAppState } from "lib/context/app";
-import { Slogan } from "lib/types/slogan.type";
+import { motion } from "framer-motion";
 import { Brand } from "lib/types/brand.type";
 import { colorCodes } from "lib/helper";
+import parse from "html-react-parser";
 
 export default function Banner({ brand }: { brand: string }) {
     const slogans = {
         grease: {
-            bold1: "Ulemj grease LLC",
-            bold2: "25th anniversary.",
-            text: "is a leading company with great experience in the sector of nail, beauty spa and hair salons in Mongolia at its ",
+            text: "<span className='font-medium'>Ulemj grease LLC</span> is a leading company with great experience in the sector of nail, beauty spa and hair salons in Mongolia at its <span className='font-medium'>25th anniversary.</span>",
             button1: {
                 title: "Shop now",
                 route: "https://shop.ulemjgrease.com/",
@@ -22,9 +18,7 @@ export default function Banner({ brand }: { brand: string }) {
             },
         },
         pharm: {
-            bold1: "Ulemj pharm LLC",
-            bold2: "since 2016.",
-            text: "is a renowned establishment that has been operating ",
+            text: "<span className='font-medium'>Ulemj pharm LLC</span> is a leading company with great experience in the sector of nail, beauty spa and hair salons in Mongolia at its <span className='font-medium'>since 2016.</span>",
             button1: {
                 title: "Shop now",
                 route: "https://shop.ulemjgrease.com/",
@@ -32,12 +26,10 @@ export default function Banner({ brand }: { brand: string }) {
             button2: null,
         },
         stardom: {
-            bold1: "Ulemj pharm LLC",
-            bold2: "since 2016.",
-            text: "is a renowned establishment that has been operating ",
+            text: "<span className='font-medium'>Stardom Boutique</span> has been making waves in the fashion industry since its establishment in <span className='font-medium'>2014</span>. With its first branch located in Ulaanbaatar City Department Store, futher expanded  <span className='font-medium'>in Shangri-la Shopping Centre.</span>",
             button1: {
-                title: "Shop now",
-                route: "https://shop.ulemjgrease.com/",
+                title: "Shop Now",
+                route: "https://www.instagram.com/stardom_boutique/",
             },
             button2: null,
         },
@@ -46,7 +38,7 @@ export default function Banner({ brand }: { brand: string }) {
             bold2: "since 2016.",
             text: "is a renowned establishment that has been operating ",
             button1: {
-                title: "Shop now",
+                title: "Shop ow",
                 route: "https://shop.ulemjgrease.com/",
             },
             button2: null,
@@ -85,14 +77,8 @@ export default function Banner({ brand }: { brand: string }) {
                     className="absolute w-full h-1/2 bottom-0 left-0 z-20 bg-white"
                 ></motion.div>
             </div>
-            <div className="absolute bottom-1/3 left-5 md:left-10 text-smaller font-light text-justify w-[40%] md:w-2/5 sm:text-lg md:text-xl xl:text-3xl shadow-text">
-                <span className="font-medium">
-                    {slogans[brand as keyof Brand]?.bold1}{" "}
-                </span>
-                {slogans[brand as keyof Brand]?.text}
-                <span className="font-medium">
-                    {slogans[brand as keyof Brand]?.bold2}
-                </span>
+            <div className="absolute text-shadow bottom-1/3 left-5 md:left-10 text-smaller font-light text-justify w-[40%] md:w-2/5 sm:text-lg md:text-xl xl:text-3xl shadow-text">
+                {parse(slogans[brand as keyof Brand]?.text)}
             </div>
 
             <motion.div
@@ -113,7 +99,9 @@ export default function Banner({ brand }: { brand: string }) {
                                 slogans[brand as keyof Brand]?.button2?.route
                             )
                         }
-                        className="cursor-pointer shadow-text bg-transparent rounded-3xl border-white border p-2.5"
+                        className={`cursor-pointer shadow-text bg-transparent rounded-3xl border-white border p-2.5 ${
+                            colorCodes[brand as keyof Brand].color
+                        }`}
                     >
                         {slogans[brand as keyof Brand]?.button2?.title}
                     </div>
@@ -124,11 +112,11 @@ export default function Banner({ brand }: { brand: string }) {
                             slogans[brand as keyof Brand]?.button1?.route
                         )
                     }
-                    className={`cursor-pointer ${
+                    className={`cursor-pointer shadow ${
                         colorCodes[brand as keyof Brand]?.button
                     } rounded-3xl border ${
                         colorCodes[brand as keyof Brand]?.["button-border"]
-                    } py-2.5 px-4`}
+                    } ${colorCodes[brand as keyof Brand].color} py-2.5 px-4`}
                 >
                     {slogans[brand as keyof Brand]?.button1?.title}
                 </div>
