@@ -7,91 +7,102 @@ export default function About() {
                     IS OUR GUARANTEE
                 </h1>
                 <p className="mb-8">
-                    Ulemj Clinic began its journey in the field of medical
-                    cosmetology in 2017 at the Shangri-La shopping center. Since
-                    then, the clinic has expanded its services to plastic
-                    surgery and rebranded itself as "HAIR & ESTHETIC CLINIC" in
-                    2020.
+                    The California Restaurant was established in 2002 with a
+                    unique American-style environment that evokes the atmosphere
+                    of California. The restaurant was designed by Pacific
+                    Westline Inc., which has extensive experience in creating
+                    existing fine dining restaurants as The Cheesecake Factory,
+                    Grandlux Café in the United States.
                 </p>
                 <div className="mb-8 grid sm:grid-cols-3 gap-1 sm:gap-10">
                     <div
-                        className={`border border-grease rounded-2xl py-8 px-5 hover:bg-grease
+                        className={`border border-california rounded-2xl py-8 px-5 hover:bg-california
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">MISSION</h2>
                         <p>
-                            Adopt best practices in management and professional
-                            practice
+                            To satisfy our clients senses with food as the focal
+                            point, the perfect atmosphere and flawless service.
                         </p>
                     </div>
                     <div
-                        className={`border border-grease rounded-2xl py-8 px-5 hover:bg-grease
+                        className={`border border-california rounded-2xl py-8 px-5 hover:bg-california
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">VISION</h2>
                         <p>
-                            Introduction of international standarts, clinical
-                            guidelines and production technology
+                            To bring people together and have a positive impact
+                            on our customers, our team, the environment and the
+                            community.
                         </p>
                     </div>
                     <div
-                        className={`border border-grease rounded-2xl py-8 px-5 hover:bg-grease
+                        className={`border border-california rounded-2xl py-8 px-5 hover:bg-california
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">VALUES</h2>
                         <p>
-                            Introduction of evidence-based advanced technologies
+                            We believe in continuously listening, learning,
+                            educating and improving our, team, our processes and
+                            our company Our team and culture
                         </p>
                     </div>
                 </div>
                 <p>
-                    In 2017, Ulemj Clinic introduced new treatments, such as
-                    V-Shape facelift, forehead lift, droopy eye lift, temple
-                    lift, droopy cheek lift, infraorbital wrinkle, perioral
-                    wrinkles, and nose augmentation, through face thread lifts.
-                    The clinic also provides body thread lifts for breast and
-                    buttock lift, double-eyelid, lower blepharoplasty, and male
-                    eyeplasty, and cheek dimple treatments.
+                    To ensure the highest quality of cuisine, a Michelin-starred
+                    chef from the United States works as the head chef. In 2007,
+                    California started offering catering services and opened a
+                    reception hall next to the restaurant. In 2011, the
+                    restaurant underwent a major expansion to accommodate 350
+                    people and a separate meat, vegetable raw material
+                    processing plant. Due to its popularity, California opened
+                    its second branch in the Great Mongolia Center in 2015,
+                    complete with a bonquet hall and VIP rooms.
                 </p>
             </div>
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10">
                 <div>
                     <img
-                        src={`/images/about/clinic/About-Photo01.png`}
+                        src={`/images/about/california/banner01.png`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/clinic/About-Photo02.png`}
+                        src={`/images/about/california/banner02.png`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/clinic/About-Photo03.png`}
+                        src={`/images/about/california/banner03.png`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
             </div>
             <div className="my-8 px-4">
                 <h2 className="text-center font-bold mb-8">
-                    Sustainability – Customer Service – Quality -
-                    Personalization - Innovation - Professionalism and Teamwork.
+                    A Perfect Blend of Sensational Food, Inspiring Ideas and
+                    Professional Staff
                 </h2>
                 <div className="sm:px-20 mb-8">
                     <img
-                        src={`/images/about/clinic/banner.png`}
+                        src={`/images/about/california/banner.jpg`}
                         alt=""
                         className="hover:scale-105 ease-in duration-100 rounded-xl"
                     />
                 </div>
                 <p>
-                    We are through our branch medicine supply company “Ulemj
-                    Grease” LLC From developed countries such as South Korea,
-                    France, Spain, and the The United States, suitable for
-                    Mongolian skin bringing in the best products and using them
-                    in our services.
+                    The California Restaurant has expanded its business by
+                    opening a bakery and coffee shop in 2019. Located on the B1
+                    floor of Shangri-la mall, the bakery boasts an interior
+                    design inspired by the well-known Aichenger brand of
+                    Germany. The bakery is equipped with Miwe brand ovens,
+                    American True brand equipments, serves American Starbucks
+                    and Italian Valentino coffee. The California Bakery uses raw
+                    materials imported directly from Germany, and applies German
+                    technology to produce more than 40 types of pastries such as
+                    croissant, tart, muffin, mousse, and cakes.
                 </p>
             </div>
         </div>
