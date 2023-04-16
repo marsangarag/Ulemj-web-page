@@ -1,6 +1,7 @@
 import { useAppState } from "lib/context/app";
 import { Lang } from "lib/types/language.type";
 import { useRouter } from "next/router";
+import Fade from "./fade";
 
 export default function Footer() {
     const { lang } = useAppState();
@@ -72,7 +73,10 @@ export default function Footer() {
     };
     return (
         <>
-            <div className="py-5 flex flex-col text-center gap-y-2 sm:flex-row sm:justify-evenly">
+            <Fade
+                transition={{ y: 250, delay: 0 }}
+                className="py-5 flex flex-col text-center gap-y-2 sm:flex-row sm:justify-evenly"
+            >
                 {footerItems?.map((footer) => {
                     return (
                         <div
@@ -98,7 +102,7 @@ export default function Footer() {
                         </div>
                     );
                 })}
-            </div>
+            </Fade>
         </>
     );
 }

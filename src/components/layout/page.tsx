@@ -5,7 +5,7 @@ import Opacity from "./opacity";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { colorCodes } from "lib/helper";
-import { Color } from "lib/types/color.type";
+import { Brand } from "lib/types/brand.type";
 
 export default function Page({ children }: { children: any }) {
     const { lang } = useAppState();
@@ -27,12 +27,12 @@ export default function Page({ children }: { children: any }) {
         <Opacity className={`w-screen h-screen overflow-x-hidden font-rubik`}>
             <div
                 className={`${
-                    colorCodes[brand as keyof Color]?.bgColor
+                    colorCodes[brand as keyof Brand]?.bgColor
                 } w-full h-5 md:h-8`}
             ></div>
             <div
                 className={`mx-5 border-r border-l ${
-                    colorCodes[brand as keyof Color]?.border
+                    colorCodes[brand as keyof Brand]?.border
                 }`}
             >
                 <Header brand={brand} />

@@ -15,6 +15,7 @@
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "framer-motion": "^10.11.2",
+    "html-react-parser": "^3.0.15",
     "next": "13.3.0",
     "next-build-id": "^3.0.0",
     "react": "18.2.0",

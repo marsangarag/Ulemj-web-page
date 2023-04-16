@@ -5,7 +5,7 @@ import { Lang } from "lib/types/language.type";
 import { useState } from "react";
 import Image from "next/image";
 import { colorCodes } from "lib/helper";
-import { Color } from "lib/types/color.type";
+import { Brand } from "lib/types/brand.type";
 
 export default function Header({ brand }: { brand: string }) {
     const router = useRouter();
@@ -61,7 +61,7 @@ export default function Header({ brand }: { brand: string }) {
     return (
         <div
             className={`relative h-[63px] flex flex-col items-center border-b ${
-                colorCodes[brand as keyof Color]?.border
+                colorCodes[brand as keyof Brand]?.border
             }`}
         >
             <Opacity

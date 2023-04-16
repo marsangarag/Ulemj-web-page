@@ -1,48 +1,75 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import Fade from "components/layout/fade";
+import { Brand } from "lib/types/brand.type";
 
-export default function Products() {
-    const products = [
-        {
-            name: "Lotion P5",
-            price: "242.900",
-            link: "https://shop.ulemjgrease.com/products/9256/92988",
-        },
+export default function Products({ brand }: { brand: string }) {
+    const products = {
+        grease: [
+            {
+                name: "Lotion P5",
+                price: "242.900",
+                link: "https://shop.ulemjgrease.com/products/9256/92988",
+            },
 
-        {
-            name: "Cyfolia",
-            price: "189.900",
-            link: "https://shop.ulemjgrease.com/products/9256/91692",
-        },
-        {
-            name: "White Lumination",
-            price: "173.900",
-            link: "https://shop.ulemjgrease.com/products/9584/92806",
-        },
-        {
-            name: "Structruriste",
-            price: "219.900",
-            link: "https://shop.ulemjgrease.com/products/9584/92600",
-        },
-        {
-            name: "Line repair Teraskin+HA",
-            price: "50.900",
-            link: "https://shop.ulemjgrease.com/products/9256/35743",
-        },
-        {
-            name: "Wish Absolute Confidence",
-            price: "219.900",
-            link: "https://shop.ulemjgrease.com/products/9256/35615",
-        },
-    ];
+            {
+                name: "Cyfolia",
+                price: "189.900",
+                link: "https://shop.ulemjgrease.com/products/9256/91692",
+            },
+            {
+                name: "White Lumination",
+                price: "173.900",
+                link: "https://shop.ulemjgrease.com/products/9584/92806",
+            },
+            {
+                name: "Structruriste",
+                price: "219.900",
+                link: "https://shop.ulemjgrease.com/products/9584/92600",
+            },
+            {
+                name: "Line repair Teraskin+HA",
+                price: "50.900",
+                link: "https://shop.ulemjgrease.com/products/9256/35743",
+            },
+            {
+                name: "Wish Absolute Confidence",
+                price: "219.900",
+                link: "https://shop.ulemjgrease.com/products/9256/35615",
+            },
+        ],
+        pharm: [
+            {
+                name: "Shave Relief Balm",
+                price: "31.900",
+                link: "https://shop.ulemjgrease.com/products/9583/34469",
+            },
+
+            {
+                name: "3 Action with hemp seed oil",
+                price: "178.900",
+                link: "https://shop.ulemjgrease.com/products/9583/35568",
+            },
+            {
+                name: "Instant lift eye mask",
+                price: "28.900",
+                link: "https://shop.ulemjgrease.com/products/9256/87064",
+            },
+            {
+                name: "Goli - Supergreens gummies",
+                price: "89.000",
+                link: "https://shop.ulemjgrease.com/products/null/179442",
+            },
+        ],
+    };
 
     const onShopClick = (link: string) => {
         window.open(link, "_blank", "noreferrer");
     };
 
     return (
-        <div>
+        <Fade className="" transition={{ y: -50, delay: 0 }}>
             <Swiper
                 spaceBetween={4}
                 slidesPerView={4}
@@ -50,7 +77,7 @@ export default function Products() {
                 grabCursor={true}
                 resistanceRatio={0}
             >
-                {products?.map((product) => (
+                {products[brand as keyof Brand]?.map((product) => (
                     <SwiperSlide key={product.name}>
                         <div
                             onContextMenu={(e) => e.preventDefault()}
@@ -93,6 +120,6 @@ export default function Products() {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </Fade>
     );
 }

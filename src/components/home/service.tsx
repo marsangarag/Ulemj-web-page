@@ -1,46 +1,63 @@
-import { motion } from "framer-motion";
-import { useEffect } from "react";
+import Fade from "components/layout/fade";
+import { Brand } from "lib/types/brand.type";
+import parse from "html-react-parser";
 
-export default function Service() {
+export default function Service({ brand }: { brand: string }) {
     const onLinkClick = (link: string) => {
         window.open(link, "_blank", "noreferrer");
     };
+
+    const content = {
+        grease: {
+            left: {
+                image: "spa",
+                title: "Grease Wellness",
+                text: "at Shangri-La Ulaanbaatar, Mongolia",
+                route: "http://appointment.ulemjgrease.com/salon-profile/wellness/",
+            },
+            right: {
+                route: "http://appointment.ulemjgrease.com/salon-profile/egulen/",
+                button: "<span className='font-bold'>Grease VIP</span> at Baga tenger",
+                img: "baga_tenger",
+            },
+        },
+        pharm: {
+            left: {
+                image: "spa",
+                title: "Grease Wellness",
+                text: "at Shangri-La Ulaanbaatar, Mongolia",
+                route: "http://appointment.ulemjgrease.com/salon-profile/wellness/",
+            },
+            right: {
+                route: "http://appointment.ulemjgrease.com/salon-profile/egulen/",
+                button: "<span className='font-bold'>Grease VIP</span> at Baga tenger",
+                img: "baga_tenger",
+            },
+        },
+    };
+
     return (
-        <motion.div
-            onContextMenu={(e) => e.preventDefault()}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 50,
-            }}
-            viewport={{ once: true }}
-            className="flex flex-col gap-y-1 md:grid md:grid-cols-5 gap-x-1 md:place-items-stretch"
-        >
-            <div className="col-span-3 w-full h-full relative text-white ">
-                {/* <Image
-                    src={"/images/spa.jpg"}
-                    alt="spa"
-                    className="rounded-xl w-full h-full"
-                    fill
-                /> */}
+        <div className="flex flex-col gap-y-1 md:grid md:grid-cols-5 gap-x-1 md:place-items-stretch">
+            <Fade
+                transition={{ y: -200, delay: 0 }}
+                className="col-span-3 w-full h-full relative text-white "
+            >
                 <img
-                    src="/images/service/spa.jpg"
+                    src={`/images/service/${brand}/spa.jpg`}
                     alt="spa"
                     className="rounded-xl h-full w-full"
                 />
-                <div className="absolute bottom-8 left-6">
+                <div className="absolute bottom-8 left-5">
                     <p className="text-xl sm:text-3xl tracking-wide font-light">
-                        Grease Wellness
+                        {content[brand as keyof Brand]?.left?.title}
                     </p>
                     <p className="text-smaller font-normal pb-5">
-                        at Shangri-La Ulaanbaatar, Mongolia
+                        {content[brand as keyof Brand]?.left?.text}
                     </p>
                     <button
                         onClick={() =>
                             onLinkClick(
-                                "http://appointment.ulemjgrease.com/salon-profile/wellness/"
+                                content[brand as keyof Brand]?.left?.route
                             )
                         }
                         className="border-2 py-1.5 px-3 rounded-3xl text-xs font-semibold"
@@ -48,8 +65,9 @@ export default function Service() {
                         Learn more
                     </button>
                 </div>
-            </div>
-            <div
+            </Fade>
+            <Fade
+                transition={{ y: 200, delay: 0.1 }}
                 onClick={() =>
                     onLinkClick(
                         "http://appointment.ulemjgrease.com/salon-profile/egulen/"
@@ -58,20 +76,16 @@ export default function Service() {
                 className="md:col-span-2 cursor-pointer relative"
             >
                 <div className="bg-white  absolute z-20 right-0 -top-1 font-light px-3 py-1 text-sm rounded-bl-xl">
-                    <span className="font-bold">Grease VIP</span> at Baga tenger
+                    {parse(content[brand as keyof Brand]?.right?.button)}
                 </div>
-                {/* <Image
-                    src="/images/service/baga_tenger.jpg"
-                    className="rounded-xl"
-                    fill
-                    alt="baga-tenger"
-                /> */}
                 <img
-                    src="/images/service/baga_tenger.jpg"
+                    src={`/images/service/${brand}/${
+                        content[brand as keyof Brand]?.right?.img
+                    }.jpg`}
                     alt="baga tenger"
                     className="rounded-xl h-full w-full"
                 />
-            </div>
-        </motion.div>
+            </Fade>
+        </div>
     );
 }

@@ -1,6 +1,7 @@
 import Banner from "components/home/banner";
 import Carousel from "components/home/carousel";
 import Companies from "components/home/companies";
+import MidText from "components/home/mid-text";
 import Products from "components/home/product";
 import RunningText from "components/home/running-text";
 import Salon from "components/home/salon";
@@ -28,14 +29,11 @@ export default function Pharm() {
                 ]}
             />
             <Salon brand="pharm" />
-            <div className="self-center py-5 text-center font-bold">
-                Sustainability – Customer Service – Quality - Personalization -
-                Innovation - Professionalism and Teamwork.
-            </div>
-            <Products />
-            <Service />
+            <MidText brand="pharm" />
+            <Products brand="pharm" />
+            <Service brand="pharm" />
             <Companies />
-            <Carousel />
+            <Carousel brand="pharm" />
         </div>
     );
 }

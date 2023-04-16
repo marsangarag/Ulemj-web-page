@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 
 export default function Companies() {
     const router = useRouter();
-    const { setBrand } = useAppState();
     const companies = [
         "stardom",
         "clinic",
@@ -15,7 +14,6 @@ export default function Companies() {
     ];
 
     const onCompanyClick = async (name: string) => {
-        await setBrand(name);
         router.push(`/${name}`);
     };
 

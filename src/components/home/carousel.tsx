@@ -3,17 +3,16 @@ import { Autoplay, Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import Fade from "components/layout/fade";
+import { Brand } from "lib/types/brand.type";
 
-export default function Carousel() {
-    const banners = [
-        "banner00",
-        "banner01",
-        "banner02",
-        "banner03",
-        "banner04",
-    ];
+export default function Carousel({ brand }: { brand: string }) {
+    const banners = {
+        grease: ["banner00", "banner01", "banner02", "banner03", "banner04"],
+        pharm: ["banner1"],
+    };
     return (
-        <div>
+        <Fade className="" transition={{ y: -250, delay: 0 }}>
             <Swiper
                 modules={[Pagination, Autoplay]}
                 spaceBetween={50}
@@ -26,7 +25,7 @@ export default function Carousel() {
                     disableOnInteraction: false,
                 }}
             >
-                {banners?.map((banner) => {
+                {banners[brand as keyof Brand]?.map((banner) => {
                     return (
                         <SwiperSlide
                             onContextMenu={(e) => e.preventDefault()}
@@ -41,7 +40,7 @@ export default function Carousel() {
                             key={banner}
                         >
                             <img
-                                src={`/images/carousel/${banner}.jpg`}
+                                src={`/images/carousel/${brand}/${banner}.jpg`}
                                 alt={banner}
                                 className="rounded-2xl"
                             />
@@ -49,6 +48,6 @@ export default function Carousel() {
                     );
                 })}
             </Swiper>
-        </div>
+        </Fade>
     );
 }
