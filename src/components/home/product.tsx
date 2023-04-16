@@ -13,17 +13,17 @@ export default function Products() {
         {
             name: "Cyfolia",
             price: "189.900",
-            link: "https://shop.ulemjgrease.com/products/9256/92988",
+            link: "https://shop.ulemjgrease.com/products/9256/91692",
         },
         {
             name: "White Lumination",
             price: "173.900",
-            link: "https://shop.ulemjgrease.com/products/9256/92988",
+            link: "https://shop.ulemjgrease.com/products/9584/92806",
         },
         {
             name: "Structruriste",
             price: "219.900",
-            link: "https://shop.ulemjgrease.com/products/9256/92988",
+            link: "https://shop.ulemjgrease.com/products/9584/92600",
         },
         {
             name: "Line repair Teraskin+HA",
@@ -51,7 +51,7 @@ export default function Products() {
                 resistanceRatio={0}
             >
                 {products?.map((product) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={product.name}>
                         <div
                             onContextMenu={(e) => e.preventDefault()}
                             key={product.name}

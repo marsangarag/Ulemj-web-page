@@ -1,5 +1,6 @@
 import Banner from "components/home/banner";
 import Carousel from "components/home/carousel";
+import Companies from "components/home/companies";
 import Products from "components/home/product";
 import RunningText from "components/home/running-text";
 import Salon from "components/home/salon";
@@ -11,19 +12,19 @@ export default function Home() {
             <Banner />
             <RunningText
                 images={[
+                    "phytomer",
+                    "lumenis",
                     "bodyography",
-                    "byebyeblemish",
+                    "ionto",
+                    "cuccio",
+                    "orly",
+                    "hantesis",
                     "christina",
+                    "lpg",
+                    "woody",
                     "gigi",
                     "goli",
-                    "hantesis",
-                    "cuccio",
-                    "ionto",
-                    "lpg",
-                    "lumenis",
-                    "orly",
-                    "phytomer",
-                    "woody",
+                    "byebyeblemish",
                 ]}
             />
             <Salon />
@@ -33,6 +34,7 @@ export default function Home() {
             </div>
             <Products />
             <Service />
+            <Companies />
             <Carousel />
         </div>
     );

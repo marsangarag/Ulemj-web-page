@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 export default function Opacity({
     delay,
@@ -11,8 +12,10 @@ export default function Opacity({
     className?: string;
     onClick?: any;
 }) {
+    const router = useRouter();
     return (
         <motion.div
+            key={router.pathname}
             onClick={onClick}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}

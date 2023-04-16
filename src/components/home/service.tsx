@@ -49,15 +49,15 @@ export default function Service() {
                     </button>
                 </div>
             </div>
-            <div className="md:col-span-2  relative">
-                <div
-                    onClick={() =>
-                        onLinkClick(
-                            "http://appointment.ulemjgrease.com/salon-profile/egulen/"
-                        )
-                    }
-                    className="bg-white cursor-pointer absolute z-20 right-0 -top-1 font-light px-3 py-1 text-sm rounded-bl-xl"
-                >
+            <div
+                onClick={() =>
+                    onLinkClick(
+                        "http://appointment.ulemjgrease.com/salon-profile/egulen/"
+                    )
+                }
+                className="md:col-span-2 cursor-pointer relative"
+            >
+                <div className="bg-white  absolute z-20 right-0 -top-1 font-light px-3 py-1 text-sm rounded-bl-xl">
                     <span className="font-bold">Grease VIP</span> at Baga tenger
                 </div>
                 {/* <Image

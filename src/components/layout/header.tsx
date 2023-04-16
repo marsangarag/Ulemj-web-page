@@ -44,7 +44,11 @@ export default function Header() {
 
     return (
         <div className="relative h-full w-full sm:block flex flex-col items-center">
-            <Opacity onClick={() => onNavigate("/")} delay={0.2}>
+            <Opacity
+                className="cursor-pointer"
+                onClick={() => onNavigate("/")}
+                delay={0.2}
+            >
                 <Image
                     src={"/images/brand-logo.png"}
                     alt="ulemj"
