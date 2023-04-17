@@ -21,7 +21,7 @@ export default function About() {
                     >
                         <h2 className="font-bold">MISSION</h2>
                         <p>
-                            The store's mission is to create quality service
+                            The store&#39;s mission is to create quality service
                             with high standards
                         </p>
                     </div>
@@ -42,7 +42,7 @@ export default function About() {
                     >
                         <h2 className="font-bold">VALUES</h2>
                         <p>
-                            The store's motto is to respect the customer and
+                            The store&#39;s motto is to respect the customer and
                             value quality
                         </p>
                     </div>
@@ -51,7 +51,7 @@ export default function About() {
                     Good Price Store initially imported products solely from the
                     United States, but now, it imports and sells products from
                     various countries, including Germany, Korea, and Russia. The
-                    store's mission is to create perfect service standards,
+                    store&#39;s mission is to create perfect service standards,
                     establish an international trade channel, and create a
                     unified central distribution system. The values that guide
                     the store include profit, speed and energy, the perfect

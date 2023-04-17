@@ -10,8 +10,8 @@ export default function About() {
                     Ulemj Clinic began its journey in the field of medical
                     cosmetology in 2017 at the Shangri-La shopping center. Since
                     then, the clinic has expanded its services to plastic
-                    surgery and rebranded itself as "HAIR & ESTHETIC CLINIC" in
-                    2020.
+                    surgery and rebranded itself as &#34;HAIR & ESTHETIC
+                    CLINIC&#34; in 2020.
                 </p>
                 <div className="mb-8 grid sm:grid-cols-3 gap-1 sm:gap-10">
                     <div
@@ -82,7 +82,7 @@ export default function About() {
                 <div className="sm:px-20 mb-8">
                     <img
                         src={`/images/about/clinic/banner.png`}
-                        alt=""
+                        alt="banner"
                         className="hover:scale-105 ease-in duration-100 rounded-xl"
                     />
                 </div>

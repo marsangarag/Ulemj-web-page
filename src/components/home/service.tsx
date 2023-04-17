@@ -19,7 +19,7 @@ export default function Service({ brand }: { brand: string }) {
             },
             right: {
                 route: "http://appointment.ulemjgrease.com/salon-profile/egulen/",
-                button: "<span className='font-bold'>Grease VIP</span> at Baga tenger",
+                button: '<span className="font-bold">Grease VIP</span> at Baga tenger',
                 img: "baga_tenger",
             },
         },
