@@ -110,6 +110,18 @@ export default function Header({ brand }: { brand: string }) {
                 route: `/${brand}/about`,
             },
         ],
+        ulemj: [
+            // {
+            //     en: "Reservations",
+            //     mon: "",
+            //     route: `tel:+97611319031 `,
+            // },
+            // {
+            //     en: "Services",
+            //     mon: "",
+            //     route: `https://www.facebook.com/California.Restaurant.MN`,
+            // },
+        ],
     };
 
     const rightItems = [
@@ -126,7 +138,7 @@ export default function Header({ brand }: { brand: string }) {
         setLang(lang === "en" ? "mon" : "en");
     };
 
-    return (
+    return brand ? (
         <div
             className={`relative h-full sm:h-16 flex flex-col gap-y-1 items-center border-b ${
                 colorCodes[brand as keyof Brand]?.border
@@ -201,5 +213,5 @@ export default function Header({ brand }: { brand: string }) {
                 </Opacity>
             </div> */}
         </div>
-    );
+    ) : null;
 }

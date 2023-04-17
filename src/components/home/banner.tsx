@@ -72,6 +72,7 @@ export default function Banner({
                 route: "https://qrmenu.mn/menu/ODQy",
             },
         },
+        ulemj: { text: "", button1: null, button2: null },
     };
 
     const onButtonClick = (link?: string) => {
@@ -150,50 +151,59 @@ export default function Banner({
                     className="absolute  w-full h-1/2 bottom-0 left-0 z-20 bg-white"
                 ></motion.div>
             </div>
-            <div className="absolute z-30 text-shadow bottom-1/3 left-5 md:left-10 text-smaller font-light text-justify w-[40%] md:w-2/5 sm:text-lg md:text-xl xl:text-3xl shadow-text">
-                {parse(slogans[brand as keyof Brand]?.text)}
-            </div>
-
-            <motion.div
-                initial={{ x: -500 }}
-                animate={{ x: 0 }}
-                transition={{
-                    delay: 0.7,
-                    type: "spring",
-                    stiffness: 500,
-                    damping: 50,
-                }}
-                className="w-full text-smaller sm:text-xs md:text-sm font-medium px-4 md:px-8 absolute bottom-4 md:bottom-10 z-30 flex justify-start gap-x-2.5 items-center"
-            >
-                {slogans[brand as keyof Brand]?.button2 ? (
-                    <div
-                        onClick={() =>
-                            onButtonClick(
-                                slogans[brand as keyof Brand]?.button2?.route
-                            )
-                        }
-                        className={`cursor-pointer shadow-text bg-transparent rounded-3xl border-white border p-2.5 ${
-                            colorCodes[brand as keyof Brand].color
-                        }`}
-                    >
-                        {slogans[brand as keyof Brand]?.button2?.title}
+            {slogans[brand as keyof Brand].text ? (
+                <>
+                    <div className="absolute z-30 text-shadow bottom-1/3 left-5 md:left-10 text-smaller font-light text-justify w-[40%] md:w-2/5 sm:text-lg md:text-xl xl:text-3xl shadow-text">
+                        {parse(slogans[brand as keyof Brand]?.text)}
                     </div>
-                ) : null}
-                <div
-                    onClick={() =>
-                        onButtonClick(
-                            slogans[brand as keyof Brand]?.button1?.route
-                        )
-                    }
-                    className={`cursor-pointer shadow ${
-                        colorCodes[brand as keyof Brand]?.button
-                    } rounded-3xl border ${
-                        colorCodes[brand as keyof Brand]?.["button-border"]
-                    } ${colorCodes[brand as keyof Brand].color} py-2.5 px-4`}
-                >
-                    {slogans[brand as keyof Brand]?.button1?.title}
-                </div>
-            </motion.div>
+                    <motion.div
+                        initial={{ x: -500 }}
+                        animate={{ x: 0 }}
+                        transition={{
+                            delay: 0.7,
+                            type: "spring",
+                            stiffness: 500,
+                            damping: 50,
+                        }}
+                        className="w-full text-smaller sm:text-xs md:text-sm font-medium px-4 md:px-8 absolute bottom-4 md:bottom-10 z-30 flex justify-start gap-x-2.5 items-center"
+                    >
+                        {slogans[brand as keyof Brand]?.button2 ? (
+                            <div
+                                onClick={() =>
+                                    onButtonClick(
+                                        slogans[brand as keyof Brand]?.button2
+                                            ?.route
+                                    )
+                                }
+                                className={`cursor-pointer shadow-text bg-transparent rounded-3xl border-white border p-2.5 ${
+                                    colorCodes[brand as keyof Brand].color
+                                }`}
+                            >
+                                {slogans[brand as keyof Brand]?.button2?.title}
+                            </div>
+                        ) : null}
+                        <div
+                            onClick={() =>
+                                onButtonClick(
+                                    slogans[brand as keyof Brand]?.button1
+                                        ?.route
+                                )
+                            }
+                            className={`cursor-pointer shadow ${
+                                colorCodes[brand as keyof Brand]?.button
+                            } rounded-3xl border ${
+                                colorCodes[brand as keyof Brand]?.[
+                                    "button-border"
+                                ]
+                            } ${
+                                colorCodes[brand as keyof Brand].color
+                            } py-2.5 px-4`}
+                        >
+                            {slogans[brand as keyof Brand]?.button1?.title}
+                        </div>
+                    </motion.div>
+                </>
+            ) : null}
         </div>
     );
 }

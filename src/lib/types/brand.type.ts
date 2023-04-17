@@ -5,4 +5,5 @@ export interface Brand {
     stardom: string;
     goodprice?: string;
     california: string;
+    ulemj: string;
 }

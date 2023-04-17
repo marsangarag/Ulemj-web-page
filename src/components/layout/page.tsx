@@ -8,7 +8,7 @@ import { colorCodes } from "lib/helper";
 import { Brand } from "lib/types/brand.type";
 
 export default function Page({ children }: { children: any }) {
-    const [brand, setBrand] = useState<string>("grease");
+    const [brand, setBrand] = useState<string>("ulemj");
     const router = useRouter();
     const { pathname } = router;
 
@@ -26,13 +26,13 @@ export default function Page({ children }: { children: any }) {
                 setBrand("goodprice");
             } else if (pathname.includes("stardom")) {
                 setBrand("stardom");
-            } else if (pathname.includes("buildings")) {
-                setBrand("buildings");
+            } else {
+                setBrand("ulemj");
             }
         }
     }, [router]);
 
-    return (
+    return brand ? (
         <>
             <Opacity
                 className={`w-screen h-screen overflow-x-hidden font-rubik`}
@@ -53,5 +53,5 @@ export default function Page({ children }: { children: any }) {
                 </div>
             </Opacity>
         </>
-    );
+    ) : null;
 }

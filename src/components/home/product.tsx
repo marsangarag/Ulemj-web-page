@@ -3,8 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Fade from "components/layout/fade";
 import { Brand } from "lib/types/brand.type";
+import { useRouter } from "next/router";
 
 export default function Products({ brand }: { brand: string }) {
+    const router = useRouter();
     const products = {
         grease: [
             {
@@ -156,10 +158,48 @@ export default function Products({ brand }: { brand: string }) {
                 link: "https://www.instagram.com/stardom_boutique/",
             },
         ],
+        ulemj: [
+            {
+                name: "Fine dining",
+                price: "California",
+                link: "/california",
+            },
+            {
+                name: "Fashion retail",
+                price: "Stardom",
+                link: "/stardom",
+            },
+            {
+                name: "Beauty Spa",
+                price: "Ulemj grease",
+                link: "/grease",
+            },
+            {
+                name: "High-quality products & service",
+                price: "GoodPrice",
+                link: "/goodprice",
+            },
+            {
+                name: "Dermatology clinic",
+                price: "Ulemj Clinic",
+                link: "/clinic",
+            },
+            {
+                name: "Pharmacy",
+                price: "Ulemj Pharm",
+                link: "/pharm",
+            },
+        ],
     };
 
     const onShopClick = (link: string) => {
-        window.open(link, "_blank", "noreferrer");
+        if (link) {
+            if (link.includes("http")) {
+                window.open(link, "_blank", "noreferrer");
+            } else {
+                router.push(link);
+            }
+        }
     };
 
     return (
@@ -206,7 +246,8 @@ export default function Products({ brand }: { brand: string }) {
                                                     }
                                                     className="rounded-3xl cursor-pointer border border-white py-1 px-1 md:px-2.5 lg:px-5"
                                                 >
-                                                    {brand === "clinic"
+                                                    {brand === "clinic" ||
+                                                    brand === "ulemj"
                                                         ? "More"
                                                         : "Shop"}
                                                 </div>

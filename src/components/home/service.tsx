@@ -4,7 +4,9 @@ import parse from "html-react-parser";
 
 export default function Service({ brand }: { brand: string }) {
     const onLinkClick = (link: string) => {
-        window.open(link, "_blank", "noreferrer");
+        if (link) {
+            window.open(link, "_blank", "noreferrer");
+        }
     };
 
     const content = {
@@ -87,6 +89,19 @@ export default function Service({ brand }: { brand: string }) {
                 img: "right",
             },
         },
+        ulemj: {
+            left: {
+                image: "left",
+                title: "Construction",
+                text: "Project management",
+                route: "",
+            },
+            right: {
+                route: "",
+                button: "<span className='font-bold'>Manufacture, </span>Planning & Design",
+                img: "right",
+            },
+        },
     };
 
     return (
@@ -95,6 +110,7 @@ export default function Service({ brand }: { brand: string }) {
                 transition={{ y: -200, delay: 0 }}
                 className="col-span-3 w-full h-full relative text-white "
             >
+                <div className="gradient-bg"></div>
                 <img
                     src={`/images/service/${brand}/${
                         content[brand as keyof Brand]?.left?.image
@@ -158,6 +174,20 @@ export default function Service({ brand }: { brand: string }) {
                             alt="baga tenger"
                             className="rounded-xl h-full w-full"
                         />
+                        {brand === "ulemj" && (
+                            <div className="absolute text-white shadow-text bottom-8 left-5 right-5">
+                                <div className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-wide font-light">
+                                    Manufacture
+                                </div>
+                                <div className="text-smaller sm:text-xs md:text-sm lg:text-base xl:text-xl font-normal pb-1 sm:pb-5 text-justify">
+                                    Diversified services univarying quality
+                                </div>
+
+                                <button className="border-2 shadow py-1.5 px-3  rounded-3xl text-xs md:text-sm lg:text-base font-semibold">
+                                    Learn more
+                                </button>
+                            </div>
+                        )}
                     </>
                 )}
             </Fade>

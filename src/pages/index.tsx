@@ -5,38 +5,20 @@ import Products from "components/home/product";
 import RunningText from "components/home/running-text";
 import Salon from "components/home/cards";
 import Service from "components/home/service";
+import UlemjCards from "components/ulemj/cards";
+import MidText from "components/home/mid-text";
 
 export default function Home() {
     return (
-        <div>hehehas</div>
-        // <div className="flex flex-col gap-y-2.5 ">
-        //     <Banner />
-        //     <RunningText
-        //         images={[
-        //             "phytomer",
-        //             "lumenis",
-        //             "bodyography",
-        //             "ionto",
-        //             "cuccio",
-        //             "orly",
-        //             "hantesis",
-        //             "christina",
-        //             "lpg",
-        //             "woody",
-        //             "gigi",
-        //             "goli",
-        //             "byebyeblemish",
-        //         ]}
-        //     />
-        //     <Salon />
-        //     <div className="self-center py-5 text-center font-bold">
-        //         Sustainability – Customer Service – Quality - Personalization -
-        //         Innovation - Professionalism and Teamwork.
-        //     </div>
-        //     <Products />
-        //     <Service />
-        //     <Companies />
-        //     <Carousel />
-        // </div>
+        <div className="flex flex-col gap-y-2.5 ">
+            <Banner brand="ulemj" />
+            <Companies />
+            <UlemjCards />
+            <MidText brand="ulemj" />
+            <Products brand="ulemj" />
+            <Service brand="ulemj" />
+            <img src="/images/logos/all.jpg" alt="all" />
+            <Carousel brand="ulemj" />
+        </div>
     );
 }

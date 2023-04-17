@@ -292,6 +292,42 @@ export default function Footer({ brand }: { brand: string }) {
                 ],
             },
         ],
+        ulemj: [
+            {
+                title: { en: "Navigation", mon: "Хэсэх" },
+                items: [{ en: "About", mon: "Дэлгэрэнгүй", route: "/about" }],
+            },
+            {
+                title: { en: "Contact", mon: "Холбоо барих" },
+                items: [
+                    {
+                        en: "info@ulemj.mn",
+                        mon: "info@ulemj.mn",
+                        route: "info@ulemj.mn",
+                    },
+                    {
+                        en: "+976 77770090",
+                        mon: "+976 77770090",
+                        route: "+976 77770090",
+                    },
+                ],
+            },
+            {
+                title: { en: "Social media", mon: "Сошиал медиа" },
+                items: [
+                    // {
+                    //     en: "Instagram",
+                    //     mon: "Instagram",
+                    //     route: "https://www.instagram.com/stardom_boutique/",
+                    // },
+                    {
+                        en: "Facebook",
+                        mon: "Facebook",
+                        route: "https://www.facebook.com/profile.php?id=100082994967506",
+                    },
+                ],
+            },
+        ],
     };
 
     const onLinkClick = (route: string) => {

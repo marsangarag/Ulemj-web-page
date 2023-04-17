@@ -47,6 +47,14 @@ const colorCodes = {
         "button-border": "border-white",
         color: "text-white",
     },
+    ulemj: {
+        bgColor: "bg-gradient-to-r from-[#41437b] to-[#bf3d3c]",
+        border: "border-grease/50",
+        hover: "hover:bg-gradient-to-r from-[#41437b] to-[#bf3d3c]",
+        button: "bg-transparent",
+        "button-border": "border-white",
+        color: "text-white",
+    },
 };
 
 export { colorCodes };

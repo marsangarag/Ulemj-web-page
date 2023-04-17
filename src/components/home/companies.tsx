@@ -14,7 +14,11 @@ export default function Companies() {
     ];
 
     const onCompanyClick = async (name: string) => {
-        router.push(`/${name}`);
+        if (name === "buildings") {
+            router.push("/");
+        } else {
+            router.push(`/${name}`);
+        }
     };
 
     return (

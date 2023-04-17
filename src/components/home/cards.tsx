@@ -231,6 +231,44 @@ export default function Salon({ brand }: { brand: string }) {
                 },
             },
         },
+        ulemj: {
+            left: {
+                image: "left",
+                title: "Ulemj Building's",
+                text: "Constuction and manufacturing",
+                button: {
+                    title: "",
+                    route: "",
+                },
+                button2: {
+                    title: "",
+                    route: "",
+                },
+            },
+            center: {
+                top: {
+                    image: "top",
+                    title: "",
+                    text: "“Ulemj” is the Mongolian word for “Great”, “Giant”, and “Perfection” which often indicates the quality and size of things that align with our quality and services.",
+                    route: "",
+                },
+                bottom: {
+                    button: "About",
+                    image: "bottom",
+                    text: "Since its establishment in 1991, ULEMJ LLC has been expanding its range in the direction of supplying high-quality and reliable products to foreign and domestic trade and service industries.",
+                    route: "",
+                },
+            },
+            right: {
+                image: "right",
+                title: "Our Services",
+                text: "",
+                button: {
+                    title: "See more",
+                    route: "https://www.facebook.com/California.Restaurant.MN",
+                },
+            },
+        },
     };
 
     return (
@@ -257,23 +295,28 @@ export default function Salon({ brand }: { brand: string }) {
                         </div>
                     </div>
                     <div className="flex gap-x-2">
-                        <div
-                            onClick={() =>
-                                onButtonClick(
+                        {content[brand as keyof Brand]?.left?.button?.title ? (
+                            <div
+                                onClick={() =>
+                                    onButtonClick(
+                                        content[brand as keyof Brand]?.left
+                                            ?.button?.route
+                                    )
+                                }
+                                className={`${
+                                    colorCodes[brand as keyof Brand]?.button
+                                } ${colorCodes[brand as keyof Brand]?.color}  ${
+                                    colorCodes[brand as keyof Brand]?.[
+                                        "button-border"
+                                    ]
+                                } border cursor-pointer shadow rounded-3xl py-2.5 px-4 text-xs md:text-sm lg:text-base xl:text-xl font-medium`}
+                            >
+                                {
                                     content[brand as keyof Brand]?.left?.button
-                                        ?.route
-                                )
-                            }
-                            className={`${
-                                colorCodes[brand as keyof Brand]?.button
-                            } ${colorCodes[brand as keyof Brand]?.color}  ${
-                                colorCodes[brand as keyof Brand]?.[
-                                    "button-border"
-                                ]
-                            } border cursor-pointer shadow rounded-3xl py-2.5 px-4 text-xs md:text-sm lg:text-base xl:text-xl font-medium`}
-                        >
-                            {content[brand as keyof Brand]?.left?.button?.title}
-                        </div>
+                                        ?.title
+                                }
+                            </div>
+                        ) : null}
                         {content[brand as keyof Brand]?.left?.button2.title ? (
                             <div
                                 onClick={() =>
@@ -325,7 +368,8 @@ export default function Salon({ brand }: { brand: string }) {
                             (brand === "pharm" ||
                                 brand === "stardom" ||
                                 brand === "clinic" ||
-                                brand === "california") &&
+                                brand === "california" ||
+                                brand === "ulemj") &&
                             "text-white"
                         }`}
                     >
