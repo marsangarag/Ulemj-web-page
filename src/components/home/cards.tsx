@@ -234,7 +234,7 @@ export default function Salon({ brand }: { brand: string }) {
         ulemj: {
             left: {
                 image: "left",
-                title: "Ulemj Building's",
+                title: "Ulemj Building&#39;s",
                 text: "Constuction and manufacturing",
                 button: {
                     title: "",

@@ -167,7 +167,7 @@ export default function Header({ brand }: { brand: string }) {
             <div
                 className={`flex items-center gap-x-5 text-sm sm:absolute ${
                     brand === "ulemj"
-                        ? "sm:right-5"
+                        ? "sm:right-10"
                         : "sm:left-1/2 sm:-translate-x-1/2"
                 }  sm:top-1/2 sm:-translate-y-1/2 pb-4 sm:pb-0 -mt-4 sm:mt-0 $`}
             >
