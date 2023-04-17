@@ -9,6 +9,8 @@ import { Autoplay, Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { useState } from "react";
+import ReactPlayer from "react-player";
 
 export default function Banner({
     brand,
@@ -17,6 +19,8 @@ export default function Banner({
     brand: string;
     images?: string[];
 }) {
+    const [muted, setMuted] = useState<boolean>(true);
+
     const slogans = {
         grease: {
             text: "<span className='font-medium'>Ulemj grease LLC</span> is a leading company with great experience in the sector of nail, beauty spa and hair salons in Mongolia at its <span className='font-medium'>25th anniversary.</span>",
@@ -127,14 +131,36 @@ export default function Banner({
                         </Swiper>
                     </>
                 ) : (
-                    <video
-                        onContextMenu={(e) => e.preventDefault()}
-                        className="w-full aspect-video overflow-hidden rounded-xl relative"
-                        autoPlay={true}
-                        loop
-                        muted
-                        src={`/video/${brand}.mp4`}
-                    />
+                    <>
+                        <video
+                            onContextMenu={(e) => e.preventDefault()}
+                            className="w-full aspect-video overflow-hidden rounded-xl relative"
+                            autoPlay={true}
+                            loop
+                            muted={muted}
+                            src={`/video/${brand}.mp4`}
+                        />
+                        <div
+                            onClick={() => setMuted(!muted)}
+                            className="absolute left-4 top-4 md:left-6 md:top-6 xl:left-8 xl:top-8"
+                        >
+                            <div className="relative w-4 h-4 md:w-8 md:h-8 xl:w-10 xlh-10">
+                                {muted ? (
+                                    <Image
+                                        src={"/icons/mute.png"}
+                                        alt="unmute"
+                                        fill
+                                    />
+                                ) : (
+                                    <Image
+                                        src={"/icons/unmute.png"}
+                                        alt="mute"
+                                        fill
+                                    />
+                                )}
+                            </div>
+                        </div>
+                    </>
                 )}
                 <motion.div
                     initial={{ scaleY: 1 }}

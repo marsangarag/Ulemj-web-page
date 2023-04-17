@@ -2,7 +2,7 @@ export default function About() {
     return (
         <div className="container mx-auto">
             <div className="px-2 md:px-24 pb-8 text-justify leading-5 ">
-                <p className="mb-8">
+                <div className="mb-8">
                     We are the official distributor of internationally
                     recognized <b>MCCM Medical Cosmetics LLC</b> of Portugal
                     wich manufactures aesthetic professional ampoules, sheffield
@@ -31,7 +31,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <p>
+                <div>
                     The company’s business is the trade and import of the
                     medicines, biological active products, medical technics,
                     equipment and devices and cosmetic treatment instruments. It

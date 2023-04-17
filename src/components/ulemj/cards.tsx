@@ -78,21 +78,21 @@ export default function UlemjCards() {
                 />
                 <div className="absolute inset-0 px-5 py-10 h-full flex flex-col justify-between text-white items-start">
                     <div className="flex flex-col gap-y-1 md:gap-y-1.5">
-                        <div className="text-xl sm:text-3xl font-medium tracking-wide">
-                            Trading
+                        <div className="text-xl sm:text-3xl font-normal tracking-wide">
+                            Trade
                         </div>
-                        <div className="text-xl sm:text-3xl font-medium tracking-wide">
+                        <div className="text-xl sm:text-3xl font-normal tracking-wide">
                             Service
                         </div>
-                        <div className="text-xl sm:text-3xl font-medium tracking-wide">
+                        <div className="text-xl sm:text-3xl font-normal tracking-wide">
                             Design
                         </div>
-                        <div className="text-xl sm:text-3xl font-medium tracking-wide">
+                        <div className="text-xl sm:text-3xl font-normal tracking-wide">
                             Construction
                         </div>
                     </div>
                     <div className="self-end flex flex-col gap-y-2.5 items-end">
-                        <div className="text-xl sm:text-3xl font-medium tracking-wide">
+                        <div className="text-xl sm:text-3xl font-normal tracking-wide">
                             1991
                         </div>
                         <div className="font-light text-smaller sm:text-sm xl:text-base">

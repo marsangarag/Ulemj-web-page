@@ -14,19 +14,16 @@ export default function Stardom() {
             <Banner brand="stardom" />
             <RunningText
                 images={[
-                    "phytomer",
-                    "lumenis",
-                    "bodyography",
-                    "ionto",
-                    "cuccio",
-                    "orly",
-                    "hantesis",
-                    "christina",
-                    "lpg",
-                    "woody",
-                    "gigi",
-                    "goli",
-                    "byebyeblemish",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "010",
                 ]}
             />
             <Salon brand="stardom" />

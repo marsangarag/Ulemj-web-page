@@ -5,7 +5,7 @@ export default function About() {
                 <h1 className="font-bold mb-8 text-center text-sm sm:text-2xl">
                     TRADING | SERVICE | DESIGN | CONSTRUCTION
                 </h1>
-                <p className="mb-8">
+                <div className="mb-8">
                     Each of the specialized companies associated with ULEMJ
                     GROUP consists of a number of highly qualified and
                     experienced individuals. These individuals have a unique
@@ -14,35 +14,35 @@ export default function About() {
                     expertise. This unique combination enables us to implement
                     the best available technology in a practical sense in a
                     developing environment.
-                </p>
+                </div>
                 <div className="mb-8 grid sm:grid-cols-3 gap-1 sm:gap-5">
                     <div
                         className="border border-ulemj rounded-2xl py-8 px-5 hover:bg-gradient-to-r hover:from-[#41437b] hover:to-[#bf3d3c]
                         ease-in duration-100 hover:text-white hover:scale-110 text-sm"
                     >
                         <h2 className="font-bold">MISSION</h2>
-                        <p>
+                        <div>
                             To become the leading group that utilizes great
                             intelligence and knowledge of Mongolia. being
                             mingled with modern technology.
-                        </p>
+                        </div>
                     </div>
                     <div
                         className="border border-ulemj rounded-2xl py-8 px-5  hover:bg-gradient-to-r hover:from-[#41437b] hover:to-[#bf3d3c]
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm"
                     >
                         <h2 className="font-bold">VISION</h2>
-                        <p>
+                        <div>
                             To build a highly civilized and globally acclaimed
                             Mongolia.
-                        </p>
+                        </div>
                     </div>
                     <div
                         className="border border-ulemj rounded-2xl py-8 px-5  hover:bg-gradient-to-r hover:from-[#41437b] hover:to-[#bf3d3c]
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm"
                     >
                         <h2 className="font-bold">VALUES</h2>
-                        <p>
+                        <div>
                             More we take care of our most valuables,those shall
                             br ing greatest fertilities. <br />
                             <span className="text-xs text-start">
@@ -50,20 +50,20 @@ export default function About() {
                                 Our Customers | Our Business Partners | Our
                                 Employees
                             </span>
-                        </p>
+                        </div>
                     </div>
                 </div>
-                <p>
+                <div>
                     Over the past 23 years, Ulemj Buildings has emerged as one
                     of the most respected general contracting firms in Mongolia.
                     Again and again, in the area of constraction and earthworks
                     construction, we have proven our ability to our client on
                     taking large, complex projects and complete them on time, on
                     budget, and at the highest levels of quality.
-                </p>
+                </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 bg-black/5 min-h-[430px] items-center p-5">
-                <div className="bg-white h-full rounded-xl flex flex-col justify-center px-5 text-justify group">
+                <div className="bg-white h-full rounded-xl flex flex-col justify-center items-center px-5 text-justify group">
                     <div className="font-bold group-hover:hidden ">
                         What we are
                     </div>
@@ -72,7 +72,7 @@ export default function About() {
                         trade and service groupsIn Mongolia.
                     </div>
                 </div>
-                <div className="bg-white h-full rounded-xl flex flex-col justify-center px-5 text-justify group">
+                <div className="bg-white h-full rounded-xl flex flex-col justify-center items-center px-5 text-justify group">
                     <div className="font-bold group-hover:hidden">
                         What we do
                     </div>
@@ -85,7 +85,7 @@ export default function About() {
                         development.
                     </div>
                 </div>
-                <div className="bg-white h-full rounded-xl flex flex-col justify-center px-5 text-justify group">
+                <div className="bg-white h-full rounded-xl flex flex-col justify-center items-center px-5 text-justify group">
                     <div className="font-bold group-hover:hidden">
                         Who we are
                     </div>
@@ -102,11 +102,11 @@ export default function About() {
                     technology in our trade, industry, and services to improve
                     the quality of our products.
                 </h2>
-                <div className="mb-8">
+                <div className="mb-8 ">
                     <img
-                        src={`/images/about/ulemj/About.jpg`}
+                        src={`/images/about/ulemj/about.png`}
                         alt=""
-                        className="hover:scale-105 ease-in duration-100 rounded-xl"
+                        className="hover:scale-105 px-5 ease-in duration-100 rounded-xl"
                     />
                 </div>
             </div>

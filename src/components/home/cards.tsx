@@ -123,11 +123,11 @@ export default function Salon({ brand }: { brand: string }) {
                 title: "New Release",
                 text: "Women Spring collection",
                 button: {
-                    title: "Shop ↗",
+                    title: "Shop \u2197",
                     route: "https://www.instagram.com/stardom_boutique/",
                 },
                 button2: {
-                    title: "Lookbook ↗",
+                    title: "Lookbook \u2197",
                     route: "https://www.instagram.com/stardom_boutique/",
                 },
             },
@@ -161,11 +161,11 @@ export default function Salon({ brand }: { brand: string }) {
                 title: "New Release",
                 text: "Women Spring collection",
                 button: {
-                    title: "Shop ↗",
+                    title: "Shop \u2197",
                     route: "https://www.instagram.com/stardom_boutique/",
                 },
                 button2: {
-                    title: "Lookbook ↗",
+                    title: "Lookbook  ↗",
                     route: "https://www.instagram.com/stardom_boutique/",
                 },
             },
@@ -432,10 +432,10 @@ export default function Salon({ brand }: { brand: string }) {
                                     colorCodes[brand as keyof Brand].color
                                 }`}
                             >
-                                {
+                                {parse(
                                     content[brand as keyof Brand]?.center
                                         ?.bottom?.text
-                                }
+                                )}
                             </div>
                         ) : null}
                     </Fade>

@@ -22,8 +22,9 @@ export default function About() {
                 </div>
                 <div>
                     Stardom Boutique Shop has gained a strong following in the
-                    local fashion scene. It is the perfect destination for
-                    fashion drivin individuals who appreciate quality and style.
+                    local fashion scene in Mongolia. It is the perfect
+                    destination for fashion drivin individuals who appreciate
+                    quality and style.
                 </div>
             </div>
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10 bg-black/5 rounded-xl">

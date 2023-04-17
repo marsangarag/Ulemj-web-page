@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
@@ -24,14 +25,15 @@ export default function RunningText({ images }: { images: string[] }) {
                     //     priority
                     //     src={`/images/logos/${image}.png`}
                     //     alt={image}
-                    //     width={100}
-                    //     height={50}
+                    //     height={width > 768 ? 100 : 60}
+                    //     width={120}
                     // />
+
                     <img
                         onContextMenu={(e) => e.preventDefault()}
                         src={`/images/logos/${image}.png`}
                         alt={image}
-                        className="w-3/4 h-3/4 md:w-full md:h-full"
+                        className="w-3/4 h-3/4 max-w-[75%] max-h-[75%] md:max-w-full md:max-h-full md:w-full md:h-full"
                         key={image}
                     />
                 );

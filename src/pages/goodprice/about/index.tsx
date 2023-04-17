@@ -6,57 +6,57 @@ export default function About() {
                     SERVICE IS OUR BUSINESS PERFECTION IS OUR GOAL SATISFACTION
                     IS OUR GUARANTEE
                 </h1>
-                <p className="mb-8">
+                <div className="mb-8">
                     The Good Price Market is a well-established retail chain
                     that began its operations in 1998. The store is equipped
                     with high-quality German shop furnitures and US made
                     refrigerators. Over time, the store expanded its reach by
                     opening new branches in 2010, 2012, and 2013. Currently, the
                     store has four branches, serving a wide customer base.
-                </p>
+                </div>
                 <div className="mb-8 grid sm:grid-cols-3 gap-1 sm:gap-10">
                     <div
                         className={`border border-goodprice rounded-2xl py-8 px-5 hover:bg-goodprice
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">MISSION</h2>
-                        <p>
-                            The store's mission is to create quality service
+                        <div>
+                            The store&#39;s mission is to create quality service
                             with high standards
-                        </p>
+                        </div>
                     </div>
                     <div
                         className={`border border-goodprice rounded-2xl py-8 px-5 hover:bg-goodprice
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">VISION</h2>
-                        <p>
+                        <div>
                             The values that guide the market are to establish an
                             international trade channel and create a unified
                             central distribution system.
-                        </p>
+                        </div>
                     </div>
                     <div
                         className={`border border-goodprice rounded-2xl py-8 px-5 hover:bg-goodprice
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">VALUES</h2>
-                        <p>
-                            The store's motto is to respect the customer and
+                        <div>
+                            The store&#39;s motto is to respect the customer and
                             value quality
-                        </p>
+                        </div>
                     </div>
                 </div>
-                <p>
+                <div>
                     Good Price Store initially imported products solely from the
                     United States, but now, it imports and sells products from
                     various countries, including Germany, Korea, and Russia. The
-                    store's mission is to create perfect service standards,
+                    store&#39;s mission is to create perfect service standards,
                     establish an international trade channel, and create a
                     unified central distribution system. The values that guide
                     the store include profit, speed and energy, the perfect
                     solution, health, and family.
-                </p>
+                </div>
             </div>
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10">
                 <div>
@@ -90,12 +90,12 @@ export default function About() {
                         className="hover:scale-105 ease-in duration-100 rounded-xl"
                     />
                 </div>
-                <p>
+                <div>
                     The Good Price Market’s motto is to respect the customer and
                     value quality. With its commitment to providing excellent
                     service, high-quality products, and a focus on international
                     trading.
-                </p>
+                </div>
             </div>
         </div>
     );

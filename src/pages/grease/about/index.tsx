@@ -6,7 +6,7 @@ export default function About() {
                     SERVICE IS OUR BUSINESS PERFECTION IS OUR GOAL SATISFACTION
                     IS OUR GUARANTEE
                 </h1>
-                <p className="mb-8">
+                <div className="mb-8">
                     Ulemj Grease LLC, which started its operations in November
                     1997, is the first full-service high-level salon in
                     Mongolia. Initially serving in the fields of hairdressing,
@@ -20,7 +20,7 @@ export default function About() {
                         className={`border border-main rounded-2xl py-8 px-5 hover:bg-grease ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">MISSION</h2>
-                        <p>
+                        <div>
                             Comfortable environment, quality service, strong
                             ability employees.
                         </p>
@@ -30,7 +30,7 @@ export default function About() {
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">VISION</h2>
-                        <p>
+                        <div>
                             We respect to be a leader of the public service
                             development and utility fields of Mongolia.
                         </p>
@@ -40,13 +40,13 @@ export default function About() {
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
                     >
                         <h2 className="font-bold">VALUES</h2>
-                        <p>
+                        <div>
                             Customer with satisfaction, happy employees and
                             their families, quality and standard developer.
                         </p>
                     </div>
                 </div>
-                <p>
+                <div>
                     We have been successfully leading the beauty industry
                     offering international service standards for those who value
                     the quality. Our main operation is beauty salon and esthetic

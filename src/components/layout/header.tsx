@@ -116,11 +116,11 @@ export default function Header({ brand }: { brand: string }) {
             //     mon: "",
             //     route: `tel:+97611319031 `,
             // },
-            // {
-            //     en: "Services",
-            //     mon: "",
-            //     route: `https://www.facebook.com/California.Restaurant.MN`,
-            // },
+            {
+                en: "About",
+                mon: "",
+                route: `/about`,
+            },
         ],
     };
 
@@ -140,19 +140,21 @@ export default function Header({ brand }: { brand: string }) {
 
     return brand ? (
         <div
-            className={`relative h-full sm:h-16 flex flex-col gap-y-1 items-center border-b ${
+            className={`relative h-full sm:h-16 aspect-auto flex flex-col gap-y-1 items-center border-b ${
                 colorCodes[brand as keyof Brand]?.border
             }`}
         >
             <Opacity
-                className="sm:absolute sm:left-0"
-                onClick={() => onNavigate(`/${brand}`)}
+                className={`sm:absolute sm:left-0 flex-grow-0`}
+                onClick={() =>
+                    onNavigate(`/${brand === "ulemj" ? "/" : brand}`)
+                }
                 delay={0.2}
             >
                 <img
                     src={`/images/brand/${brand}.png`}
                     alt={brand}
-                    className="h-16 aspect-auto cursor-pointer w-full"
+                    className="h-16 w-auto cursor-pointer"
                 />
                 {/* <Image
                     className="cursor-pointer"
@@ -162,7 +164,13 @@ export default function Header({ brand }: { brand: string }) {
                     width={120}
                 /> */}
             </Opacity>
-            <div className="flex items-center gap-x-5 text-sm sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:top-1/2 sm:-translate-y-1/2 pb-4 sm:pb-0 -mt-4 sm:mt-0">
+            <div
+                className={`flex items-center gap-x-5 text-sm sm:absolute ${
+                    brand === "ulemj"
+                        ? "sm:right-5"
+                        : "sm:left-1/2 sm:-translate-x-1/2"
+                }  sm:top-1/2 sm:-translate-y-1/2 pb-4 sm:pb-0 -mt-4 sm:mt-0 $`}
+            >
                 {centerItems[brand as keyof typeof centerItems]?.map(
                     (item, index: number) => {
                         return (
