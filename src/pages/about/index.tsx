@@ -17,8 +17,8 @@ export default function About() {
                 </p>
                 <div className="mb-8 grid sm:grid-cols-3 gap-1 sm:gap-5">
                     <div
-                        className="border border-ulemj rounded-2xl py-8 px-5 hover:bg-ulemj
-                        } ease-in duration-100 hover:text-white hover:scale-110 text-sm"
+                        className="border border-ulemj rounded-2xl py-8 px-5 hover:bg-gradient-to-r hover:from-[#41437b] hover:to-[#bf3d3c]
+                        ease-in duration-100 hover:text-white hover:scale-110 text-sm"
                     >
                         <h2 className="font-bold">MISSION</h2>
                         <p>
@@ -28,7 +28,7 @@ export default function About() {
                         </p>
                     </div>
                     <div
-                        className="border border-ulemj rounded-2xl py-8 px-5 hover:bg-ulemj
+                        className="border border-ulemj rounded-2xl py-8 px-5  hover:bg-gradient-to-r hover:from-[#41437b] hover:to-[#bf3d3c]
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm"
                     >
                         <h2 className="font-bold">VISION</h2>
@@ -38,7 +38,7 @@ export default function About() {
                         </p>
                     </div>
                     <div
-                        className="border border-ulemj rounded-2xl py-8 px-5 hover:bg-ulemj
+                        className="border border-ulemj rounded-2xl py-8 px-5  hover:bg-gradient-to-r hover:from-[#41437b] hover:to-[#bf3d3c]
                         } ease-in duration-100 hover:text-white hover:scale-110 text-sm"
                     >
                         <h2 className="font-bold">VALUES</h2>
@@ -64,7 +64,7 @@ export default function About() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 bg-black/5 min-h-[430px] items-center p-5">
                 <div className="bg-white h-full rounded-xl flex flex-col justify-center px-5 text-justify group">
-                    <div className="font-bold group-hover:hidden">
+                    <div className="font-bold group-hover:hidden ">
                         What we are
                     </div>
                     <div className="text-justify hidden group-hover:block">
