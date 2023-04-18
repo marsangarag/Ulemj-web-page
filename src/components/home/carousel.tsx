@@ -41,7 +41,7 @@ export default function Carousel({ brand }: { brand: string }) {
         },
         california: {
             photos: ["dood"],
-            route: "https://www.facebook.com/goodpricemarket ",
+            route: "https://www.facebook.com/California.Restaurant.MN",
         },
         ulemj: {
             photos: ["dood"],
