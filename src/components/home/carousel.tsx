@@ -45,7 +45,7 @@ export default function Carousel({ brand }: { brand: string }) {
         },
         ulemj: {
             photos: ["dood"],
-            route: "https://www.facebook.com/goodpricemarket ",
+            route: "",
         },
     };
     return (

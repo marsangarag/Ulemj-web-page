@@ -1,11 +1,15 @@
 import Fade from "components/layout/fade";
 import { Brand } from "lib/types/brand.type";
 import parse from "html-react-parser";
+import { useRouter } from "next/router";
 
 export default function Service({ brand }: { brand: string }) {
+    const router = useRouter();
     const onLinkClick = (link: string) => {
         if (link) {
-            window.open(link, "_blank", "noreferrer");
+            if (link?.includes("http")) {
+                window.open(link, "_blank", "noreferrer");
+            } else router.push(link);
         }
     };
 
@@ -84,7 +88,7 @@ export default function Service({ brand }: { brand: string }) {
                 route: "",
             },
             right: {
-                route: "https://www.instagram.com/stardom_boutique/",
+                route: "https://qrmenu.mn/menu/ODQy",
                 button: "<span className='font-bold'>#</span>Oversized denim shirt",
                 img: "right",
             },
@@ -94,10 +98,10 @@ export default function Service({ brand }: { brand: string }) {
                 image: "left",
                 title: "Construction",
                 text: "Project management",
-                route: "",
+                route: "/about",
             },
             right: {
-                route: "",
+                route: "/about",
                 button: "<span className='font-bold'>Manufacture, </span>Planning & Design",
                 img: "right",
             },

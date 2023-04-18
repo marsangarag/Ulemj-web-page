@@ -22,7 +22,7 @@ export default function Footer({ brand }: { brand: string }) {
                         mon: "Цаг захиалах",
                         route: "http://appointment.ulemjgrease.com/",
                     },
-                    { en: "About", mon: "Дэлгэрэнгүй", route: "/about" },
+                    { en: "About", mon: "Дэлгэрэнгүй", route: "/grease/about" },
                 ],
             },
             {
@@ -71,7 +71,7 @@ export default function Footer({ brand }: { brand: string }) {
                         route: "https://shop.ulemjgrease.com/",
                     },
 
-                    { en: "About", mon: "Дэлгэрэнгүй", route: "/about" },
+                    { en: "About", mon: "Дэлгэрэнгүй", route: "/pharm/about" },
                 ],
             },
             {
@@ -114,7 +114,7 @@ export default function Footer({ brand }: { brand: string }) {
                         mon: "Цаг захиалах",
                         route: "http://appointment.ulemjgrease.com/salon-profile/clinic/services",
                     },
-                    { en: "About", mon: "Дэлгэрэнгүй", route: "/about" },
+                    { en: "About", mon: "Дэлгэрэнгүй", route: "/clinic/about" },
                 ],
             },
             {
@@ -162,7 +162,11 @@ export default function Footer({ brand }: { brand: string }) {
                         mon: "Цаг захиалах",
                         route: "https://www.facebook.com/stardombyplatinum",
                     },
-                    { en: "About", mon: "Дэлгэрэнгүй", route: "/about" },
+                    {
+                        en: "About",
+                        mon: "Дэлгэрэнгүй",
+                        route: "/stardom/about",
+                    },
                 ],
             },
             {
@@ -210,7 +214,11 @@ export default function Footer({ brand }: { brand: string }) {
                         mon: "Цаг захиалах",
                         route: "http://goodprice.mindplay.mn/shopTab/",
                     },
-                    { en: "About", mon: "Дэлгэрэнгүй", route: "/about" },
+                    {
+                        en: "About",
+                        mon: "Дэлгэрэнгүй",
+                        route: "/goodprice/about",
+                    },
                 ],
             },
             {
@@ -258,7 +266,11 @@ export default function Footer({ brand }: { brand: string }) {
                         mon: "Цаг захиалах",
                         route: "https://www.facebook.com/California.Restaurant.MN",
                     },
-                    { en: "About", mon: "Дэлгэрэнгүй", route: "/about" },
+                    {
+                        en: "About",
+                        mon: "Дэлгэрэнгүй",
+                        route: "/california/about",
+                    },
                 ],
             },
             {

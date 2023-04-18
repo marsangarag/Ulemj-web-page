@@ -13,7 +13,7 @@ export default function Header({ brand }: { brand: string }) {
     const [showLang, setShowLang] = useState<boolean>(false);
 
     const onNavigate = (route: string) => {
-        if (route.includes("http")) {
+        if (route.includes("http") || route.includes("+976")) {
             window.open(route, "_blank", "noreferrer");
         } else {
             router.push(route);
