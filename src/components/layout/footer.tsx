@@ -343,10 +343,7 @@ export default function Footer({ brand }: { brand: string }) {
     };
     return (
         <>
-            <Fade
-                transition={{ y: 250, delay: 0 }}
-                className="py-5 flex flex-col text-center gap-y-2 sm:flex-row sm:justify-evenly"
-            >
+            <div className="py-5 flex flex-col text-center gap-y-2 sm:flex-row sm:justify-evenly">
                 {footerItems[brand as keyof Brand]?.map((footer) => {
                     return (
                         <div
@@ -372,7 +369,7 @@ export default function Footer({ brand }: { brand: string }) {
                         </div>
                     );
                 })}
-            </Fade>
+            </div>
         </>
     );
 }

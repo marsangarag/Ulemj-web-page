@@ -14,29 +14,30 @@ export default function RunningText({ images }: { images: string[] }) {
     return width ? (
         <Marquee
             gradient={false}
-            speed={width > 444 ? (width > 500 ? 100 : 50) : 30}
+            speed={width > 444 ? (width > 500 ? 100 : 50) : 40}
             className="h-[60px] md:h-[100px]"
         >
             {images?.map((image) => {
                 return (
-                    // <Image
-                    //     onContextMenu={(e) => e.preventDefault()}
-                    //     key={image}
-                    //     priority
-                    //     src={`/images/logos/${image}.png`}
-                    //     alt={image}
-                    //     height={width > 768 ? 100 : 60}
-                    //     width={120}
-                    // />
-
-                    <img
+                    <Image
                         onContextMenu={(e) => e.preventDefault()}
+                        priority
+                        key={image}
                         src={`/images/logos/${image}.png`}
                         alt={image}
-                        className="w-3/4 h-3/4 max-w-[75%] max-h-[75%] md:max-w-full md:max-h-full md:w-full md:h-full"
-                        key={image}
+                        height={width > 768 ? 100 : 60}
+                        width={width > 768 ? 200 : 120}
                     />
                 );
+                {
+                    /* <img
+                            onContextMenu={(e) => e.preventDefault()}
+                            src={`/images/logos/${image}.png`}
+                            alt={image}
+                            className="w-full h-full"
+                            key={image}
+                        /> */
+                }
             })}
         </Marquee>
     ) : null;
