@@ -146,9 +146,7 @@ export default function Header({ brand }: { brand: string }) {
         >
             <Opacity
                 className={`sm:absolute sm:left-0 flex-grow-0`}
-                onClick={() =>
-                    onNavigate(`/${brand === "ulemj" ? "/" : brand}`)
-                }
+                onClick={() => onNavigate(`/${brand === "ulemj" ? "" : brand}`)}
                 delay={0.2}
             >
                 <img

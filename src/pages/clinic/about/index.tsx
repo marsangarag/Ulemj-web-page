@@ -12,7 +12,7 @@ export default function About() {
                     then, the clinic has expanded its services to plastic
                     surgery and rebranded itself as &#34;HAIR & ESTHETIC
                     CLINIC&#34; in 2020.
-                </p>
+                </div>
                 <div className="mb-8 grid sm:grid-cols-3 gap-1 sm:gap-10">
                     <div
                         className={`border border-grease rounded-2xl py-8 px-5 hover:bg-grease
@@ -22,7 +22,7 @@ export default function About() {
                         <div>
                             Adopt best practices in management and professional
                             practice
-                        </p>
+                        </div>
                     </div>
                     <div
                         className={`border border-grease rounded-2xl py-8 px-5 hover:bg-grease
@@ -32,7 +32,7 @@ export default function About() {
                         <div>
                             Introduction of international standarts, clinical
                             guidelines and production technology
-                        </p>
+                        </div>
                     </div>
                     <div
                         className={`border border-grease rounded-2xl py-8 px-5 hover:bg-grease
@@ -41,7 +41,7 @@ export default function About() {
                         <h2 className="font-bold">VALUES</h2>
                         <div>
                             Introduction of evidence-based advanced technologies
-                        </p>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -52,7 +52,7 @@ export default function About() {
                     The clinic also provides body thread lifts for breast and
                     buttock lift, double-eyelid, lower blepharoplasty, and male
                     eyeplasty, and cheek dimple treatments.
-                </p>
+                </div>
             </div>
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10">
                 <div>
@@ -92,7 +92,7 @@ export default function About() {
                     France, Spain, and the The United States, suitable for
                     Mongolian skin bringing in the best products and using them
                     in our services.
-                </p>
+                </div>
             </div>
         </div>
     );

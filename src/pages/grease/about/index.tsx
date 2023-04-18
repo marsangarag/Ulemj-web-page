@@ -14,7 +14,7 @@ export default function About() {
                     improved our range of services in line with global
                     (especially France, USA, and Germany) trends, and have been
                     adding the best technology and services to our customers.
-                </p>
+                </div>
                 <div className="mb-8 grid sm:grid-cols-3 gap-1 sm:gap-10">
                     <div
                         className={`border border-main rounded-2xl py-8 px-5 hover:bg-grease ease-in duration-100 hover:text-white hover:scale-110 text-sm`}
@@ -23,7 +23,7 @@ export default function About() {
                         <div>
                             Comfortable environment, quality service, strong
                             ability employees.
-                        </p>
+                        </div>
                     </div>
                     <div
                         className={`border border-main rounded-2xl py-8 px-5 hover:bg-grease
@@ -33,7 +33,7 @@ export default function About() {
                         <div>
                             We respect to be a leader of the public service
                             development and utility fields of Mongolia.
-                        </p>
+                        </div>
                     </div>
                     <div
                         className={`border border-main rounded-2xl py-8 px-5 hover:bg-grease
@@ -43,7 +43,7 @@ export default function About() {
                         <div>
                             Customer with satisfaction, happy employees and
                             their families, quality and standard developer.
-                        </p>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -53,7 +53,7 @@ export default function About() {
                     clinic and 90% of the products we use are exclusively
                     distributed by us in Mongolia, including the devices and
                     equipments.
-                </p>
+                </div>
             </div>
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10">
                 <div>

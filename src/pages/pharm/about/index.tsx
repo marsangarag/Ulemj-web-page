@@ -15,7 +15,7 @@ export default function About() {
                     Disintegrating Fims, <b>Neocell Co.,Ltd</b> of USA which
                     manufactures natural collagen supplements for beauty and
                     sport.
-                </p>
+                </div>
                 <div className="flex justify-center mb-8">
                     <div className="hover:bg-pharm border border-pharm min-w-[330px] min-h-[200px] text-white rounded-xl flex justify-center items-center group">
                         <div className="px-8 group-hover:hidden text-5xl font-bold text-pharm">
@@ -37,7 +37,7 @@ export default function About() {
                     equipment and devices and cosmetic treatment instruments. It
                     is the health product importer of Mongolia and the
                     developing national company of wholesale.
-                </p>
+                </div>
             </div>
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10">
                 <div>
