@@ -173,9 +173,9 @@ export default function Footer({ brand }: { brand: string }) {
                 title: { en: "Contact", mon: "Холбоо барих" },
                 items: [
                     {
-                        en: "agii@ulemj.mn",
-                        mon: "agii@ulemj.mn",
-                        route: "agii@ulemj.mn",
+                        en: "agimaa@ulemj.mn",
+                        mon: "agimaa@ulemj.mn",
+                        route: "agimaa@ulemj.mn",
                     },
                     // {
                     //     en: "+976 77779595",
