@@ -33,7 +33,7 @@ export default function Salon({ brand }: { brand: string }) {
                 bottom: {
                     button: "Appointment",
                     image: "",
-                    text: "We served <b>6000</b> clients a month and more than <b>70%</b>  of them are long-term for more than <b>3 years</b>. Total clients are potential and <b>15%</b>  of our clients are foreigners, living in Ulaanbaatar.",
+                    text: "We served <b>6000</b> clients a month and more than <b>70%</b>  of them are Long-term for more than <b>3 years</b>. Total clients are potential and <b>15%</b>  of our clients are foreigners, living in Ulaanbaatar.",
                     route: "http://appointment.ulemjgrease.com/",
                 },
             },
@@ -141,7 +141,7 @@ export default function Salon({ brand }: { brand: string }) {
                 bottom: {
                     button: "Social",
                     image: "bottom",
-                    text: "We served <b>6000</b> clients a month and more than <b>70%</b>  of them are long-term for more than <b>3 years</b>. Total clients are potential and <b>15%</b>  of our clients are foreigners, living in Ulaanbaatar.",
+                    text: "We served <b>6000</b> clients a month and more than <b>70%</b>  of them are Long-term for more than <b>3 years</b>. Total clients are potential and <b>15%</b>  of our clients are foreigners, living in Ulaanbaatar.",
                     route: "https://www.instagram.com/stardom_boutique/",
                 },
             },
@@ -179,7 +179,7 @@ export default function Salon({ brand }: { brand: string }) {
                 bottom: {
                     button: "Social",
                     image: "bottom",
-                    text: "We served <b>6000</b> clients a month and more than <b>70%</b>  of them are long-term for more than <b>3 years</b>. Total clients are potential and <b>15%</b>  of our clients are foreigners, living in Ulaanbaatar.",
+                    text: "We served <b>6000</b> clients a month and more than <b>70%</b>  of them are Long-term for more than <b>3 years</b>. Total clients are potential and <b>15%</b>  of our clients are foreigners, living in Ulaanbaatar.",
                     route: "https://www.instagram.com/stardom_boutique/",
                 },
             },
