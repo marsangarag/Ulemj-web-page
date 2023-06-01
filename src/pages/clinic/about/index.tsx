@@ -57,19 +57,19 @@ export default function About() {
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10">
                 <div>
                     <img
-                        src={`/images/about/clinic/About-Photo01.png`}
+                        src={`/images/about/clinic/About-Photo01.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/clinic/About-Photo02.png`}
+                        src={`/images/about/clinic/About-Photo02.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/clinic/About-Photo03.png`}
+                        src={`/images/about/clinic/About-Photo03.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
@@ -81,7 +81,7 @@ export default function About() {
                 </h2>
                 <div className="sm:px-20 mb-8">
                     <img
-                        src={`/images/about/clinic/banner.png`}
+                        src={`/images/about/clinic/banner.jpg`}
                         alt="banner"
                         className="hover:scale-105 ease-in duration-100 rounded-xl"
                     />

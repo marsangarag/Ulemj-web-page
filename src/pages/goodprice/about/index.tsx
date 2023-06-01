@@ -61,19 +61,19 @@ export default function About() {
             <div className="grid grid-cols-3 px-4 sm:px-24 py-4 gap-1 sm:gap-10">
                 <div>
                     <img
-                        src={`/images/about/goodprice/banner01.png`}
+                        src={`/images/about/goodprice/banner01.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/goodprice/banner02.png`}
+                        src={`/images/about/goodprice/banner02.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={`/images/about/goodprice/banner03.png`}
+                        src={`/images/about/goodprice/banner03.jpg`}
                         className="rounded-xl hover:scale-105 ease-in duration-100 hover:shadow-xl shadow-lg"
                     />
                 </div>
