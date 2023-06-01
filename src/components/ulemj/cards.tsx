@@ -36,7 +36,7 @@ export default function UlemjCards() {
                         className="rounded-xl h-full w-full"
                     />
 
-                    <div className="text-smaller text-white text-justify text-start px-4 absolute top-1/2 -translate-y-1/2 sm:text-xs xl:text-base">
+                    <div className="text-smaller text-white text-justify px-4 absolute top-1/2 -translate-y-1/2 sm:text-xs xl:text-base">
                         “Ulemj” is the Mongolian word for “Great”, “Giant”, and
                         “Perfection” which often indicates the quality and size
                         of things that align with our quality and services.
